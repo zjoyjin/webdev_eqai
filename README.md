@@ -1,16 +1,22 @@
-# Assessment Hub
+# EQAI - Emotional Intelligence Meets AI
 
-A modern, professional assessment platform built with Next.js 14 and TailwindCSS. Features full internationalization support for English and Chinese.
+A modern, professional landing page and assessment platform for EQAIGlobal. Built with Next.js 14 and TailwindCSS, featuring full internationalization support for English and Chinese.
 
 ## Features
 
-- Clean, minimal design inspired by Google's design principles
-- Full internationalization (English/Chinese)
-- Responsive design for desktop and mobile
-- Four assessment categories: Work, Personal, Kid, and Pet
-- Built with Next.js 14 App Router
-- TypeScript for type safety
-- TailwindCSS for styling
+- **Professional Landing Page**: Hero section, mission statement, and feature highlights
+- **Clean, Google-inspired Design**: Minimal UI with excellent typography and spacing
+- **Full Internationalization**: Complete English/Chinese support with next-intl
+- **Responsive Design**: Optimized for desktop, tablet, and mobile
+- **Multiple Pages**:
+  - Homepage with hero, features, and assessment cards
+  - About Us page with mission, vision, and values
+  - Donate page with impact information
+  - Contact page with form (placeholder)
+  - Four assessment pages: Work, Personal, Kid, and Pet
+- **Modern Navigation**: Sticky header with mobile hamburger menu
+- **Static Generation**: All pages pre-rendered for optimal performance
+- **Built with**: Next.js 14 App Router, TypeScript, TailwindCSS
 
 ## Installation
 
@@ -32,8 +38,17 @@ Open [http://localhost:3000](http://localhost:3000) in your browser. You'll be r
 
 ## Available Routes
 
-- `/en` - English homepage
+### Main Pages
+- `/en` - English homepage (with hero, features, mission)
 - `/zh` - Chinese homepage
+- `/en/about` - About Us page (English)
+- `/zh/about` - About Us page (Chinese)
+- `/en/donate` - Donate page (English)
+- `/zh/donate` - Donate page (Chinese)
+- `/en/contact` - Contact page (English)
+- `/zh/contact` - Contact page (Chinese)
+
+### Assessment Pages
 - `/en/work` - Work assessment (English)
 - `/en/personal` - Personal assessment (English)
 - `/en/kid` - Kid assessment (English)
@@ -83,6 +98,26 @@ Translations are organized by section:
     }
   }
 }
+```
+
+## Customizing the Hero Image
+
+The homepage hero section currently has a placeholder for an image. To add your custom banner:
+
+1. Place your image in the `public/` directory (e.g., `public/hero-banner.jpg`)
+2. Open `src/components/HeroSection.tsx`
+3. Uncomment the `<Image>` component at the bottom of the file
+4. Update the `src` prop to match your image filename
+
+Example:
+```tsx
+<Image
+  src="/hero-banner.jpg"
+  alt={t('imageAlt')}
+  fill
+  className="object-cover"
+  priority
+/>
 ```
 
 ## Adding Assessment Questions

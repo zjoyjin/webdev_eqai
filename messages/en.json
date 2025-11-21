@@ -1,30 +1,126 @@
 {
   "common": {
-    "appName": "Assessment Hub"
+    "appName": "EQAI",
+    "tagline": "Emotional Intelligence Meets Artificial Intelligence"
   },
   "nav": {
-    "home": "Home"
+    "home": "Home",
+    "assessments": "Assessments",
+    "about": "About",
+    "donate": "Donate",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Unlock Your Emotional Intelligence with AI",
+    "subtitle": "EQAI combines cutting-edge artificial intelligence with evidence-based assessment tools to help you understand and develop your emotional intelligence.",
+    "cta": "Explore Assessments",
+    "imageAlt": "EQAI Hero Banner"
+  },
+  "mission": {
+    "heading": "Our Mission",
+    "text": "EQAIGlobal is dedicated to making emotional intelligence accessible to everyone. We believe that understanding and developing emotional intelligence is essential for personal growth, meaningful relationships, and professional success."
+  },
+  "features": {
+    "heading": "Why Emotional Intelligence Matters",
+    "whatIsEqai": {
+      "title": "What Are EQAI Assessments?",
+      "description": "Our assessments combine psychological research with AI-powered analysis to provide personalized insights into your emotional intelligence. Each assessment is designed to help you understand your strengths and identify areas for growth."
+    },
+    "whyMatters": {
+      "title": "Why It Matters",
+      "description": "Emotional intelligence affects every aspect of life—from personal relationships to workplace dynamics. Higher EQ is linked to better mental health, stronger relationships, effective leadership, and greater overall life satisfaction."
+    },
+    "whoFor": {
+      "title": "Who Is This For?",
+      "description": "Whether you're a professional seeking career growth, a parent supporting child development, or simply someone committed to personal growth, our assessments provide valuable insights tailored to your unique journey."
+    },
+    "aiSupport": {
+      "title": "AI-Enhanced Evaluation",
+      "description": "Our advanced AI algorithms analyze your responses to provide nuanced, personalized feedback. The technology adapts to your unique patterns, offering insights that go beyond traditional assessment methods."
+    }
   },
   "home": {
-    "title": "Welcome to Assessment Hub",
-    "subtitle": "Select an assessment category to begin",
+    "assessmentsHeading": "Choose Your Assessment Path",
+    "assessmentsSubheading": "Select the assessment that best fits your needs",
     "categories": {
       "work": {
         "title": "Work Assessment",
-        "description": "Evaluate your professional development and career goals"
+        "description": "Evaluate your professional emotional intelligence and enhance workplace relationships"
       },
       "personal": {
         "title": "Personal Assessment",
-        "description": "Assess your personal growth and well-being"
+        "description": "Develop self-awareness and strengthen your emotional well-being"
       },
       "kid": {
         "title": "Kid Assessment",
-        "description": "Evaluate child development and learning progress"
+        "description": "Support healthy emotional development in children and adolescents"
       },
       "pet": {
         "title": "Pet Assessment",
-        "description": "Monitor your pet's health and behavior"
+        "description": "Understand your pet's emotional needs and strengthen your bond"
       }
+    }
+  },
+  "about": {
+    "title": "About EQAIGlobal",
+    "mission": {
+      "heading": "Our Mission",
+      "text": "EQAIGlobal was founded on the belief that emotional intelligence is a fundamental skill that can be developed and strengthened. We combine decades of psychological research with modern AI technology to create assessments that are both scientifically rigorous and deeply personal."
+    },
+    "vision": {
+      "heading": "Our Vision",
+      "text": "We envision a world where emotional intelligence is recognized as essential to human flourishing. By making high-quality EQ assessments accessible to everyone, we aim to foster greater empathy, understanding, and connection across all areas of life."
+    },
+    "approach": {
+      "heading": "Our Approach",
+      "text": "Our assessments are grounded in established emotional intelligence frameworks while leveraging AI to provide personalized, actionable insights. We continuously refine our algorithms based on the latest research in psychology, neuroscience, and machine learning."
+    },
+    "values": {
+      "heading": "Our Values",
+      "accessibility": "Accessibility - EQ assessment should be available to everyone",
+      "science": "Science - Our methods are evidence-based and rigorously tested",
+      "privacy": "Privacy - Your data is protected and never shared without consent",
+      "growth": "Growth - We believe in the human capacity for emotional development"
+    }
+  },
+  "donate": {
+    "title": "Support Our Mission",
+    "intro": "EQAIGlobal is committed to making emotional intelligence assessments accessible to everyone, regardless of their ability to pay. Your donation helps us continue providing free assessments to those who need them most.",
+    "impact": {
+      "heading": "Your Impact",
+      "text": "Every contribution helps us expand access to emotional intelligence tools and resources. Your support enables us to:",
+      "point1": "Provide free assessments to underserved communities",
+      "point2": "Invest in research and development of new assessment tools",
+      "point3": "Translate our assessments into more languages",
+      "point4": "Create educational resources about emotional intelligence"
+    },
+    "howToHelp": {
+      "heading": "How to Donate",
+      "text": "We are currently setting up our donation infrastructure. If you would like to support our mission, please contact us directly. We appreciate your interest in helping make emotional intelligence accessible to all."
+    },
+    "button": "Contact Us About Donating",
+    "thanks": "Thank you for your support"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "intro": "Have questions about our assessments? Interested in partnerships or research collaborations? We'd love to hear from you.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "placeholder": {
+        "name": "Enter your name",
+        "email": "your@email.com",
+        "subject": "What is this regarding?",
+        "message": "Tell us more about your inquiry..."
+      }
+    },
+    "info": {
+      "heading": "Contact Information",
+      "email": "Email: info@eqaiglobal.org",
+      "note": "This contact form is currently a placeholder. Full functionality will be added soon."
     }
   },
   "assessments": {
