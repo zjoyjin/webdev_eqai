@@ -192,6 +192,32 @@ This application supports all modern browsers:
 - Safari (latest)
 - Edge (latest)
 
+## Troubleshooting
+
+### 404 Error on Vercel After Deployment
+
+If you see a 404 error after deploying to Vercel:
+
+1. **Clear Vercel Cache**: Go to your project settings on Vercel and redeploy
+2. **Check Build Logs**: Ensure the build completed successfully
+3. **Verify Routes**: The root `/` should redirect to `/en` automatically
+4. **Test Locally First**: Run `npm run build && npm start` to verify production build works locally
+
+### npm Deprecation Warnings
+
+The deprecation warnings during installation are from dependencies and don't affect functionality:
+- These are warnings, not errors
+- They come from Next.js dependencies
+- Your application will work perfectly fine
+- Future versions of Next.js will update these dependencies
+
+### Local Development Issues
+
+If `npm run dev` fails:
+1. Delete `node_modules` and `.next` folders
+2. Run `npm install` again
+3. Try `npm run dev` again
+
 ## License
 
 MIT
