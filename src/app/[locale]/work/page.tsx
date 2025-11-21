@@ -1,6 +1,12 @@
 import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 
-export default function WorkAssessmentPage() {
+type Props = {
+  params: { locale: string };
+};
+
+export default function WorkAssessmentPage({ params: { locale } }: Props) {
+  setRequestLocale(locale);
   const t = useTranslations('assessments.work');
 
   return (

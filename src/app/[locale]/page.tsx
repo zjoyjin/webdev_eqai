@@ -1,7 +1,13 @@
 import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import AssessmentCard from '@/components/AssessmentCard';
 
-export default function HomePage() {
+type Props = {
+  params: { locale: string };
+};
+
+export default function HomePage({ params: { locale } }: Props) {
+  setRequestLocale(locale);
   const t = useTranslations('home');
 
   const categories = [
