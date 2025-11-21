@@ -1,0 +1,48 @@
+{
+  "common": {
+    "appName": "评估中心"
+  },
+  "nav": {
+    "home": "首页"
+  },
+  "home": {
+    "title": "欢迎来到评估中心",
+    "subtitle": "选择一个评估类别开始",
+    "categories": {
+      "work": {
+        "title": "工作评估",
+        "description": "评估您的职业发展和职业目标"
+      },
+      "personal": {
+        "title": "个人评估",
+        "description": "评估您的个人成长和幸福感"
+      },
+      "kid": {
+        "title": "儿童评估",
+        "description": "评估儿童发展和学习进度"
+      },
+      "pet": {
+        "title": "宠物评估",
+        "description": "监测您的宠物健康和行为"
+      }
+    }
+  },
+  "assessments": {
+    "work": {
+      "title": "工作评估",
+      "placeholder": "评估问题将显示在这里"
+    },
+    "personal": {
+      "title": "个人评估",
+      "placeholder": "评估问题将显示在这里"
+    },
+    "kid": {
+      "title": "儿童评估",
+      "placeholder": "评估问题将显示在这里"
+    },
+    "pet": {
+      "title": "宠物评估",
+      "placeholder": "评估问题将显示在这里"
+    }
+  }
+}

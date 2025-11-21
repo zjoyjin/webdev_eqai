@@ -1,0 +1,48 @@
+{
+  "common": {
+    "appName": "Assessment Hub"
+  },
+  "nav": {
+    "home": "Home"
+  },
+  "home": {
+    "title": "Welcome to Assessment Hub",
+    "subtitle": "Select an assessment category to begin",
+    "categories": {
+      "work": {
+        "title": "Work Assessment",
+        "description": "Evaluate your professional development and career goals"
+      },
+      "personal": {
+        "title": "Personal Assessment",
+        "description": "Assess your personal growth and well-being"
+      },
+      "kid": {
+        "title": "Kid Assessment",
+        "description": "Evaluate child development and learning progress"
+      },
+      "pet": {
+        "title": "Pet Assessment",
+        "description": "Monitor your pet's health and behavior"
+      }
+    }
+  },
+  "assessments": {
+    "work": {
+      "title": "Work Assessment",
+      "placeholder": "Assessment questions will appear here"
+    },
+    "personal": {
+      "title": "Personal Assessment",
+      "placeholder": "Assessment questions will appear here"
+    },
+    "kid": {
+      "title": "Kid Assessment",
+      "placeholder": "Assessment questions will appear here"
+    },
+    "pet": {
+      "title": "Pet Assessment",
+      "placeholder": "Assessment questions will appear here"
+    }
+  }
+}
