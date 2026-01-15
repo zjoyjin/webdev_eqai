@@ -3,6 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/request';
 import Navigation from '@/components/Navigation';
+import ChatBox from '@/components/ChatBox';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -29,6 +30,7 @@ export default async function LocaleLayout({
           <main className="min-h-screen">
             {children}
           </main>
+          <ChatBox />
         </NextIntlClientProvider>
       </body>
     </html>
