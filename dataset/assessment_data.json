@@ -1,0 +1,1580 @@
+{
+  "original": [
+    {
+      "code": "MWI",
+      "title_en": "Multiple Wisdom and Intelligence",
+      "title_cn": "多维智慧与智力",
+      "title_full": "EQAI多维智慧与智力问卷",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "情绪理解与社交",
+          "code": "01",
+          "desc_casual": "这套题在看你能不能察觉别人的情绪，是否容易理解他人感受，遇到矛盾时能否平和沟通，以及在相处中是否能让关系更融洽、彼此都感到被理解。",
+          "desc_academic": "反映个体在情绪觉察、理解与调节方面的特点，以及在人际交往中维系良好关系的倾向。它关注对他人情绪的感知能力、共情反应、应对冲突的方式及适应性社交行为的表现。"
+        },
+        {
+          "name": "自我愉悦与情绪调节",
+          "code": "02",
+          "desc_casual": "这个部分看你遇到不顺心的事情时，能不能调整自己的情绪，以及会不会用适合自己的方法让自己冷静或好受一些。也了解你面对批评或变化时的情绪反应。",
+          "desc_academic": "反映个体在面对压力或负面情绪时的情绪调节能力，体现为对自身情绪的觉察、接纳与恢复水平。高分者通常能较好地应对挫折，保持内心平稳，展现出较强的心理适应性。"
+        },
+        {
+          "name": "幽默与趣味感知",
+          "code": "03",
+          "desc_casual": "这套题想了解你在生活中能不能发现好笑的瞬间，会不会用幽默让气氛变轻松。比如遇到尴尬或压力时，你是否能自然地说句话，让大家都笑出来。",
+          "desc_academic": "反映个体在日常生活中感知和运用幽默的倾向，体现其以轻松态度应对情境、调节情绪反应及促进人际互动的特征。高分者通常更善于捕捉趣味元素，并在社交中自然流露幽默感。"
+        },
+        {
+          "name": "身心健康与生活平衡",
+          "code": "04",
+          "desc_casual": "这套题想了解你在忙碌中是否能照顾好自己，比如有没有好好休息、按时吃饭、坚持锻炼和放松。也看看你能不能察觉到身体累或心情变差，并主动做出调整。",
+          "desc_academic": "反映个体在日常生活与工作中调节精力、维持身心平衡的倾向，表现为对休息、饮食、锻炼等自我照护行为的持续关注，以及对疲劳和压力信号的敏感性与应对能力，强调节奏感和自我调适的稳定性。"
+        },
+        {
+          "name": "陪伴与共情",
+          "code": "05",
+          "desc_casual": "这些题目在看你平时能不能注意到别人的情绪变化，是否愿意在朋友开心或低落时陪伴他们，能否真正理解他们的感受，并自然地给予回应。",
+          "desc_academic": "反映个体在人际交往中感知他人情绪、给予情感回应及维持共情联结的稳定倾向，体现其情绪觉察力、关怀表达以及在关系中持续提供理解支持的特点。"
+        },
+        {
+          "name": "乐观与积极心态",
+          "code": "06",
+          "desc_casual": "这些题目用来了解你在遇到挫折时，能否保持信心，看到希望，调节情绪，并用自己的正能量带动身边人一起面对困难。",
+          "desc_academic": "反映个体在压力或逆境中维持积极心态的倾向，体现其对未来的乐观预期、情绪调节能力，以及在困境中寻找意义并支持他人心理适应的特质。"
+        },
+        {
+          "name": "逆境应对力与心理韧性",
+          "code": "07",
+          "desc_casual": "这个部分想了解你面对困难或压力时，能否保持冷静、不轻易放弃，并努力寻找解决办法。它关注你如何调整心态，坚持目标，并在挑战中不断进步。",
+          "desc_academic": "反映个体在压力、挫折或环境变化中的心理调适能力，体现情绪稳定、目标坚持及从逆境中成长的倾向。高分者通常具备良好的自我调节能力，能积极应对挑战并持续采取行动。"
+        },
+        {
+          "name": "慧商",
+          "code": "08",
+          "desc_casual": "这些题目用来了解一个人是否能从生活中获得领悟，遇事时善于冷静思考，理解问题的本质，并做出成熟应对。",
+          "desc_academic": "反映个体对人生经验的深层理解与整合能力，体现其在面对复杂问题时的觉察水平、反思习惯及对长远意义的关注倾向。"
+        },
+        {
+          "name": "逻辑思维与解决问题",
+          "code": "09",
+          "desc_casual": "这些题目关注你平时遇到难题时，能否理清思路、找出解决方法，是否愿意深入思考事情背后的原因，并从经历中总结经验。",
+          "desc_academic": "反映个体在面对复杂信息时，运用逻辑分析、整合线索并提炼核心规律的认知特征，体现其系统思考与从经验中构建理解的能力倾向。"
+        },
+        {
+          "name": "勇气与决断",
+          "code": "10",
+          "desc_casual": "这套题想了解你在遇到困难或突发状况时，能不能稳住自己、敢不敢做决定，以及会不会因害怕犯错而犹豫不前。它关注你在压力下是否还能坚持行动，勇敢面对该承担的事。",
+          "desc_academic": "反映个体在压力与不确定性中保持镇定、自主决策并采取行动的心理倾向，体现面对挑战时的决断力、行动意愿及对挫折的包容态度。具有此特质者通常信赖自身判断，能在信息有限时做出选择，并在受挫后继续前行。"
+        },
+        {
+          "name": "目标感与持续行动力",
+          "code": "11",
+          "desc_casual": "这组题目用来了解你是否能清楚设定目标，合理安排步骤，并坚持完成。它关注你在遇到困难时能否调整自己，不轻易放弃，一步步向前推进并把事情做完。",
+          "desc_academic": "反映个体在追求目标过程中表现出的持续行动力，包括明确目标设定、合理规划步骤、自我调节进度以及在挑战中保持方向的能力，体现为有意识的坚持与时间管理的稳定性。"
+        },
+        {
+          "name": "团队协作与信任",
+          "code": "12",
+          "desc_casual": "这个部分用来了解你在团队中是否愿意和他人合作，能不能有效沟通，遇到意见不合时能否冷静应对，以及是否信任队友并共同努力达成目标的真实想法和日常表现。",
+          "desc_academic": "衡量个体在团队中建立互信、促进沟通与协作的心理特质，表现为对成员能力的信赖、面对冲突时的理性态度、调和分歧的主动性，以及协调个人与集体目标的能力，反映其推动团队合作的内在倾向。"
+        },
+        {
+          "name": "执行与组织能力",
+          "code": "13",
+          "desc_casual": "这套题在了解一个人做事是否条理清晰，能否合理安排时间和步骤，遇到困难时是否能灵活应对，让事情有条不紊地进行。",
+          "desc_academic": "反映个体在实现目标过程中组织计划、分配资源及调整行动的心理特征，体现其在复杂情境中保持效率与持续推进任务的能力。"
+        },
+        {
+          "name": "判断与责任意识",
+          "code": "14",
+          "desc_casual": "这些题目用来了解一个人平时做决定时，会不会仔细核实信息，能否独立判断对错，以及是否敢于承认失误并从中学习。",
+          "desc_academic": "衡量个体在信息处理过程中注重证据、识别逻辑漏洞的能力，以及在决策时保持客观、审慎并承担相应后果的心理特质，反映其理性思维与责任意识的结合。"
+        },
+        {
+          "name": "言语策略与表达艺术",
+          "code": "15",
+          "desc_casual": "这套题了解你说话时会不会用生动的方式表达，比如打比方、讲笑话或调整语气，让别人更容易理解也更愿意听你说话。它关注你如何让语言更有趣、更有感染力。",
+          "desc_academic": "反映个体在口头交流中运用语言策略增强表达效果的心理特点，体现其在修辞手法、表达方式调节和信息呈现生动性方面的倾向。高分者更倾向于使用比喻、幽默或类比等技巧提升沟通的吸引力与感染力。"
+        },
+        {
+          "name": "网络沟通与传播判断力",
+          "code": "16",
+          "desc_casual": "这套题了解你上网时能否分辨信息真假，说话是否考虑他人感受，能否清楚表达自己，并负责任地分享内容。",
+          "desc_academic": "反映个体在网络环境中理解、表达与评估信息的综合倾向，体现对信息真实性、传播影响及沟通方式的综合判断，表征其在网络交流中的理性思考与责任意识。"
+        },
+        {
+          "name": "书面表达与思维能力",
+          "code": "17",
+          "desc_casual": "这套题了解你在写作文或表达想法时，能否理清思路，有条理地写出观点，让人看得明白，以及是否会用恰当的例子和逻辑来支持自己的看法。",
+          "desc_academic": "反映个体在书面表达中组织思维、构建逻辑结构及清晰传递信息的心理倾向，体现其在写作过程中对条理性、论证严谨性和表达清晰度的关注程度。"
+        },
+        {
+          "name": "文学鉴赏与感受力",
+          "code": "18",
+          "desc_casual": "这个问题想了解你在读小说、诗歌或散文时，是否容易被文字感染，喜欢体会其中的情感和深层含义，以及阅读给你带来的感受和思考有多深刻。",
+          "desc_academic": "衡量个体在接触文学作品时，对语言表达、情感内涵、象征意义及作者意图的觉察与兴趣，体现其通过阅读获取审美体验、情感共鸣和思想启迪的倾向性。"
+        },
+        {
+          "name": "审美与视觉感知",
+          "code": "19",
+          "desc_casual": "这些问题想了解你对颜色搭配、画面结构和整体美感的敏感程度，比如是否容易察觉艺术作品或周围环境中的视觉细节，以及是否常被美的事物吸引。",
+          "desc_academic": "衡量个体对视觉元素如色彩、构图与空间关系的感知敏锐度，以及对艺术形式和美学特征的理解与评价倾向，反映其在审美情境中的认知与情感反应模式。"
+        },
+        {
+          "name": "生活品味与艺术感知",
+          "code": "20",
+          "desc_casual": "这个部分想了解你是否喜欢在生活中寻找美和表达美，比如欣赏音乐、设计空间或留意物品的搭配，看你是否习惯让日常环境更顺眼、更舒心。",
+          "desc_academic": "反映个体对美感体验的偏好与追求，表现为对艺术形式、环境氛围及生活细节的敏锐感知和主动塑造，体现通过审美选择提升日常生活质量的内在倾向。"
+        },
+        {
+          "name": "仪态表演与形象管理",
+          "code": "21",
+          "desc_casual": "这套问题在了解你在不同场合是否会留意自己的穿着、言行和留给别人的印象，以及能否根据环境调整自己，表现得更恰当自然。",
+          "desc_academic": "反映个体在社会情境中通过仪表、举止和形象管理来展现适宜行为的倾向，体现其对自我表达的重视程度，以及依据环境调节外在表现的能力特征。"
+        }
+      ]
+    },
+    {
+      "code": "SR",
+      "title_en": "School Refusal",
+      "title_cn": "厌学",
+      "title_full": "EQAI厌学自评量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "学业成就情绪负担",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "学习动机丧失",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "学习策略低效与认知超负荷",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "校园人际关系与归属感",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "家庭压力与支持缺乏",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "自我认同与未来焦虑",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": ""
+        }
+      ]
+    },
+    {
+      "code": "ER_Aware",
+      "title_en": "(Negative) Emotional Regulation - Emotional Awareness and Understanding",
+      "title_cn": "(负面)情绪管理 - 情绪的觉察与理解",
+      "title_full": "EQAI负面情绪管理量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "情绪意识/感知力缺乏",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": "情绪意识，又称情绪感知力，即对自身情绪状态的觉察。缺乏情绪意识的人可能无法将情绪的生理信号（胃不舒服，身体虚弱，胸闷等）归因为情绪的产生，也不会关注自己是否出现某一种负面情绪。举例来说，当一个学生因第二天要公开演讲而感到焦虑时，他的胃部持续发紧，手心出汗。如果他缺乏情绪意识，他可能只会把这些生理信号简单归因为“胃不舒服”或“身体有点虚”，并开始担心自己是否生病了。他无法将身体的紧张感识别为“焦虑”或“紧张”这种情绪正在产生的信号，因此也无法针对情绪本身进行任何调节，只能陷于对身体不适的困惑与担忧之中。无法觉察到自己具体的情绪会让孩子无法正确表达自己的情绪和需要，而难以使用情绪调节策略。"
+        },
+        {
+          "name": "情绪清晰度缺乏",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": "情绪清晰度，指的是个体理解、区分和精确标注与表达自身具体情绪体验的能力。如果说“情绪意识”是觉察到情绪信号的存在，那么“情绪清晰度”则是能够解读这些信号的具体含义。它回答的是“我感受到的究竟是什么”这一问题，涉及对情绪状态的归因、复杂情绪的辨析（如区分失望、悲伤与愤怒）以及情绪混合体的识别（如悲喜交加）。例如，考试失利后，缺乏情绪清晰度的学生会陷入一种模糊的负面混沌感中，只能用“很烦”“难受”等笼统词汇描述内心。他们无法辨析其中究竟混杂着失望、羞耻、恐惧还是愤怒，如同面对一团无法理清的情绪乱麻。这种“情绪模糊”会导致调节策略错配（如用打游戏宣泄或逃避），造成沟通障碍（无法向他人有效表达），并可能使未被理解的痛苦逐渐内化为持续的焦虑或低落，从而影响学习与人际适应。"
+        }
+      ]
+    },
+    {
+      "code": "ER_Accept",
+      "title_en": "(Negative) Emotional Regulation - Emotion Acceptance",
+      "title_cn": "(负面)情绪管理 - 情绪接纳",
+      "title_full": "EQAI负面情绪管理量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "非接纳情绪反应",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": "指的是个体不愿接受情绪，不仅在经历负面情绪，更在抗拒和批判自己的情绪体验，将情绪本身视为“错误”、“脆弱”或“不应该的”。这常导致“情绪叠加”：即原始情绪（如悲伤）之上，又叠加了因该情绪而产生的次生情绪（如羞耻与自责），形成恶性循环，成为情绪管理困难的重要表现之一。"
+        }
+      ]
+    },
+    {
+      "code": "ER_ImpulseControl",
+      "title_en": "(Negative) Emotional Regulation - Impulse Control",
+      "title_cn": "(负面)情绪管理 - 冲动控制",
+      "title_full": "EQAI负面情绪管理量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "目标导向行为困难",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": "指个体在情绪激动时，或在经历负面情绪时，难以集中注意力、组织思维或继续执行既定任务的能力缺陷。其核心在于情绪的干扰作用削弱了认知资源的有效分配与行为持续性。"
+        },
+        {
+          "name": "冲动控制困难",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": "指个体在情绪高涨或痛苦时，难以抑制立即的、通常是适应不良的行为反应的倾向。这些行为旨在快速缓解情绪痛苦，但往往带来负面后果。"
+        }
+      ]
+    },
+    {
+      "code": "ER_Strategy",
+      "title_en": "(Negative) Emotional Regulation - Flexibility of Strategies",
+      "title_cn": "(负面)情绪管理 - 策略运用",
+      "title_full": "EQAI负面情绪管理量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "情绪调节策略受限",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": "指个体在情绪激动时，主观感到缺乏有效的方法来管理和缓解情绪，陷入“无能为力”或“别无选择”的困境，常伴有对情绪状态持久性的悲观预期，或使用非适应性的情绪调节策略如回避，自我贬低等。"
+        },
+        {
+          "name": "非适应性情绪调节策略",
+          "code": "07",
+          "desc_casual": "",
+          "desc_academic": "本子维度旨在系统测量儿童及青少年在应对情绪唤起时，所习惯性采用的、长期来看对心理社会功能有害的调节策略。非适应性情绪调节策略是指那些可能暂时缓解情绪痛苦，但会阻碍长期目标达成、损害社会关系或加剧情绪问题的行为与认知模式。非适应性情绪调节策略包括行为回避（avoidance，如面对困难任务时退缩）、认知反刍（rumination，反复思考负面事件及感受）、情绪压抑（suppression，抑制情绪的表达）、冲动发泄（aggressive actions，如言语或身体攻击），以及将数字媒体使用作为逃避现实情绪的手段等。在现实中，此类策略常体现为：青少年在经历学业挫折或社交焦虑后，不是寻求解决方法或支持，而是陷入对自身失败的反复回想（反刍），或长时间沉浸在网络游戏、社交媒体中以逃离负面情绪（行为逃避），这可能导致情绪失调的恶性循环和问题性网络使用的风险增高。"
+        }
+      ]
+    },
+    {
+      "code": "PS_Authoritative",
+      "title_en": "Parenting Styles - Authoritative",
+      "title_cn": "家长养育模式 - 权威型",
+      "title_full": "EQAI家长养育模式问卷",
+      "module_cn": "家长参与",
+      "module_code": 3,
+      "measures": [
+        {
+          "name": "情感支持",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": "本分维度聚焦父母在孩子出现情绪时的回应方式：包括是否能注意到情绪信号、是否愿意倾听、是否提供安抚与共情、是否允许孩子表达，以及是否在情绪稳定后再进入问题解决。"
+        },
+        {
+          "name": "讲道理与引导",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": "指父母在管教和引导孩子行为时，是否通过解释原因、讨论后果、帮助分析情境等方式，引导孩子理解规则的意义，而不仅仅依靠命令或惩罚。这一分维度强调父母是否帮助孩子将外在要求转化为内在理解，从而逐步形成自我调节能力。"
+        },
+        {
+          "name": "有结构的自主支持",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": "指父母在设定清晰规则和边界的前提下，逐步给予孩子与其发展阶段相匹配的选择权和决策空间。该分维度强调，自主并非完全放手，而是在父母持续参与和引导下进行。父母既明确哪些事情不可协商，也在合适范围内允许孩子表达意见、参与决策并尝试自己的方式。"
+        }
+      ]
+    },
+    {
+      "code": "PS_Authoritarian",
+      "title_en": "Parenting Styles - Authoritarian",
+      "title_cn": "家长养育模式 - 专制型",
+      "title_full": "EQAI家长养育模式问卷",
+      "module_cn": "家长参与",
+      "module_code": 3,
+      "measures": [
+        {
+          "name": "等级化权威信念",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": "指父母对亲子关系中权力结构的基本看法，即是否认为父母应处于绝对权威地位，而孩子主要应以服从和听话作为行为准则。在这一信念框架下，父母通常认为规则和决定不需要向孩子解释，孩子提出质疑可能被视为不尊重或挑战权威。"
+        },
+        {
+          "name": "心理控制与界限侵入",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": "指父母通过操控孩子的情绪、想法或自我评价来影响其行为，而非通过清晰规则或合理引导进行管教。这类做法通常不表现为直接惩罚，而是通过内疚、羞辱、否定、情感撤回或过度干预隐私等方式，使孩子顺从父母期望。该分维度关注的是父母是否尊重孩子的心理界限与情感独立性，而非父母是否关心孩子。"
+        },
+        {
+          "name": "惩罚性管教",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": "指父母在纠正或制止孩子不当行为时，主要依赖惩罚、威慑或强制手段，而较少使用解释、引导或协商的方式。这类管教方式强调通过制造不适或恐惧来迅速改变行为，其形式可以包括言语威胁、剥夺权利、体罚或强制性约束等。该分维度关注的是父母是否将惩罚视为主要或必要的管教工具，而非惩罚的频率或严重程度本身。"
+        }
+      ]
+    },
+    {
+      "code": "PS_Permissive",
+      "title_en": "Parenting Styles - Permissive",
+      "title_cn": "家长养育模式 - 宽容型",
+      "title_full": "EQAI家长养育模式问卷",
+      "module_cn": "家长参与",
+      "module_code": 3,
+      "measures": [
+        {
+          "name": "反限制信念",
+          "code": "07",
+          "desc_casual": "",
+          "desc_academic": "指父母对规则、约束和管教介入的基本看法，即是否认为对孩子施加限制会阻碍其自然发展，或认为过多干预并非必要甚至有害。持有此类信念的父母往往强调孩子应“顺其自然”“自己摸索”，并倾向于减少规则和要求的设定。本分维度关注的是父母对限制本身的态度，而非实际行为是否完全放任。"
+        },
+        {
+          "name": "低结构与低引导",
+          "code": "08",
+          "desc_casual": "",
+          "desc_academic": "指父母在日常养育中较少为孩子提供清晰、稳定的规则、期望和行为指导，也较少主动介入孩子的行为发展过程。该分维度关注的是父母是否在生活安排、行为规范和问题处理上提供持续而一致的方向感，而非父母是否关心孩子或与孩子关系亲近。在这一模式下，父母往往对孩子的行为采取被动或延迟回应，更多在问题变得明显或严重时才介入。"
+        },
+        {
+          "name": "育儿信心不足",
+          "code": "09",
+          "desc_casual": "",
+          "desc_academic": "指父母在育儿过程中，对自身引导、管教和做决定能力的信心较低，常感到不确定、犹豫或缺乏把握。本分维度关注的是父母对自身育儿角色的自我效能感，而非其是否关心孩子或是否投入时间。在这种情况下，父母可能避免设定规则、回避冲突，或在孩子反对时轻易让步，并非出于明确的养育理念，而是源于对“我这样做是否正确”的不安。"
+        }
+      ]
+    },
+    {
+      "code": "Soc_Stress",
+      "title_en": "Social Stress",
+      "title_cn": "人际关系压力",
+      "title_full": "EQAI人际关系压力量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "师生关系压力",
+          "code": "",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "同学关系压力(e.g., 霸凌)",
+          "code": "",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "网络社交压力",
+          "code": "",
+          "desc_casual": "",
+          "desc_academic": ""
+        }
+      ]
+    },
+    {
+      "code": "SSD",
+      "title_en": "Somatic Symptom Disorder",
+      "title_cn": "躯体性问题",
+      "title_full": "EQAI躯体化症状量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "睡眠质量",
+          "code": "",
+          "desc_casual": "",
+          "desc_academic": ""
+        }
+      ]
+    },
+    {
+      "code": "Aca_Competence",
+      "title_en": "Academic Competence",
+      "title_cn": "学业能力",
+      "title_full": "EQAI学业能力量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "内在目标定向",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "任务价值与兴趣",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "成功期望",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "掌握效能感",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "组织策略",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "学习迁移",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "精细加工与整合",
+          "code": "07",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "批判性思维与评估",
+          "code": "08",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "任务表现监测",
+          "code": "09",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "认知过程监控",
+          "code": "10",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "时间与学习环境管理",
+          "code": "11",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "努力管理",
+          "code": "12",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "同伴学习",
+          "code": "13",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "求助策略",
+          "code": "14",
+          "desc_casual": "",
+          "desc_academic": ""
+        }
+      ]
+    },
+    {
+      "code": "ADHD_Inattention",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - Inattention",
+      "title_cn": "注意力缺陷多动障碍 - 注意缺陷",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "持续性注意困难",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": "持续性注意困难是指个体在较长时间内维持对任务、信息或目标的专注能力不足，表现为注意力易中断、难以长时间投入单一活动，以及在无外部提醒下难以完成持续性认知任务。 持续性注意困难被界定为：个体在无外部强制条件下，难以在一段时间内保持对单一目标、任务或信息的稳定注意状态。该维度不等同于单纯的分心，而强调“时间维度上的注意崩解”，尤其在学习、阅读、听讲与数字环境中表现突出。因此，本亚维度的测量聚焦于注意维持时长、任务中断频率以及主观专注体验。"
+        },
+        {
+          "name": "注意分配问题与易分心",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": "注意分配与易分心是指个体在多刺激或多任务环境中，难以有效选择、维持或切换注意焦点的能力缺陷，表现为对无关刺激高度敏感、注意资源被频繁占用，以及难以抑制干扰信息。该亚维度强调注意的选择性与抑制功能，区别于持续性注意，更关注注意控制的质量。注意分配与易分心亚维度聚焦于个体在存在干扰源时对注意焦点的调节能力，涵盖对外界刺激的敏感性、抑制无关信息的能力以及在多任务情境中的注意稳定性。与持续性注意不同，该维度强调“控制失败”而非“耐力不足”，尤其适用于数字化、高刺激环境下的注意评估。因此，其测量条目充分反映现实中常见的干扰源（如通知、声音、视觉信息），并捕捉个体对注意失控的主观体验。 "
+        },
+        {
+          "name": "注意启动与任务进入困难",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": "注意启动与任务进入困难是指个体在开始一项需要注意投入的任务时，难以迅速调动认知资源并进入专注状态，表现为拖延启动、迟迟无法“进入状态”，以及在任务开始阶段产生显著心理阻力。该维度不同于持续性注意与易分心，强调注意的启动阶段而非维持或控制阶段。 注意启动与任务进入困难被界定为个体在面对需要注意投入的任务时，难以迅速激活专注状态并转入有效执行的倾向。该维度强调“开始之前的停滞”，而非任务过程中的分心或疲劳，尤其在学习、自主任务与低外部结构环境中表现显著。结合理论、现有工具与社交媒体表征，该维度具有明确的认知与行为边界，且在现有注意缺陷测量中往往被低估。 "
+        }
+      ]
+    },
+    {
+      "code": "ADHD_Hyperact",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - Hyperactivity/Impulsivity",
+      "title_cn": "注意力缺陷多动障碍 - 冲动/多动",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "行为抑制与冲动控制困难",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": "行为抑制与冲动控制困难是指个体在面对即时刺激、情绪或反应冲动时，难以延迟、抑制或调节自身行为的倾向，表现为“想到就做”“来不及思考后果”以及频繁打断、插话或冲动决策。行为抑制与冲动控制困难被界定为个体在需要延迟反应、权衡后果或遵守行为规范时，难以抑制即时行为冲动的稳定倾向。该维度强调“反应之前的失控”，而非活动水平本身，尤其适用于评估青少年在社交互动、情绪情境与数字环境中的冲动表现。因此，条目设计同时覆盖行为层面与主观体验层面，具有较好的生态效度。 "
+        },
+        {
+          "name": "心理与言语多动",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": "心理与言语多动是指个体在认知与言语层面表现出的过度活跃状态，具体表现为思维跳跃、内心难以安静、想法不断涌现，以及说话过多、语速过快或难以抑制表达冲动。与传统以身体活动为核心的“多动”不同，该亚维度强调内在认知活动与言语输出的过度激活，在青少年与青年群体中尤为常见。心理与言语多动被界定为个体在缺乏外界刺激时，仍持续体验到思维与言语层面的过度活跃状态。该维度强调多动的“内化表现”，区别于身体活动水平，尤其适用于评估青春期及以上群体中不易被传统量表捕捉的多动形式。因此，测量覆盖思维速度、内心躁动、言语输出控制等方面，并避免将其简单等同于外向性或社交性。"
+        },
+        {
+          "name": "活动水平调节困难",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": "活动水平调节困难是指个体在不同情境下难以根据环境要求调节自身活动强度与身体状态，表现为坐立不安、频繁动作、难以保持静止，或在需要安静的场合中活动水平明显偏高。该维度是传统 ADHD 多动表现的核心，但在青少年阶段常以“细微、持续的动作”而非剧烈跑动呈现。活动水平调节困难被界定为个体在需要保持相对静止或低活动状态的情境中，难以有效调节身体活动强度的稳定倾向。该维度强调“活动量与情境要求的不匹配”，而非单纯的精力旺盛。其测量覆盖不同场景下的身体不安、小动作频率及主观控制感，以避免将多动简单等同于活跃或外向。"
+        }
+      ]
+    },
+    {
+      "code": "ADHD _Oppose",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - Opposition/Conflict",
+      "title_cn": "注意力缺陷多动障碍 - 违抗/冲突",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "权威对立与规则抵触",
+          "code": "07",
+          "desc_casual": "",
+          "desc_academic": "权威对立与规则抵触是指个体在面对外部权威（如教师、家长、制度要求）或明确规则时，表现出持续的抗拒、反驳或不配合倾向，常以争辩、顶撞、故意不遵守规则等形式出现。该维度并非单纯的“不听话”，而强调一种稳定的互动模式，即在权力不对等关系中对控制与要求的负向反应。权威对立与规则抵触被界定为个体在面对外部要求、规范或权威指令时，倾向于以反驳、抗拒或消极不配合方式回应的稳定特征。该维度强调互动关系中的“对抗性反应模式”，而非偶发的不顺从行为。测量时区分合理表达意见与情绪性、动机性反抗，以避免将正常自主性误判为问题行为。"
+        },
+        {
+          "name": "易怒情绪与情绪性反应",
+          "code": "08",
+          "desc_casual": "",
+          "desc_academic": "易怒情绪与情绪性反应是指个体在日常互动中情绪阈值较低、容易因小事产生愤怒、不耐烦或情绪爆发的倾向，常伴随对立或违抗行为出现。该维度强调情绪层面的不稳定性，是对立行为的重要情绪基础。"
+        }
+      ]
+    },
+    {
+      "code": "ADHD_EmoReg",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - EmoRegulation",
+      "title_cn": "注意力缺陷多动障碍 - 情绪调节困难",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "情绪调节与恢复困难",
+          "code": "09",
+          "desc_casual": "",
+          "desc_academic": "情绪调节与恢复困难是指个体在经历情绪波动后，难以有效识别、管理或缓解自身情绪状态的倾向，表现为情绪持续时间长、难以冷静、情绪反应过后仍长时间受影响。该维度强调情绪过程管理能力，而非具体情绪内容（如愤怒或悲伤）。情绪调节与恢复困难被界定为个体在情绪被触发后，难以有效管理情绪强度、持续时间及其对行为和认知的影响。该维度强调“情绪之后发生了什么”，是理解功能受损与心理健康风险的重要桥梁。测量时关注情绪恢复、调节策略可及性以及主观失控体验。 "
+        }
+      ]
+    },
+    {
+      "code": "ADHD_Motiv",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - Delay Aversion",
+      "title_cn": "注意力缺陷多动障碍 - 动机/延迟满足",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "即时奖励偏好与延迟厌恶",
+          "code": "10",
+          "desc_casual": "",
+          "desc_academic": "即时奖励偏好与延迟厌恶是指个体在决策和行为选择中，更倾向于即时、低成本回报，而对需要等待或长期投入的目标表现出显著回避。该维度并非单纯的冲动，而是一种稳定的动机取向差异。即时奖励偏好与延迟厌恶被界定为个体在面对需要等待、持续投入或延迟回报的任务时，主观动机显著下降的稳定倾向。该维度强调“等待本身的心理成本”，而非能力不足或懒惰。其测量对于理解学习坚持、目标管理与数字依赖具有重要价值。 "
+        }
+      ]
+    }
+  ],
+  "adopted": [
+    {
+      "code": "16PF",
+      "title_en": "Cattell's 16 Personality Factors Test",
+      "title_cn": "卡特尔十六种人格因素测验",
+      "title_full": "EQAI人格因素测验",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "乐群性",
+          "code": "01",
+          "desc_casual": "A1\tINTEGER\t\"I know how to comfort others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA2\tINTEGER\t\"I enjoy bringing people together\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA3\tINTEGER\t\"I feel others' emotions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA4\tINTEGER\t\"I take an interest in other people's lives\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA5\tINTEGER\t\"I cheer people up\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA6\tINTEGER\t\"I make people feel at ease\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA7\tINTEGER\t\"I take time out for others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA8\tINTEGER\t\"I don't like to get involved in other people's problems\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA9\tINTEGER\t\"I am not really interested in others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA10\tINTEGER\t\"I try not to think about the needy\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB1\tINTEGER\t\"I make insightful remarks\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB2\tINTEGER\t\"I know the answers to many questions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB3\tINTEGER\t\"I tend to analyze things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB4\tINTEGER\t\"I use my brain\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB5\tINTEGER\t\"I learn quickly\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB6\tINTEGER\t\"I counter others' arguments\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB7\tINTEGER\t\"I reflect on things before acting\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB8\tINTEGER\t\"I weigh the pros against the cons\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB9\tINTEGER\t\"I consider myself an average person\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB10\tINTEGER\t\"I get confused easily\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB11\tINTEGER\t\"I know that I am not a special person\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB12\tINTEGER\t\"I have a poor vocabulary\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB13\tINTEGER\t\"I skip difficult words while reading\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC1\tINTEGER\t\"I seldom feel blue\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC2\tINTEGER\t\"I feel comfortable with myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC3\tINTEGER\t\"I readily overcome setbacks\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC4\tINTEGER\t\"I am relaxed most of the time\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC5\tINTEGER\t\"I am not easily frustrated\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC6\tINTEGER\t\"I have frequent mood swings\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC7\tINTEGER\t\"I often feel blue\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC8\tINTEGER\t\"I dislike myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC9\tINTEGER\t\"I feel desperate\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC10\tINTEGER\t\"I am easily discouraged\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD1\tINTEGER\t\"I take charge\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD2\tINTEGER\t\"I want to be in charge\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD3\tINTEGER\t\"I say what I think\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD4\tINTEGER\t\"I am not afraid of providing criticism\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD5\tINTEGER\t\"I take control of things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD6\tINTEGER\t\"I can take strong measures\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD7\tINTEGER\t\"I wait for others to lead the way\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD8\tINTEGER\t\"I never challenge things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD9\tINTEGER\t\"I let others make the decisions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD10\tINTEGER\t\"I let myself be pushed around\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE1\tINTEGER\t\"I am the life of the party\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE2\tINTEGER\t\"I love large parties\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE3\tINTEGER\t\"I joke around a lot\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE4\tINTEGER\t\"I enjoy being part of a loud crowd\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE5\tINTEGER\t\"I amuse my friends\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE6\tINTEGER\t\"I act wild and crazy\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE7\tINTEGER\t\"I seldom joke around\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE8\tINTEGER\t\"I don't like crowded events\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE9\tINTEGER\t\"I am the last to laugh at a joke\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE10\tINTEGER\t\"I dislike loud music\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF1\tINTEGER\t\"I believe laws should be strictly enforced\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF2\tINTEGER\t\"I try to follow the rules\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF3\tINTEGER\t\"I believe in one true religion\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF4\tINTEGER\t\"I respect authority\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF5\tINTEGER\t\"I like to stand during the national anthem\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF6\tINTEGER\t\"I resist authority\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF7\tINTEGER\t\"I break rules\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF8\tINTEGER\t\"I use swear words\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF9\tINTEGER\t\"I oppose authority\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF10\tINTEGER\t\"I know how to get around the rules\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG1\tINTEGER\t\"I feel comfortable around people\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG2\tINTEGER\t\"I talk to a lot of different people at parties\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG3\tINTEGER\t\"I don't mind being the center of attention\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG4\tINTEGER\t\"I make friends easily\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG5\tINTEGER\t\"I start conversations\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG6\tINTEGER\t\"I find it difficult to approach others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG7\tINTEGER\t\"I often feel uncomfortable around others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG8\tINTEGER\t\"I have little to say\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG9\tINTEGER\t\"I am quiet around strangers\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG10\tINTEGER\t\"I keep in the background\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH1\tINTEGER\t\"I like to read\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH2\tINTEGER\t\"I enjoy discussing movies and books with others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH3\tINTEGER\t\"I read a lot\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH4\tINTEGER\t\"I don't like action movies\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH5\tINTEGER\t\"I cry during movies\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH6\tINTEGER\t\"I love flowers\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH7\tINTEGER\t\"I do not enjoy watching dance performances\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH8\tINTEGER\t\"I do not like poetry\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH9\tINTEGER\t\"I dislike works of fiction\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH10\tINTEGER\t\"I rarely notice my emotional reactions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI1\tINTEGER\t\"I find it hard to forgive others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI2\tINTEGER\t\"I suspect hidden motives in others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI3\tINTEGER\t\"I am wary of others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI4\tINTEGER\t\"I distrust people\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI5\tINTEGER\t\"I believe that people seldom tell you the whole truth\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI6\tINTEGER\t\"I believe that people are essentially evil\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI7\tINTEGER\t\"I trust what people say\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI8\tINTEGER\t\"I trust others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI9\tINTEGER\t\"I believe that others have good intentions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI10\tINTEGER\t\"I believe that people are basically moral\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ1\tINTEGER\t\"I do things that others find strange\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ2\tINTEGER\t\"I like to get lost in thought\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ3\tINTEGER\t\"I enjoy wild flights of fantasy\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ4\tINTEGER\t\"I love to daydream\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ5\tINTEGER\t\"I swim against the current\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ6\tINTEGER\t\"I take deviant positions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ7\tINTEGER\t\"I do unexpected things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ8\tINTEGER\t\"I do things by the book\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ9\tINTEGER\t\"I seldom daydream\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ10\tINTEGER\t\"I seldom get lost in thought\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK1\tINTEGER\t\"I reveal little about myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK2\tINTEGER\t\"I am hard to get to know\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK3\tINTEGER\t\"I don't talk a lot\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK4\tINTEGER\t\"I bottle up my feelings\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK5\tINTEGER\t\"I keep my thoughts to myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK6\tINTEGER\t\"I am open about myself to others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK7\tINTEGER\t\"I am open about my feelings\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK8\tINTEGER\t\"I disclose my intimate thoughts\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK9\tINTEGER\t\"I show my feelings\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK10\tINTEGER\t\"I am willing to talk about myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL1\tINTEGER\t\"I am afraid that I will do the wrong thing\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL2\tINTEGER\t\"I feel threatened easily\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL3\tINTEGER\t\"I am easily hurt\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL4\tINTEGER\t\"I worry about things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL5\tINTEGER\t\"I spend time thinking about past mistakes\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL6\tINTEGER\t\"I feel guilty when I say 'no'\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL7\tINTEGER\t\"I feel crushed by setbacks\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL8\tINTEGER\t\"I don't worry about things that have already happened\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL9\tINTEGER\t\"I am not easily bothered by things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL10\tINTEGER\t\"I don't let others discourage me\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was label"
+        },
+        {
+          "name": "聪慧性",
+          "code": "02",
+          "desc_casual": ""
+        },
+        {
+          "name": "稳定性",
+          "code": "03",
+          "desc_casual": ""
+        },
+        {
+          "name": "恃强性",
+          "code": "04",
+          "desc_casual": ""
+        },
+        {
+          "name": "兴奋性",
+          "code": "05",
+          "desc_casual": ""
+        },
+        {
+          "name": "有恒性",
+          "code": "06",
+          "desc_casual": ""
+        },
+        {
+          "name": "敢为性",
+          "code": "07",
+          "desc_casual": ""
+        },
+        {
+          "name": "敏感性",
+          "code": "08",
+          "desc_casual": ""
+        },
+        {
+          "name": "怀疑性",
+          "code": "09",
+          "desc_casual": ""
+        },
+        {
+          "name": "幻想性",
+          "code": "10",
+          "desc_casual": ""
+        },
+        {
+          "name": "世故性",
+          "code": "11",
+          "desc_casual": ""
+        },
+        {
+          "name": "忧虑性",
+          "code": "12",
+          "desc_casual": ""
+        },
+        {
+          "name": "实验性",
+          "code": "13",
+          "desc_casual": ""
+        },
+        {
+          "name": "独立性",
+          "code": "14",
+          "desc_casual": ""
+        },
+        {
+          "name": "自律性",
+          "code": "15",
+          "desc_casual": ""
+        },
+        {
+          "name": "紧张性",
+          "code": "16",
+          "desc_casual": ""
+        }
+      ]
+    },
+    {
+      "code": "Achenbach_YSR",
+      "title_en": "Achenbach System - Youth Self-Report",
+      "title_cn": "青少年自评量表",
+      "title_full": "EQAI身心健康自评筛查",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "焦虑/抑郁",
+          "code": "01",
+          "desc_casual": ""
+        },
+        {
+          "name": "退缩/抑郁",
+          "code": "02",
+          "desc_casual": ""
+        },
+        {
+          "name": "躯体主诉",
+          "code": "03",
+          "desc_casual": ""
+        },
+        {
+          "name": "社会交往问题",
+          "code": "04",
+          "desc_casual": ""
+        },
+        {
+          "name": "思维问题",
+          "code": "05",
+          "desc_casual": ""
+        },
+        {
+          "name": "注意力问题",
+          "code": "06",
+          "desc_casual": ""
+        },
+        {
+          "name": "违纪行为",
+          "code": "07",
+          "desc_casual": ""
+        },
+        {
+          "name": "攻击性行为",
+          "code": "08",
+          "desc_casual": ""
+        }
+      ]
+    },
+    {
+      "code": "Achenbach_CBCL",
+      "title_en": "Achenbach System - Child Behavior Checklist",
+      "title_cn": "儿童青少年行为量表",
+      "title_full": "EQAI身心健康他评筛查（家长）",
+      "module_cn": "家长参与",
+      "module_code": 3,
+      "measures": [
+        {
+          "name": "焦虑/抑郁",
+          "code": "01",
+          "desc_casual": ""
+        },
+        {
+          "name": "退缩/抑郁",
+          "code": "02",
+          "desc_casual": ""
+        },
+        {
+          "name": "躯体主诉",
+          "code": "03",
+          "desc_casual": ""
+        },
+        {
+          "name": "社会交往问题",
+          "code": "04",
+          "desc_casual": ""
+        },
+        {
+          "name": "思维问题",
+          "code": "05",
+          "desc_casual": ""
+        },
+        {
+          "name": "注意力问题",
+          "code": "06",
+          "desc_casual": ""
+        },
+        {
+          "name": "违纪行为",
+          "code": "07",
+          "desc_casual": ""
+        },
+        {
+          "name": "攻击性行为",
+          "code": "08",
+          "desc_casual": ""
+        }
+      ]
+    }
+  ],
+  "all_groups": [
+    {
+      "code": "MWI",
+      "title_en": "Multiple Wisdom and Intelligence",
+      "title_cn": "多维智慧与智力",
+      "title_full": "EQAI多维智慧与智力问卷",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "情绪理解与社交",
+          "code": "01",
+          "desc_casual": "这套题在看你能不能察觉别人的情绪，是否容易理解他人感受，遇到矛盾时能否平和沟通，以及在相处中是否能让关系更融洽、彼此都感到被理解。",
+          "desc_academic": "反映个体在情绪觉察、理解与调节方面的特点，以及在人际交往中维系良好关系的倾向。它关注对他人情绪的感知能力、共情反应、应对冲突的方式及适应性社交行为的表现。"
+        },
+        {
+          "name": "自我愉悦与情绪调节",
+          "code": "02",
+          "desc_casual": "这个部分看你遇到不顺心的事情时，能不能调整自己的情绪，以及会不会用适合自己的方法让自己冷静或好受一些。也了解你面对批评或变化时的情绪反应。",
+          "desc_academic": "反映个体在面对压力或负面情绪时的情绪调节能力，体现为对自身情绪的觉察、接纳与恢复水平。高分者通常能较好地应对挫折，保持内心平稳，展现出较强的心理适应性。"
+        },
+        {
+          "name": "幽默与趣味感知",
+          "code": "03",
+          "desc_casual": "这套题想了解你在生活中能不能发现好笑的瞬间，会不会用幽默让气氛变轻松。比如遇到尴尬或压力时，你是否能自然地说句话，让大家都笑出来。",
+          "desc_academic": "反映个体在日常生活中感知和运用幽默的倾向，体现其以轻松态度应对情境、调节情绪反应及促进人际互动的特征。高分者通常更善于捕捉趣味元素，并在社交中自然流露幽默感。"
+        },
+        {
+          "name": "身心健康与生活平衡",
+          "code": "04",
+          "desc_casual": "这套题想了解你在忙碌中是否能照顾好自己，比如有没有好好休息、按时吃饭、坚持锻炼和放松。也看看你能不能察觉到身体累或心情变差，并主动做出调整。",
+          "desc_academic": "反映个体在日常生活与工作中调节精力、维持身心平衡的倾向，表现为对休息、饮食、锻炼等自我照护行为的持续关注，以及对疲劳和压力信号的敏感性与应对能力，强调节奏感和自我调适的稳定性。"
+        },
+        {
+          "name": "陪伴与共情",
+          "code": "05",
+          "desc_casual": "这些题目在看你平时能不能注意到别人的情绪变化，是否愿意在朋友开心或低落时陪伴他们，能否真正理解他们的感受，并自然地给予回应。",
+          "desc_academic": "反映个体在人际交往中感知他人情绪、给予情感回应及维持共情联结的稳定倾向，体现其情绪觉察力、关怀表达以及在关系中持续提供理解支持的特点。"
+        },
+        {
+          "name": "乐观与积极心态",
+          "code": "06",
+          "desc_casual": "这些题目用来了解你在遇到挫折时，能否保持信心，看到希望，调节情绪，并用自己的正能量带动身边人一起面对困难。",
+          "desc_academic": "反映个体在压力或逆境中维持积极心态的倾向，体现其对未来的乐观预期、情绪调节能力，以及在困境中寻找意义并支持他人心理适应的特质。"
+        },
+        {
+          "name": "逆境应对力与心理韧性",
+          "code": "07",
+          "desc_casual": "这个部分想了解你面对困难或压力时，能否保持冷静、不轻易放弃，并努力寻找解决办法。它关注你如何调整心态，坚持目标，并在挑战中不断进步。",
+          "desc_academic": "反映个体在压力、挫折或环境变化中的心理调适能力，体现情绪稳定、目标坚持及从逆境中成长的倾向。高分者通常具备良好的自我调节能力，能积极应对挑战并持续采取行动。"
+        },
+        {
+          "name": "慧商",
+          "code": "08",
+          "desc_casual": "这些题目用来了解一个人是否能从生活中获得领悟，遇事时善于冷静思考，理解问题的本质，并做出成熟应对。",
+          "desc_academic": "反映个体对人生经验的深层理解与整合能力，体现其在面对复杂问题时的觉察水平、反思习惯及对长远意义的关注倾向。"
+        },
+        {
+          "name": "逻辑思维与解决问题",
+          "code": "09",
+          "desc_casual": "这些题目关注你平时遇到难题时，能否理清思路、找出解决方法，是否愿意深入思考事情背后的原因，并从经历中总结经验。",
+          "desc_academic": "反映个体在面对复杂信息时，运用逻辑分析、整合线索并提炼核心规律的认知特征，体现其系统思考与从经验中构建理解的能力倾向。"
+        },
+        {
+          "name": "勇气与决断",
+          "code": "10",
+          "desc_casual": "这套题想了解你在遇到困难或突发状况时，能不能稳住自己、敢不敢做决定，以及会不会因害怕犯错而犹豫不前。它关注你在压力下是否还能坚持行动，勇敢面对该承担的事。",
+          "desc_academic": "反映个体在压力与不确定性中保持镇定、自主决策并采取行动的心理倾向，体现面对挑战时的决断力、行动意愿及对挫折的包容态度。具有此特质者通常信赖自身判断，能在信息有限时做出选择，并在受挫后继续前行。"
+        },
+        {
+          "name": "目标感与持续行动力",
+          "code": "11",
+          "desc_casual": "这组题目用来了解你是否能清楚设定目标，合理安排步骤，并坚持完成。它关注你在遇到困难时能否调整自己，不轻易放弃，一步步向前推进并把事情做完。",
+          "desc_academic": "反映个体在追求目标过程中表现出的持续行动力，包括明确目标设定、合理规划步骤、自我调节进度以及在挑战中保持方向的能力，体现为有意识的坚持与时间管理的稳定性。"
+        },
+        {
+          "name": "团队协作与信任",
+          "code": "12",
+          "desc_casual": "这个部分用来了解你在团队中是否愿意和他人合作，能不能有效沟通，遇到意见不合时能否冷静应对，以及是否信任队友并共同努力达成目标的真实想法和日常表现。",
+          "desc_academic": "衡量个体在团队中建立互信、促进沟通与协作的心理特质，表现为对成员能力的信赖、面对冲突时的理性态度、调和分歧的主动性，以及协调个人与集体目标的能力，反映其推动团队合作的内在倾向。"
+        },
+        {
+          "name": "执行与组织能力",
+          "code": "13",
+          "desc_casual": "这套题在了解一个人做事是否条理清晰，能否合理安排时间和步骤，遇到困难时是否能灵活应对，让事情有条不紊地进行。",
+          "desc_academic": "反映个体在实现目标过程中组织计划、分配资源及调整行动的心理特征，体现其在复杂情境中保持效率与持续推进任务的能力。"
+        },
+        {
+          "name": "判断与责任意识",
+          "code": "14",
+          "desc_casual": "这些题目用来了解一个人平时做决定时，会不会仔细核实信息，能否独立判断对错，以及是否敢于承认失误并从中学习。",
+          "desc_academic": "衡量个体在信息处理过程中注重证据、识别逻辑漏洞的能力，以及在决策时保持客观、审慎并承担相应后果的心理特质，反映其理性思维与责任意识的结合。"
+        },
+        {
+          "name": "言语策略与表达艺术",
+          "code": "15",
+          "desc_casual": "这套题了解你说话时会不会用生动的方式表达，比如打比方、讲笑话或调整语气，让别人更容易理解也更愿意听你说话。它关注你如何让语言更有趣、更有感染力。",
+          "desc_academic": "反映个体在口头交流中运用语言策略增强表达效果的心理特点，体现其在修辞手法、表达方式调节和信息呈现生动性方面的倾向。高分者更倾向于使用比喻、幽默或类比等技巧提升沟通的吸引力与感染力。"
+        },
+        {
+          "name": "网络沟通与传播判断力",
+          "code": "16",
+          "desc_casual": "这套题了解你上网时能否分辨信息真假，说话是否考虑他人感受，能否清楚表达自己，并负责任地分享内容。",
+          "desc_academic": "反映个体在网络环境中理解、表达与评估信息的综合倾向，体现对信息真实性、传播影响及沟通方式的综合判断，表征其在网络交流中的理性思考与责任意识。"
+        },
+        {
+          "name": "书面表达与思维能力",
+          "code": "17",
+          "desc_casual": "这套题了解你在写作文或表达想法时，能否理清思路，有条理地写出观点，让人看得明白，以及是否会用恰当的例子和逻辑来支持自己的看法。",
+          "desc_academic": "反映个体在书面表达中组织思维、构建逻辑结构及清晰传递信息的心理倾向，体现其在写作过程中对条理性、论证严谨性和表达清晰度的关注程度。"
+        },
+        {
+          "name": "文学鉴赏与感受力",
+          "code": "18",
+          "desc_casual": "这个问题想了解你在读小说、诗歌或散文时，是否容易被文字感染，喜欢体会其中的情感和深层含义，以及阅读给你带来的感受和思考有多深刻。",
+          "desc_academic": "衡量个体在接触文学作品时，对语言表达、情感内涵、象征意义及作者意图的觉察与兴趣，体现其通过阅读获取审美体验、情感共鸣和思想启迪的倾向性。"
+        },
+        {
+          "name": "审美与视觉感知",
+          "code": "19",
+          "desc_casual": "这些问题想了解你对颜色搭配、画面结构和整体美感的敏感程度，比如是否容易察觉艺术作品或周围环境中的视觉细节，以及是否常被美的事物吸引。",
+          "desc_academic": "衡量个体对视觉元素如色彩、构图与空间关系的感知敏锐度，以及对艺术形式和美学特征的理解与评价倾向，反映其在审美情境中的认知与情感反应模式。"
+        },
+        {
+          "name": "生活品味与艺术感知",
+          "code": "20",
+          "desc_casual": "这个部分想了解你是否喜欢在生活中寻找美和表达美，比如欣赏音乐、设计空间或留意物品的搭配，看你是否习惯让日常环境更顺眼、更舒心。",
+          "desc_academic": "反映个体对美感体验的偏好与追求，表现为对艺术形式、环境氛围及生活细节的敏锐感知和主动塑造，体现通过审美选择提升日常生活质量的内在倾向。"
+        },
+        {
+          "name": "仪态表演与形象管理",
+          "code": "21",
+          "desc_casual": "这套问题在了解你在不同场合是否会留意自己的穿着、言行和留给别人的印象，以及能否根据环境调整自己，表现得更恰当自然。",
+          "desc_academic": "反映个体在社会情境中通过仪表、举止和形象管理来展现适宜行为的倾向，体现其对自我表达的重视程度，以及依据环境调节外在表现的能力特征。"
+        }
+      ]
+    },
+    {
+      "code": "SR",
+      "title_en": "School Refusal",
+      "title_cn": "厌学",
+      "title_full": "EQAI厌学自评量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "学业成就情绪负担",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "学习动机丧失",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "学习策略低效与认知超负荷",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "校园人际关系与归属感",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "家庭压力与支持缺乏",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "自我认同与未来焦虑",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": ""
+        }
+      ]
+    },
+    {
+      "code": "ER_Aware",
+      "title_en": "(Negative) Emotional Regulation - Emotional Awareness and Understanding",
+      "title_cn": "(负面)情绪管理 - 情绪的觉察与理解",
+      "title_full": "EQAI负面情绪管理量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "情绪意识/感知力缺乏",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": "情绪意识，又称情绪感知力，即对自身情绪状态的觉察。缺乏情绪意识的人可能无法将情绪的生理信号（胃不舒服，身体虚弱，胸闷等）归因为情绪的产生，也不会关注自己是否出现某一种负面情绪。举例来说，当一个学生因第二天要公开演讲而感到焦虑时，他的胃部持续发紧，手心出汗。如果他缺乏情绪意识，他可能只会把这些生理信号简单归因为“胃不舒服”或“身体有点虚”，并开始担心自己是否生病了。他无法将身体的紧张感识别为“焦虑”或“紧张”这种情绪正在产生的信号，因此也无法针对情绪本身进行任何调节，只能陷于对身体不适的困惑与担忧之中。无法觉察到自己具体的情绪会让孩子无法正确表达自己的情绪和需要，而难以使用情绪调节策略。"
+        },
+        {
+          "name": "情绪清晰度缺乏",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": "情绪清晰度，指的是个体理解、区分和精确标注与表达自身具体情绪体验的能力。如果说“情绪意识”是觉察到情绪信号的存在，那么“情绪清晰度”则是能够解读这些信号的具体含义。它回答的是“我感受到的究竟是什么”这一问题，涉及对情绪状态的归因、复杂情绪的辨析（如区分失望、悲伤与愤怒）以及情绪混合体的识别（如悲喜交加）。例如，考试失利后，缺乏情绪清晰度的学生会陷入一种模糊的负面混沌感中，只能用“很烦”“难受”等笼统词汇描述内心。他们无法辨析其中究竟混杂着失望、羞耻、恐惧还是愤怒，如同面对一团无法理清的情绪乱麻。这种“情绪模糊”会导致调节策略错配（如用打游戏宣泄或逃避），造成沟通障碍（无法向他人有效表达），并可能使未被理解的痛苦逐渐内化为持续的焦虑或低落，从而影响学习与人际适应。"
+        }
+      ]
+    },
+    {
+      "code": "ER_Accept",
+      "title_en": "(Negative) Emotional Regulation - Emotion Acceptance",
+      "title_cn": "(负面)情绪管理 - 情绪接纳",
+      "title_full": "EQAI负面情绪管理量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "非接纳情绪反应",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": "指的是个体不愿接受情绪，不仅在经历负面情绪，更在抗拒和批判自己的情绪体验，将情绪本身视为“错误”、“脆弱”或“不应该的”。这常导致“情绪叠加”：即原始情绪（如悲伤）之上，又叠加了因该情绪而产生的次生情绪（如羞耻与自责），形成恶性循环，成为情绪管理困难的重要表现之一。"
+        }
+      ]
+    },
+    {
+      "code": "ER_ImpulseControl",
+      "title_en": "(Negative) Emotional Regulation - Impulse Control",
+      "title_cn": "(负面)情绪管理 - 冲动控制",
+      "title_full": "EQAI负面情绪管理量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "目标导向行为困难",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": "指个体在情绪激动时，或在经历负面情绪时，难以集中注意力、组织思维或继续执行既定任务的能力缺陷。其核心在于情绪的干扰作用削弱了认知资源的有效分配与行为持续性。"
+        },
+        {
+          "name": "冲动控制困难",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": "指个体在情绪高涨或痛苦时，难以抑制立即的、通常是适应不良的行为反应的倾向。这些行为旨在快速缓解情绪痛苦，但往往带来负面后果。"
+        }
+      ]
+    },
+    {
+      "code": "ER_Strategy",
+      "title_en": "(Negative) Emotional Regulation - Flexibility of Strategies",
+      "title_cn": "(负面)情绪管理 - 策略运用",
+      "title_full": "EQAI负面情绪管理量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "情绪调节策略受限",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": "指个体在情绪激动时，主观感到缺乏有效的方法来管理和缓解情绪，陷入“无能为力”或“别无选择”的困境，常伴有对情绪状态持久性的悲观预期，或使用非适应性的情绪调节策略如回避，自我贬低等。"
+        },
+        {
+          "name": "非适应性情绪调节策略",
+          "code": "07",
+          "desc_casual": "",
+          "desc_academic": "本子维度旨在系统测量儿童及青少年在应对情绪唤起时，所习惯性采用的、长期来看对心理社会功能有害的调节策略。非适应性情绪调节策略是指那些可能暂时缓解情绪痛苦，但会阻碍长期目标达成、损害社会关系或加剧情绪问题的行为与认知模式。非适应性情绪调节策略包括行为回避（avoidance，如面对困难任务时退缩）、认知反刍（rumination，反复思考负面事件及感受）、情绪压抑（suppression，抑制情绪的表达）、冲动发泄（aggressive actions，如言语或身体攻击），以及将数字媒体使用作为逃避现实情绪的手段等。在现实中，此类策略常体现为：青少年在经历学业挫折或社交焦虑后，不是寻求解决方法或支持，而是陷入对自身失败的反复回想（反刍），或长时间沉浸在网络游戏、社交媒体中以逃离负面情绪（行为逃避），这可能导致情绪失调的恶性循环和问题性网络使用的风险增高。"
+        }
+      ]
+    },
+    {
+      "code": "PS_Authoritative",
+      "title_en": "Parenting Styles - Authoritative",
+      "title_cn": "家长养育模式 - 权威型",
+      "title_full": "EQAI家长养育模式问卷",
+      "module_cn": "家长参与",
+      "module_code": 3,
+      "measures": [
+        {
+          "name": "情感支持",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": "本分维度聚焦父母在孩子出现情绪时的回应方式：包括是否能注意到情绪信号、是否愿意倾听、是否提供安抚与共情、是否允许孩子表达，以及是否在情绪稳定后再进入问题解决。"
+        },
+        {
+          "name": "讲道理与引导",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": "指父母在管教和引导孩子行为时，是否通过解释原因、讨论后果、帮助分析情境等方式，引导孩子理解规则的意义，而不仅仅依靠命令或惩罚。这一分维度强调父母是否帮助孩子将外在要求转化为内在理解，从而逐步形成自我调节能力。"
+        },
+        {
+          "name": "有结构的自主支持",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": "指父母在设定清晰规则和边界的前提下，逐步给予孩子与其发展阶段相匹配的选择权和决策空间。该分维度强调，自主并非完全放手，而是在父母持续参与和引导下进行。父母既明确哪些事情不可协商，也在合适范围内允许孩子表达意见、参与决策并尝试自己的方式。"
+        }
+      ]
+    },
+    {
+      "code": "PS_Authoritarian",
+      "title_en": "Parenting Styles - Authoritarian",
+      "title_cn": "家长养育模式 - 专制型",
+      "title_full": "EQAI家长养育模式问卷",
+      "module_cn": "家长参与",
+      "module_code": 3,
+      "measures": [
+        {
+          "name": "等级化权威信念",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": "指父母对亲子关系中权力结构的基本看法，即是否认为父母应处于绝对权威地位，而孩子主要应以服从和听话作为行为准则。在这一信念框架下，父母通常认为规则和决定不需要向孩子解释，孩子提出质疑可能被视为不尊重或挑战权威。"
+        },
+        {
+          "name": "心理控制与界限侵入",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": "指父母通过操控孩子的情绪、想法或自我评价来影响其行为，而非通过清晰规则或合理引导进行管教。这类做法通常不表现为直接惩罚，而是通过内疚、羞辱、否定、情感撤回或过度干预隐私等方式，使孩子顺从父母期望。该分维度关注的是父母是否尊重孩子的心理界限与情感独立性，而非父母是否关心孩子。"
+        },
+        {
+          "name": "惩罚性管教",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": "指父母在纠正或制止孩子不当行为时，主要依赖惩罚、威慑或强制手段，而较少使用解释、引导或协商的方式。这类管教方式强调通过制造不适或恐惧来迅速改变行为，其形式可以包括言语威胁、剥夺权利、体罚或强制性约束等。该分维度关注的是父母是否将惩罚视为主要或必要的管教工具，而非惩罚的频率或严重程度本身。"
+        }
+      ]
+    },
+    {
+      "code": "PS_Permissive",
+      "title_en": "Parenting Styles - Permissive",
+      "title_cn": "家长养育模式 - 宽容型",
+      "title_full": "EQAI家长养育模式问卷",
+      "module_cn": "家长参与",
+      "module_code": 3,
+      "measures": [
+        {
+          "name": "反限制信念",
+          "code": "07",
+          "desc_casual": "",
+          "desc_academic": "指父母对规则、约束和管教介入的基本看法，即是否认为对孩子施加限制会阻碍其自然发展，或认为过多干预并非必要甚至有害。持有此类信念的父母往往强调孩子应“顺其自然”“自己摸索”，并倾向于减少规则和要求的设定。本分维度关注的是父母对限制本身的态度，而非实际行为是否完全放任。"
+        },
+        {
+          "name": "低结构与低引导",
+          "code": "08",
+          "desc_casual": "",
+          "desc_academic": "指父母在日常养育中较少为孩子提供清晰、稳定的规则、期望和行为指导，也较少主动介入孩子的行为发展过程。该分维度关注的是父母是否在生活安排、行为规范和问题处理上提供持续而一致的方向感，而非父母是否关心孩子或与孩子关系亲近。在这一模式下，父母往往对孩子的行为采取被动或延迟回应，更多在问题变得明显或严重时才介入。"
+        },
+        {
+          "name": "育儿信心不足",
+          "code": "09",
+          "desc_casual": "",
+          "desc_academic": "指父母在育儿过程中，对自身引导、管教和做决定能力的信心较低，常感到不确定、犹豫或缺乏把握。本分维度关注的是父母对自身育儿角色的自我效能感，而非其是否关心孩子或是否投入时间。在这种情况下，父母可能避免设定规则、回避冲突，或在孩子反对时轻易让步，并非出于明确的养育理念，而是源于对“我这样做是否正确”的不安。"
+        }
+      ]
+    },
+    {
+      "code": "Soc_Stress",
+      "title_en": "Social Stress",
+      "title_cn": "人际关系压力",
+      "title_full": "EQAI人际关系压力量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "师生关系压力",
+          "code": "",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "同学关系压力(e.g., 霸凌)",
+          "code": "",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "网络社交压力",
+          "code": "",
+          "desc_casual": "",
+          "desc_academic": ""
+        }
+      ]
+    },
+    {
+      "code": "SSD",
+      "title_en": "Somatic Symptom Disorder",
+      "title_cn": "躯体性问题",
+      "title_full": "EQAI躯体化症状量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "睡眠质量",
+          "code": "",
+          "desc_casual": "",
+          "desc_academic": ""
+        }
+      ]
+    },
+    {
+      "code": "Aca_Competence",
+      "title_en": "Academic Competence",
+      "title_cn": "学业能力",
+      "title_full": "EQAI学业能力量表",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "内在目标定向",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "任务价值与兴趣",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "成功期望",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "掌握效能感",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "组织策略",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "学习迁移",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "精细加工与整合",
+          "code": "07",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "批判性思维与评估",
+          "code": "08",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "任务表现监测",
+          "code": "09",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "认知过程监控",
+          "code": "10",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "时间与学习环境管理",
+          "code": "11",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "努力管理",
+          "code": "12",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "同伴学习",
+          "code": "13",
+          "desc_casual": "",
+          "desc_academic": ""
+        },
+        {
+          "name": "求助策略",
+          "code": "14",
+          "desc_casual": "",
+          "desc_academic": ""
+        }
+      ]
+    },
+    {
+      "code": "ADHD_Inattention",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - Inattention",
+      "title_cn": "注意力缺陷多动障碍 - 注意缺陷",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "持续性注意困难",
+          "code": "01",
+          "desc_casual": "",
+          "desc_academic": "持续性注意困难是指个体在较长时间内维持对任务、信息或目标的专注能力不足，表现为注意力易中断、难以长时间投入单一活动，以及在无外部提醒下难以完成持续性认知任务。 持续性注意困难被界定为：个体在无外部强制条件下，难以在一段时间内保持对单一目标、任务或信息的稳定注意状态。该维度不等同于单纯的分心，而强调“时间维度上的注意崩解”，尤其在学习、阅读、听讲与数字环境中表现突出。因此，本亚维度的测量聚焦于注意维持时长、任务中断频率以及主观专注体验。"
+        },
+        {
+          "name": "注意分配问题与易分心",
+          "code": "02",
+          "desc_casual": "",
+          "desc_academic": "注意分配与易分心是指个体在多刺激或多任务环境中，难以有效选择、维持或切换注意焦点的能力缺陷，表现为对无关刺激高度敏感、注意资源被频繁占用，以及难以抑制干扰信息。该亚维度强调注意的选择性与抑制功能，区别于持续性注意，更关注注意控制的质量。注意分配与易分心亚维度聚焦于个体在存在干扰源时对注意焦点的调节能力，涵盖对外界刺激的敏感性、抑制无关信息的能力以及在多任务情境中的注意稳定性。与持续性注意不同，该维度强调“控制失败”而非“耐力不足”，尤其适用于数字化、高刺激环境下的注意评估。因此，其测量条目充分反映现实中常见的干扰源（如通知、声音、视觉信息），并捕捉个体对注意失控的主观体验。 "
+        },
+        {
+          "name": "注意启动与任务进入困难",
+          "code": "03",
+          "desc_casual": "",
+          "desc_academic": "注意启动与任务进入困难是指个体在开始一项需要注意投入的任务时，难以迅速调动认知资源并进入专注状态，表现为拖延启动、迟迟无法“进入状态”，以及在任务开始阶段产生显著心理阻力。该维度不同于持续性注意与易分心，强调注意的启动阶段而非维持或控制阶段。 注意启动与任务进入困难被界定为个体在面对需要注意投入的任务时，难以迅速激活专注状态并转入有效执行的倾向。该维度强调“开始之前的停滞”，而非任务过程中的分心或疲劳，尤其在学习、自主任务与低外部结构环境中表现显著。结合理论、现有工具与社交媒体表征，该维度具有明确的认知与行为边界，且在现有注意缺陷测量中往往被低估。 "
+        }
+      ]
+    },
+    {
+      "code": "ADHD_Hyperact",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - Hyperactivity/Impulsivity",
+      "title_cn": "注意力缺陷多动障碍 - 冲动/多动",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "行为抑制与冲动控制困难",
+          "code": "04",
+          "desc_casual": "",
+          "desc_academic": "行为抑制与冲动控制困难是指个体在面对即时刺激、情绪或反应冲动时，难以延迟、抑制或调节自身行为的倾向，表现为“想到就做”“来不及思考后果”以及频繁打断、插话或冲动决策。行为抑制与冲动控制困难被界定为个体在需要延迟反应、权衡后果或遵守行为规范时，难以抑制即时行为冲动的稳定倾向。该维度强调“反应之前的失控”，而非活动水平本身，尤其适用于评估青少年在社交互动、情绪情境与数字环境中的冲动表现。因此，条目设计同时覆盖行为层面与主观体验层面，具有较好的生态效度。 "
+        },
+        {
+          "name": "心理与言语多动",
+          "code": "05",
+          "desc_casual": "",
+          "desc_academic": "心理与言语多动是指个体在认知与言语层面表现出的过度活跃状态，具体表现为思维跳跃、内心难以安静、想法不断涌现，以及说话过多、语速过快或难以抑制表达冲动。与传统以身体活动为核心的“多动”不同，该亚维度强调内在认知活动与言语输出的过度激活，在青少年与青年群体中尤为常见。心理与言语多动被界定为个体在缺乏外界刺激时，仍持续体验到思维与言语层面的过度活跃状态。该维度强调多动的“内化表现”，区别于身体活动水平，尤其适用于评估青春期及以上群体中不易被传统量表捕捉的多动形式。因此，测量覆盖思维速度、内心躁动、言语输出控制等方面，并避免将其简单等同于外向性或社交性。"
+        },
+        {
+          "name": "活动水平调节困难",
+          "code": "06",
+          "desc_casual": "",
+          "desc_academic": "活动水平调节困难是指个体在不同情境下难以根据环境要求调节自身活动强度与身体状态，表现为坐立不安、频繁动作、难以保持静止，或在需要安静的场合中活动水平明显偏高。该维度是传统 ADHD 多动表现的核心，但在青少年阶段常以“细微、持续的动作”而非剧烈跑动呈现。活动水平调节困难被界定为个体在需要保持相对静止或低活动状态的情境中，难以有效调节身体活动强度的稳定倾向。该维度强调“活动量与情境要求的不匹配”，而非单纯的精力旺盛。其测量覆盖不同场景下的身体不安、小动作频率及主观控制感，以避免将多动简单等同于活跃或外向。"
+        }
+      ]
+    },
+    {
+      "code": "ADHD _Oppose",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - Opposition/Conflict",
+      "title_cn": "注意力缺陷多动障碍 - 违抗/冲突",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "权威对立与规则抵触",
+          "code": "07",
+          "desc_casual": "",
+          "desc_academic": "权威对立与规则抵触是指个体在面对外部权威（如教师、家长、制度要求）或明确规则时，表现出持续的抗拒、反驳或不配合倾向，常以争辩、顶撞、故意不遵守规则等形式出现。该维度并非单纯的“不听话”，而强调一种稳定的互动模式，即在权力不对等关系中对控制与要求的负向反应。权威对立与规则抵触被界定为个体在面对外部要求、规范或权威指令时，倾向于以反驳、抗拒或消极不配合方式回应的稳定特征。该维度强调互动关系中的“对抗性反应模式”，而非偶发的不顺从行为。测量时区分合理表达意见与情绪性、动机性反抗，以避免将正常自主性误判为问题行为。"
+        },
+        {
+          "name": "易怒情绪与情绪性反应",
+          "code": "08",
+          "desc_casual": "",
+          "desc_academic": "易怒情绪与情绪性反应是指个体在日常互动中情绪阈值较低、容易因小事产生愤怒、不耐烦或情绪爆发的倾向，常伴随对立或违抗行为出现。该维度强调情绪层面的不稳定性，是对立行为的重要情绪基础。"
+        }
+      ]
+    },
+    {
+      "code": "ADHD_EmoReg",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - EmoRegulation",
+      "title_cn": "注意力缺陷多动障碍 - 情绪调节困难",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "情绪调节与恢复困难",
+          "code": "09",
+          "desc_casual": "",
+          "desc_academic": "情绪调节与恢复困难是指个体在经历情绪波动后，难以有效识别、管理或缓解自身情绪状态的倾向，表现为情绪持续时间长、难以冷静、情绪反应过后仍长时间受影响。该维度强调情绪过程管理能力，而非具体情绪内容（如愤怒或悲伤）。情绪调节与恢复困难被界定为个体在情绪被触发后，难以有效管理情绪强度、持续时间及其对行为和认知的影响。该维度强调“情绪之后发生了什么”，是理解功能受损与心理健康风险的重要桥梁。测量时关注情绪恢复、调节策略可及性以及主观失控体验。 "
+        }
+      ]
+    },
+    {
+      "code": "ADHD_Motiv",
+      "title_en": "Attention-Deficit/Hyperactivity Disorder - Delay Aversion",
+      "title_cn": "注意力缺陷多动障碍 - 动机/延迟满足",
+      "title_full": "EQAI注意力缺陷多动障碍筛查量表",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "即时奖励偏好与延迟厌恶",
+          "code": "10",
+          "desc_casual": "",
+          "desc_academic": "即时奖励偏好与延迟厌恶是指个体在决策和行为选择中，更倾向于即时、低成本回报，而对需要等待或长期投入的目标表现出显著回避。该维度并非单纯的冲动，而是一种稳定的动机取向差异。即时奖励偏好与延迟厌恶被界定为个体在面对需要等待、持续投入或延迟回报的任务时，主观动机显著下降的稳定倾向。该维度强调“等待本身的心理成本”，而非能力不足或懒惰。其测量对于理解学习坚持、目标管理与数字依赖具有重要价值。 "
+        }
+      ]
+    },
+    {
+      "code": "16PF",
+      "title_en": "Cattell's 16 Personality Factors Test",
+      "title_cn": "卡特尔十六种人格因素测验",
+      "title_full": "EQAI人格因素测验",
+      "module_cn": "能力与发展",
+      "module_code": 2,
+      "measures": [
+        {
+          "name": "乐群性",
+          "code": "01",
+          "desc_casual": "A1\tINTEGER\t\"I know how to comfort others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA2\tINTEGER\t\"I enjoy bringing people together\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA3\tINTEGER\t\"I feel others' emotions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA4\tINTEGER\t\"I take an interest in other people's lives\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA5\tINTEGER\t\"I cheer people up\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA6\tINTEGER\t\"I make people feel at ease\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA7\tINTEGER\t\"I take time out for others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA8\tINTEGER\t\"I don't like to get involved in other people's problems\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA9\tINTEGER\t\"I am not really interested in others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nA10\tINTEGER\t\"I try not to think about the needy\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB1\tINTEGER\t\"I make insightful remarks\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB2\tINTEGER\t\"I know the answers to many questions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB3\tINTEGER\t\"I tend to analyze things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB4\tINTEGER\t\"I use my brain\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB5\tINTEGER\t\"I learn quickly\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB6\tINTEGER\t\"I counter others' arguments\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB7\tINTEGER\t\"I reflect on things before acting\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB8\tINTEGER\t\"I weigh the pros against the cons\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB9\tINTEGER\t\"I consider myself an average person\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB10\tINTEGER\t\"I get confused easily\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB11\tINTEGER\t\"I know that I am not a special person\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB12\tINTEGER\t\"I have a poor vocabulary\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nB13\tINTEGER\t\"I skip difficult words while reading\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC1\tINTEGER\t\"I seldom feel blue\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC2\tINTEGER\t\"I feel comfortable with myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC3\tINTEGER\t\"I readily overcome setbacks\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC4\tINTEGER\t\"I am relaxed most of the time\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC5\tINTEGER\t\"I am not easily frustrated\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC6\tINTEGER\t\"I have frequent mood swings\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC7\tINTEGER\t\"I often feel blue\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC8\tINTEGER\t\"I dislike myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC9\tINTEGER\t\"I feel desperate\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nC10\tINTEGER\t\"I am easily discouraged\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD1\tINTEGER\t\"I take charge\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD2\tINTEGER\t\"I want to be in charge\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD3\tINTEGER\t\"I say what I think\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD4\tINTEGER\t\"I am not afraid of providing criticism\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD5\tINTEGER\t\"I take control of things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD6\tINTEGER\t\"I can take strong measures\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD7\tINTEGER\t\"I wait for others to lead the way\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD8\tINTEGER\t\"I never challenge things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD9\tINTEGER\t\"I let others make the decisions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nD10\tINTEGER\t\"I let myself be pushed around\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE1\tINTEGER\t\"I am the life of the party\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE2\tINTEGER\t\"I love large parties\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE3\tINTEGER\t\"I joke around a lot\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE4\tINTEGER\t\"I enjoy being part of a loud crowd\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE5\tINTEGER\t\"I amuse my friends\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE6\tINTEGER\t\"I act wild and crazy\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE7\tINTEGER\t\"I seldom joke around\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE8\tINTEGER\t\"I don't like crowded events\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE9\tINTEGER\t\"I am the last to laugh at a joke\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nE10\tINTEGER\t\"I dislike loud music\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF1\tINTEGER\t\"I believe laws should be strictly enforced\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF2\tINTEGER\t\"I try to follow the rules\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF3\tINTEGER\t\"I believe in one true religion\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF4\tINTEGER\t\"I respect authority\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF5\tINTEGER\t\"I like to stand during the national anthem\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF6\tINTEGER\t\"I resist authority\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF7\tINTEGER\t\"I break rules\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF8\tINTEGER\t\"I use swear words\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF9\tINTEGER\t\"I oppose authority\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nF10\tINTEGER\t\"I know how to get around the rules\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG1\tINTEGER\t\"I feel comfortable around people\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG2\tINTEGER\t\"I talk to a lot of different people at parties\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG3\tINTEGER\t\"I don't mind being the center of attention\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG4\tINTEGER\t\"I make friends easily\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG5\tINTEGER\t\"I start conversations\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG6\tINTEGER\t\"I find it difficult to approach others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG7\tINTEGER\t\"I often feel uncomfortable around others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG8\tINTEGER\t\"I have little to say\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG9\tINTEGER\t\"I am quiet around strangers\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nG10\tINTEGER\t\"I keep in the background\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH1\tINTEGER\t\"I like to read\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH2\tINTEGER\t\"I enjoy discussing movies and books with others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH3\tINTEGER\t\"I read a lot\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH4\tINTEGER\t\"I don't like action movies\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH5\tINTEGER\t\"I cry during movies\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH6\tINTEGER\t\"I love flowers\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH7\tINTEGER\t\"I do not enjoy watching dance performances\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH8\tINTEGER\t\"I do not like poetry\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH9\tINTEGER\t\"I dislike works of fiction\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nH10\tINTEGER\t\"I rarely notice my emotional reactions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI1\tINTEGER\t\"I find it hard to forgive others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI2\tINTEGER\t\"I suspect hidden motives in others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI3\tINTEGER\t\"I am wary of others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI4\tINTEGER\t\"I distrust people\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI5\tINTEGER\t\"I believe that people seldom tell you the whole truth\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI6\tINTEGER\t\"I believe that people are essentially evil\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI7\tINTEGER\t\"I trust what people say\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI8\tINTEGER\t\"I trust others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI9\tINTEGER\t\"I believe that others have good intentions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nI10\tINTEGER\t\"I believe that people are basically moral\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ1\tINTEGER\t\"I do things that others find strange\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ2\tINTEGER\t\"I like to get lost in thought\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ3\tINTEGER\t\"I enjoy wild flights of fantasy\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ4\tINTEGER\t\"I love to daydream\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ5\tINTEGER\t\"I swim against the current\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ6\tINTEGER\t\"I take deviant positions\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ7\tINTEGER\t\"I do unexpected things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ8\tINTEGER\t\"I do things by the book\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ9\tINTEGER\t\"I seldom daydream\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nJ10\tINTEGER\t\"I seldom get lost in thought\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK1\tINTEGER\t\"I reveal little about myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK2\tINTEGER\t\"I am hard to get to know\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK3\tINTEGER\t\"I don't talk a lot\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK4\tINTEGER\t\"I bottle up my feelings\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK5\tINTEGER\t\"I keep my thoughts to myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK6\tINTEGER\t\"I am open about myself to others\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK7\tINTEGER\t\"I am open about my feelings\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK8\tINTEGER\t\"I disclose my intimate thoughts\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK9\tINTEGER\t\"I show my feelings\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nK10\tINTEGER\t\"I am willing to talk about myself\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL1\tINTEGER\t\"I am afraid that I will do the wrong thing\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL2\tINTEGER\t\"I feel threatened easily\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL3\tINTEGER\t\"I am easily hurt\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL4\tINTEGER\t\"I worry about things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL5\tINTEGER\t\"I spend time thinking about past mistakes\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL6\tINTEGER\t\"I feel guilty when I say 'no'\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL7\tINTEGER\t\"I feel crushed by setbacks\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL8\tINTEGER\t\"I don't worry about things that have already happened\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL9\tINTEGER\t\"I am not easily bothered by things\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was labeled as \"strongly agree\".\nL10\tINTEGER\t\"I don't let others discourage me\" rated on a five point scale (1-5;0 if missed). 1 was labeled as \"strongly disagree\", 2 was labeled as \"disagree\", 3 was labeled as \"neither agree not disagree\", 4 was labeled as \"agree\" and 5 was label"
+        },
+        {
+          "name": "聪慧性",
+          "code": "02",
+          "desc_casual": ""
+        },
+        {
+          "name": "稳定性",
+          "code": "03",
+          "desc_casual": ""
+        },
+        {
+          "name": "恃强性",
+          "code": "04",
+          "desc_casual": ""
+        },
+        {
+          "name": "兴奋性",
+          "code": "05",
+          "desc_casual": ""
+        },
+        {
+          "name": "有恒性",
+          "code": "06",
+          "desc_casual": ""
+        },
+        {
+          "name": "敢为性",
+          "code": "07",
+          "desc_casual": ""
+        },
+        {
+          "name": "敏感性",
+          "code": "08",
+          "desc_casual": ""
+        },
+        {
+          "name": "怀疑性",
+          "code": "09",
+          "desc_casual": ""
+        },
+        {
+          "name": "幻想性",
+          "code": "10",
+          "desc_casual": ""
+        },
+        {
+          "name": "世故性",
+          "code": "11",
+          "desc_casual": ""
+        },
+        {
+          "name": "忧虑性",
+          "code": "12",
+          "desc_casual": ""
+        },
+        {
+          "name": "实验性",
+          "code": "13",
+          "desc_casual": ""
+        },
+        {
+          "name": "独立性",
+          "code": "14",
+          "desc_casual": ""
+        },
+        {
+          "name": "自律性",
+          "code": "15",
+          "desc_casual": ""
+        },
+        {
+          "name": "紧张性",
+          "code": "16",
+          "desc_casual": ""
+        }
+      ]
+    },
+    {
+      "code": "Achenbach_YSR",
+      "title_en": "Achenbach System - Youth Self-Report",
+      "title_cn": "青少年自评量表",
+      "title_full": "EQAI身心健康自评筛查",
+      "module_cn": "身心健康",
+      "module_code": 1,
+      "measures": [
+        {
+          "name": "焦虑/抑郁",
+          "code": "01",
+          "desc_casual": ""
+        },
+        {
+          "name": "退缩/抑郁",
+          "code": "02",
+          "desc_casual": ""
+        },
+        {
+          "name": "躯体主诉",
+          "code": "03",
+          "desc_casual": ""
+        },
+        {
+          "name": "社会交往问题",
+          "code": "04",
+          "desc_casual": ""
+        },
+        {
+          "name": "思维问题",
+          "code": "05",
+          "desc_casual": ""
+        },
+        {
+          "name": "注意力问题",
+          "code": "06",
+          "desc_casual": ""
+        },
+        {
+          "name": "违纪行为",
+          "code": "07",
+          "desc_casual": ""
+        },
+        {
+          "name": "攻击性行为",
+          "code": "08",
+          "desc_casual": ""
+        }
+      ]
+    },
+    {
+      "code": "Achenbach_CBCL",
+      "title_en": "Achenbach System - Child Behavior Checklist",
+      "title_cn": "儿童青少年行为量表",
+      "title_full": "EQAI身心健康他评筛查（家长）",
+      "module_cn": "家长参与",
+      "module_code": 3,
+      "measures": [
+        {
+          "name": "焦虑/抑郁",
+          "code": "01",
+          "desc_casual": ""
+        },
+        {
+          "name": "退缩/抑郁",
+          "code": "02",
+          "desc_casual": ""
+        },
+        {
+          "name": "躯体主诉",
+          "code": "03",
+          "desc_casual": ""
+        },
+        {
+          "name": "社会交往问题",
+          "code": "04",
+          "desc_casual": ""
+        },
+        {
+          "name": "思维问题",
+          "code": "05",
+          "desc_casual": ""
+        },
+        {
+          "name": "注意力问题",
+          "code": "06",
+          "desc_casual": ""
+        },
+        {
+          "name": "违纪行为",
+          "code": "07",
+          "desc_casual": ""
+        },
+        {
+          "name": "攻击性行为",
+          "code": "08",
+          "desc_casual": ""
+        }
+      ]
+    }
+  ]
+}
