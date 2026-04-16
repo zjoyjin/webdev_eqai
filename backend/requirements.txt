@@ -1,0 +1,27 @@
+# ── Web framework ─────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# ── Settings / env ────────────────────────────────────────────────────────────
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# ── Database ─────────────────────────────────────────────────────────────────
+supabase==2.9.1
+psycopg2-binary==2.9.10   # optional: for direct Postgres access if needed
+
+# ── AI / LLM ─────────────────────────────────────────────────────────────────
+openai==1.54.0
+anthropic==0.39.0
+
+# ── Data processing ───────────────────────────────────────────────────────────
+pandas==2.2.3
+openpyxl==3.1.5           # Excel .xlsx reader
+numpy==1.26.4
+
+# ── Language detection ────────────────────────────────────────────────────────
+langdetect==1.0.9
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+httpx==0.27.2              # async HTTP (used by supabase client internally)
+tenacity==9.0.0            # retry decorator (optional alternative to manual backoff)
