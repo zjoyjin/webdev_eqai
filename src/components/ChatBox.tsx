@@ -44,6 +44,78 @@ const MODULE_LABELS: Record<string, { en: string; emoji: string }> = {
   '家长参与': { en: 'Parenting', emoji: '👨‍👩‍👧' },
 };
 
+// Natural language keyword → assessment codes
+const KEYWORD_MAP: { keywords: string[]; codes: string[]; reply: string }[] = [
+  {
+    keywords: ['low mood', 'sad', 'sadness', 'depressed', 'depression', 'unhappy', 'down', 'hopeless', 'empty', 'crying', 'tearful', 'mood', 'bad mood', 'feeling low', 'feel low', 'feel sad'],
+    codes: ['SSD', 'SR', 'ER_Aware', 'ER_Accept'],
+    reply: "It sounds like you may be experiencing low mood or emotional difficulties. Here are the most relevant assessments:",
+  },
+  {
+    keywords: ['anxious', 'anxiety', 'worry', 'worried', 'panic', 'stress', 'stressed', 'nervous', 'fear', 'scared', 'overwhelmed', 'tense', 'uneasy', 'overthinking'],
+    codes: ['ER_Aware', 'ER_Strategy', 'Soc_Stress', 'MWI'],
+    reply: "It sounds like you may be dealing with anxiety or stress. Here are relevant assessments:",
+  },
+  {
+    keywords: ['sleep', 'insomnia', 'can\'t sleep', 'trouble sleeping', 'tired', 'fatigue', 'exhausted', 'headache', 'body pain', 'stomach', 'physical', 'somatic'],
+    codes: ['SSD'],
+    reply: "You may be experiencing physical or sleep-related symptoms. Here is the relevant assessment:",
+  },
+  {
+    keywords: ['school', 'school refusal', 'hate school', 'don\'t want to go to school', 'skipping school', 'refuse school', 'school stress', 'school anxiety', 'academic pressure', 'study pressure'],
+    codes: ['SR', 'Aca_Competence'],
+    reply: "It sounds like there may be some challenges with school or studying. Here are relevant assessments:",
+  },
+  {
+    keywords: ['attention', 'focus', 'concentrate', 'distracted', 'can\'t focus', 'can\'t concentrate', 'adhd', 'hyperactive', 'hyper', 'fidget', 'restless', 'impulsive', 'impulsivity', 'self-control', 'self control'],
+    codes: ['ADHD_Inattention', 'ADHD_Hyperact', 'ADHD_EmoReg', 'ADHD_Motiv', 'ER_ImpulseControl'],
+    reply: "You may be looking for assessments related to attention, focus, or impulse control:",
+  },
+  {
+    keywords: ['emotion', 'emotional', 'feelings', 'regulate', 'anger', 'angry', 'rage', 'outburst', 'mood swings', 'emotional regulation', 'manage emotions', 'control emotions'],
+    codes: ['ER_Aware', 'ER_Accept', 'ER_ImpulseControl', 'ER_Strategy', 'ADHD_EmoReg'],
+    reply: "It sounds like you're looking for help with emotional regulation. Here are relevant assessments:",
+  },
+  {
+    keywords: ['social', 'friendship', 'friends', 'relationships', 'bullying', 'bullied', 'peers', 'lonely', 'loneliness', 'isolation', 'social stress', 'peer pressure', 'classmates', 'teacher'],
+    codes: ['Soc_Stress', 'MWI', 'SR'],
+    reply: "You may be dealing with social or relationship challenges. Here are relevant assessments:",
+  },
+  {
+    keywords: ['parenting', 'parent', 'raise kids', 'raising children', 'child rearing', 'my child', 'my kid', 'discipline', 'authoritative', 'strict parent', 'lenient parent'],
+    codes: ['PS_Authoritative', 'PS_Authoritarian', 'PS_Permissive'],
+    reply: "Here are assessments related to parenting styles:",
+  },
+  {
+    keywords: ['intelligence', 'iq', 'smart', 'cognitive', 'thinking', 'wisdom', 'multiple intelligence', 'ability', 'talent', 'gifted', 'creativity', 'logic', 'problem solving'],
+    codes: ['MWI'],
+    reply: "Here is the assessment for intelligence and cognitive abilities:",
+  },
+  {
+    keywords: ['academic', 'study', 'learning', 'grades', 'school work', 'homework', 'exam', 'test', 'study skills', 'motivation to study', 'learning strategies'],
+    codes: ['Aca_Competence', 'SR'],
+    reply: "Here are assessments related to academic performance and learning:",
+  },
+  {
+    keywords: ['opposition', 'defiant', 'disobedient', 'rule breaking', 'authority', 'conflict', 'argumentative', 'rebellious'],
+    codes: ['ADHD _Oppose', 'PS_Authoritarian'],
+    reply: "Here are assessments related to oppositional behaviour and conflict:",
+  },
+];
+
+function findByKeywords(input: string, data: AssessmentData): { matches: AssessmentGroup[]; reply: string } | null {
+  const lower = input.toLowerCase();
+  for (const entry of KEYWORD_MAP) {
+    if (entry.keywords.some((kw) => lower.includes(kw))) {
+      const matches = entry.codes
+        .map((code) => data.original.find((g) => g.code.trim() === code.trim()))
+        .filter((g): g is AssessmentGroup => !!g);
+      if (matches.length > 0) return { matches, reply: entry.reply };
+    }
+  }
+  return null;
+}
+
 interface ChatBoxProps {
   variant?: 'floating' | 'inline';
 }
@@ -228,7 +300,20 @@ export default function ChatBox({ variant = 'floating' }: ChatBoxProps) {
 
     const lower = trimmed.toLowerCase();
 
-    // Search across groups and measures
+    // 1. Check natural language keyword map first
+    const keywordResult = findByKeywords(trimmed, assessmentData);
+    if (keywordResult) {
+      const options: Option[] = keywordResult.matches.map((g) => ({
+        label: `${g.title_cn} — ${g.title_en}`,
+        value: g.code,
+        description: g.title_full,
+      }));
+      addMessage({ text: keywordResult.reply, sender: 'assistant', options });
+      setStep('awaiting_group');
+      return;
+    }
+
+    // 2. Fallback: exact text search across groups and measures
     const matches = assessmentData.original.filter(
       (g) =>
         g.title_en.toLowerCase().includes(lower) ||
