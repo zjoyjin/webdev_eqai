@@ -11,7 +11,6 @@ export default function Footer({ locale }: FooterProps) {
   const navLinks = [
     { href: `/${locale}`, label: t('nav.home') },
     { href: `/${locale}/about`, label: t('nav.about') },
-    { href: `/${locale}/donate`, label: t('nav.donate') },
     { href: `/${locale}/contact`, label: t('nav.contact') },
   ];
 

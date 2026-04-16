@@ -4,6 +4,7 @@ import AssessmentCard from '@/components/AssessmentCard';
 import HeroSection from '@/components/HeroSection';
 import FeatureCard from '@/components/FeatureCard';
 import Footer from '@/components/Footer';
+import ChatBox from '@/components/ChatBox';
 
 type Props = {
   params: { locale: string };
@@ -160,6 +161,24 @@ export default function HomePage({ params: { locale } }: Props) {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Assessment Guide Chat Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-4">
+              Ask Us Anything
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-light text-gray-900">
+              Find Your Assessment
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 font-light">
+              Not sure where to start? Chat with our guide to discover the right assessment for you.
+            </p>
+          </div>
+          <ChatBox variant="inline" />
         </div>
       </section>
 

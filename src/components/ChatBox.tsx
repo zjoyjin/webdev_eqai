@@ -44,7 +44,11 @@ const MODULE_LABELS: Record<string, { en: string; emoji: string }> = {
   '家长参与': { en: 'Parenting', emoji: '👨‍👩‍👧' },
 };
 
-export default function ChatBox() {
+interface ChatBoxProps {
+  variant?: 'floating' | 'inline';
+}
+
+export default function ChatBox({ variant = 'floating' }: ChatBoxProps) {
   const [isOpen, setIsOpen] = useState(true);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -275,31 +279,48 @@ export default function ChatBox() {
   };
 
   // ---- Styles ----
-  const containerStyle: React.CSSProperties = {
-    position: 'fixed',
-    bottom: '16px',
-    right: '16px',
-    zIndex: 99999,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    fontFamily: 'system-ui, -apple-system, sans-serif',
-  };
+  const containerStyle: React.CSSProperties = variant === 'inline'
+    ? {
+        width: '100%',
+        fontFamily: 'system-ui, -apple-system, sans-serif',
+      }
+    : {
+        position: 'fixed',
+        bottom: '16px',
+        right: '16px',
+        zIndex: 99999,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+        fontFamily: 'system-ui, -apple-system, sans-serif',
+      };
 
-  const chatWindowStyle: React.CSSProperties = {
-    marginBottom: '12px',
-    width: '380px',
-    maxWidth: 'calc(100vw - 32px)',
-    height: '520px',
-    maxHeight: 'calc(100vh - 100px)',
-    backgroundColor: '#ffffff',
-    borderRadius: '16px',
-    boxShadow: '0 10px 40px rgba(0,0,0,0.2)',
-    border: '2px solid #0ea5e9',
-    display: 'flex',
-    flexDirection: 'column',
-    overflow: 'hidden',
-  };
+  const chatWindowStyle: React.CSSProperties = variant === 'inline'
+    ? {
+        width: '100%',
+        height: '520px',
+        backgroundColor: '#ffffff',
+        borderRadius: '16px',
+        boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
+        border: '2px solid #0ea5e9',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+      }
+    : {
+        marginBottom: '12px',
+        width: '380px',
+        maxWidth: 'calc(100vw - 32px)',
+        height: '520px',
+        maxHeight: 'calc(100vh - 100px)',
+        backgroundColor: '#ffffff',
+        borderRadius: '16px',
+        boxShadow: '0 10px 40px rgba(0,0,0,0.2)',
+        border: '2px solid #0ea5e9',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+      };
 
   const headerStyle: React.CSSProperties = {
     padding: '14px 16px',
@@ -415,6 +436,81 @@ export default function ChatBox() {
       )
     );
   };
+
+  if (variant === 'inline') {
+    return (
+      <div style={containerStyle}>
+        <div style={chatWindowStyle} role="region" aria-labelledby="chat-title-inline">
+          {/* Header */}
+          <div style={headerStyle}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{
+                width: '32px', height: '32px', borderRadius: '50%',
+                background: 'rgba(255,255,255,0.2)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '16px'
+              }}>🧠</div>
+              <div>
+                <h2 id="chat-title-inline" style={{ color: '#fff', fontWeight: 600, fontSize: '14px', margin: 0 }}>
+                  Assessment Guide
+                </h2>
+                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '11px', margin: 0 }}>
+                  Find the right assessment for you
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Messages */}
+          <div style={messagesAreaStyle} role="log" aria-live="polite">
+            {messages.map((msg) => (
+              <div key={msg.id} style={{ alignSelf: msg.sender === 'user' ? 'flex-end' : 'flex-start', maxWidth: '88%' }}>
+                <div style={msg.sender === 'user' ? userBubbleStyle : assistantBubbleStyle}>
+                  {formatText(msg.text)}
+                </div>
+                {msg.options && msg.sender === 'assistant' && (
+                  <div style={{ marginTop: '4px' }}>
+                    {msg.options.map((opt) => (
+                      <button
+                        key={opt.value}
+                        onClick={() => handleOption(opt)}
+                        style={optionButtonStyle}
+                        onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e0f2fe'; e.currentTarget.style.borderColor = '#7dd3fc'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#f0f9ff'; e.currentTarget.style.borderColor = '#bae6fd'; }}
+                      >
+                        {opt.label}
+                        {opt.description && (
+                          <span style={{ display: 'block', fontSize: '10px', color: '#64748b', marginTop: '2px' }}>{opt.description}</span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
+          {/* Input */}
+          <div style={inputAreaStyle}>
+            <input
+              ref={inputRef}
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Search assessments or ask a question..."
+              style={inputStyle}
+              aria-label="Type your message"
+            />
+            <button onClick={handleSend} disabled={!inputValue.trim()} style={sendButtonStyle} aria-label="Send">
+              <svg width="18" height="18" fill="none" stroke="#fff" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={containerStyle}>

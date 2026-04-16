@@ -15,7 +15,6 @@ export default function Navigation() {
   const navItems = [
     { key: 'home', href: `/${locale}`, label: t('nav.home') },
     { key: 'about', href: `/${locale}/about`, label: t('nav.about') },
-    { key: 'donate', href: `/${locale}/donate`, label: t('nav.donate') },
     { key: 'contact', href: `/${locale}/contact`, label: t('nav.contact') }
   ];
 
