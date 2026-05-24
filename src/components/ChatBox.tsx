@@ -137,13 +137,19 @@ export default function ChatBox({ variant = 'floating' }: ChatBoxProps) {
   const [inputValue, setInputValue] = useState('');
   const [step, setStep] = useState<ConversationStep>('idle');
   const [assessmentData, setAssessmentData] = useState<AssessmentData | null>(null);
+  const [assessmentSlug, setAssessmentSlug] = useState<string | null>(null);
   const [selectedModule, setSelectedModule] = useState<string | null>(null);
   const [selectedGroup, setSelectedGroup] = useState<AssessmentGroup | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    fetch('/api/assessments')
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('slug') ?? params.get('assessmentSlug');
+    const url = slug ? `/api/assessments?slug=${encodeURIComponent(slug)}` : '/api/assessments';
+
+    setAssessmentSlug(slug);
+    fetch(url)
       .then((r) => r.json())
       .then((d) => setAssessmentData(d))
       .catch(() => {});
@@ -175,7 +181,9 @@ export default function ChatBox({ variant = 'floating' }: ChatBoxProps) {
         value: m,
       }));
       addMessage({
-        text: 'Which area are you interested in assessing?',
+        text: assessmentSlug
+          ? `Using **${assessmentSlug}** assessment data. Which area are you interested in assessing?`
+          : 'Which area are you interested in assessing?',
         sender: 'assistant',
         options: moduleOptions,
       });
