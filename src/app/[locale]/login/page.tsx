@@ -1,4 +1,5 @@
 import LoginForm from '@/components/LoginForm';
+import { Eyebrow, PageShell } from '@/components/PageChrome';
 import { getSupabaseBrowserConfig, isSupabaseConfigured } from '@/lib/supabase/server';
 import { getTranslations } from 'next-intl/server';
 
@@ -16,11 +17,9 @@ export default async function LoginPage({ params: { locale }, searchParams }: Pr
   const supabaseConfig = getSupabaseBrowserConfig();
 
   return (
-    <div className="mx-auto max-w-md px-4 py-12 sm:px-6 sm:py-16">
+    <PageShell maxWidth="max-w-md">
       <div className="mb-8">
-        <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
-          {t('eyebrow')}
-        </p>
+        <Eyebrow tone="primary">{t('eyebrow')}</Eyebrow>
         <h1 className="text-3xl font-light text-gray-900">{t('title')}</h1>
         <p className="mt-4 text-sm leading-6 text-gray-600">
           {t('intro')}
@@ -28,7 +27,7 @@ export default async function LoginPage({ params: { locale }, searchParams }: Pr
       </div>
 
       {searchParams.message && (
-        <p className="mb-4 border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+        <p className="mb-4 rounded-2xl border border-primary-100 bg-primary-50 p-3 text-sm text-primary-800">
           {searchParams.message}
         </p>
       )}
@@ -40,7 +39,7 @@ export default async function LoginPage({ params: { locale }, searchParams }: Pr
         supabasePublishableKey={supabaseConfig.publishableKey}
         nextPath={nextPath}
       />
-    </div>
+    </PageShell>
   );
 }
 

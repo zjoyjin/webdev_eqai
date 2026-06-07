@@ -9,6 +9,14 @@ import {
   getMvpScale,
 } from '@/lib/mvpScales';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
+import {
+  Eyebrow,
+  PageShell,
+  primaryButtonClass,
+  secondaryButtonClass,
+  softCardClass,
+  softPanelClass,
+} from '@/components/PageChrome';
 
 type Props = {
   params: { locale: string; scaleCode: string };
@@ -135,61 +143,59 @@ export default async function MvpScaleResultPage({
       : null;
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
-      <div className="border border-gray-200 bg-white p-6 sm:p-8">
-        <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
-          {copy.saved}
-        </p>
+    <PageShell maxWidth="max-w-3xl">
+      <div className={softCardClass}>
+        <Eyebrow tone="teal">{copy.saved}</Eyebrow>
         <h1 className="text-3xl font-light text-gray-900">{localizedScale.title}</h1>
         {localizedScale.secondaryTitle && (
           <p className="mt-2 text-sm text-gray-500">{localizedScale.secondaryTitle}</p>
         )}
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div className="border border-gray-200 p-4">
-            <p className="text-xs font-medium uppercase tracking-wide text-gray-400">{copy.totalScore}</p>
-            <p className="mt-2 text-3xl font-light text-gray-900">
+          <div className={softPanelClass}>
+            <p className="text-xs font-medium uppercase tracking-wide text-primary-500">{copy.totalScore}</p>
+            <p className="mt-2 text-3xl font-light text-primary-700">
               {typedAttempt.total_score ?? '--'}
             </p>
           </div>
-          <div className="border border-gray-200 p-4">
-            <p className="text-xs font-medium uppercase tracking-wide text-gray-400">{copy.averageScore}</p>
-            <p className="mt-2 text-3xl font-light text-gray-900">
+          <div className={softPanelClass}>
+            <p className="text-xs font-medium uppercase tracking-wide text-teal-500">{copy.averageScore}</p>
+            <p className="mt-2 text-3xl font-light text-teal-700">
               {averageScore ?? '--'}
             </p>
             <p className="mt-2 text-xs text-gray-500">{copy.scoreRange}</p>
           </div>
-          <div className="border border-gray-200 p-4">
-            <p className="text-xs font-medium uppercase tracking-wide text-gray-400">{copy.completed}</p>
+          <div className={softPanelClass}>
+            <p className="text-xs font-medium uppercase tracking-wide text-lavender-500">{copy.completed}</p>
             <p className="mt-3 text-sm text-gray-700">
               {typedAttempt.completed_at ? formatDate(typedAttempt.completed_at, locale) : copy.savedFallback}
             </p>
           </div>
-          <div className="border border-gray-200 p-4">
-            <p className="text-xs font-medium uppercase tracking-wide text-gray-400">{copy.responseCount}</p>
-            <p className="mt-2 text-3xl font-light text-gray-900">{responseCount}</p>
+          <div className={softPanelClass}>
+            <p className="text-xs font-medium uppercase tracking-wide text-rose-500">{copy.responseCount}</p>
+            <p className="mt-2 text-3xl font-light text-rose-700">{responseCount}</p>
           </div>
         </div>
 
-        <div className="mt-6 border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">
+        <div className="mt-6 rounded-2xl border border-warm-200 bg-warm-50 p-4 text-sm leading-6 text-warm-900">
           {copy.boundary}
         </div>
 
         <section className="mt-8">
           <h2 className="text-xl font-light text-gray-900">{copy.dimensions}</h2>
           {dimensionScores.length === 0 ? (
-            <p className="mt-4 border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-600">
+            <p className="mt-4 rounded-2xl border border-gray-100 bg-gray-50 p-4 text-sm leading-6 text-gray-600">
               {copy.emptyResponses}
             </p>
           ) : (
             <div className="mt-4 space-y-3">
               {dimensionScores.map((dimension) => (
-                <div key={dimension.dimensionCode} className="border border-gray-200 p-4">
+                <div key={dimension.dimensionCode} className={softPanelClass}>
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="flex flex-wrap items-center gap-2">
                         <h3 className="text-sm font-medium text-gray-900">{dimension.title}</h3>
-                        <span className="border border-gray-300 px-2 py-0.5 text-xs text-gray-600">
+                        <span className="rounded-full border border-primary-100 bg-primary-50 px-2 py-0.5 text-xs text-primary-700">
                           {dimension.level}
                         </span>
                       </div>
@@ -202,9 +208,9 @@ export default async function MvpScaleResultPage({
                       <p className="text-xs text-gray-500">{copy.scoreLabel} · {dimension.count} / {copy.scoreRange}</p>
                     </div>
                   </div>
-                  <div className="mt-3 h-2 bg-gray-100">
+                  <div className="mt-3 h-2 overflow-hidden rounded-full bg-primary-100">
                     <div
-                      className="h-2 bg-gray-900"
+                      className="h-2 rounded-full bg-gradient-to-r from-primary-500 to-teal-500"
                       style={{ width: `${Math.max(0, Math.min(100, (Number(dimension.average) / 7) * 100))}%` }}
                     />
                   </div>
@@ -217,19 +223,19 @@ export default async function MvpScaleResultPage({
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Link
             href={`/${locale}/me/assessments`}
-            className="bg-gray-900 px-5 py-3 text-center text-sm font-medium text-white hover:bg-gray-700"
+            className={primaryButtonClass}
           >
             {copy.viewRecords}
           </Link>
           <Link
             href={`/${locale}/assessments`}
-            className="border border-gray-300 px-5 py-3 text-center text-sm font-medium text-gray-700 hover:border-gray-900 hover:text-gray-900"
+            className={secondaryButtonClass}
           >
             {copy.browseMore}
           </Link>
         </div>
       </div>
-    </div>
+    </PageShell>
   );
 }
 

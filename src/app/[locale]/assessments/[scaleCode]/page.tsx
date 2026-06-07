@@ -2,6 +2,14 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { startScaleAttempt } from '@/app/[locale]/mvpScaleActions';
 import {
+  Eyebrow,
+  PageShell,
+  primaryButtonClass,
+  secondaryButtonClass,
+  softCardClass,
+  softPanelClass,
+} from '@/components/PageChrome';
+import {
   getCurrentUser,
   getLocalizedDimensionText,
   getLocalizedScaleText,
@@ -50,14 +58,14 @@ export default async function MvpScaleDetailPage({
   const localizedScale = getLocalizedScaleText(scale, locale);
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
-      <Link href={`/${locale}/assessments`} className="text-sm font-medium text-gray-600 hover:text-gray-900">
+    <PageShell maxWidth="max-w-4xl">
+      <Link href={`/${locale}/assessments`} className={secondaryButtonClass}>
         {copy.back}
       </Link>
 
-      <div className="mt-8 border border-gray-200 bg-white p-6 sm:p-8">
+      <div className={`mt-8 ${softCardClass}`}>
         <div className="mb-5 flex flex-wrap items-center gap-3">
-          <span className="text-sm text-gray-500">{localizedScale.moduleName}</span>
+          <Eyebrow tone="teal" className="mb-0">{localizedScale.moduleName}</Eyebrow>
         </div>
 
         <h1 className="text-3xl font-light text-gray-900">{localizedScale.title}</h1>
@@ -68,12 +76,12 @@ export default async function MvpScaleDetailPage({
           {localizedScale.description}
         </p>
 
-        <div className="mt-6 border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">
+        <div className="mt-6 rounded-2xl border border-warm-200 bg-warm-50 p-4 text-sm leading-6 text-warm-900">
           {copy.boundary}
         </div>
 
         {searchParams.error && (
-          <div className="mt-4 border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+          <div className="mt-4 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
             {searchParams.error}
           </div>
         )}
@@ -87,7 +95,7 @@ export default async function MvpScaleDetailPage({
         >
           <button
             type="submit"
-            className="bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700"
+            className={primaryButtonClass}
           >
             {user ? copy.start : copy.login}
           </button>
@@ -101,7 +109,7 @@ export default async function MvpScaleDetailPage({
             const localizedDimension = getLocalizedDimensionText(dimension, locale);
 
             return (
-              <div key={dimension.dimension_code} className="border border-gray-200 bg-white p-4">
+              <div key={dimension.dimension_code} className={softPanelClass}>
                 <p className="text-sm font-medium text-gray-900">{localizedDimension.title}</p>
                 {localizedDimension.secondaryTitle && (
                   <p className="mt-1 text-sm text-gray-500">{localizedDimension.secondaryTitle}</p>
@@ -112,7 +120,7 @@ export default async function MvpScaleDetailPage({
         </div>
       </section>
 
-    </div>
+    </PageShell>
   );
 }
 

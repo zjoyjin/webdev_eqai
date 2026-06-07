@@ -3,6 +3,7 @@
 import { FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { inputClass, primaryButtonClass, softCardClass } from '@/components/PageChrome';
 
 type ContactFormProps = {
   locale: string;
@@ -68,7 +69,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" aria-busy={pending}>
+    <form onSubmit={handleSubmit} className={`${softCardClass} space-y-6`} aria-busy={pending}>
       {/* Name Field */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -79,7 +80,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
           id="name"
           name="name"
           placeholder={t('placeholder.name')}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all"
+          className={inputClass}
           required
         />
       </div>
@@ -94,7 +95,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
           id="email"
           name="email"
           placeholder={t('placeholder.email')}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all"
+          className={inputClass}
           required
         />
       </div>
@@ -107,7 +108,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
           <select
             id="inquiryType"
             name="inquiryType"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-white"
+            className={inputClass}
             defaultValue="assessment_interest"
             required
           >
@@ -126,7 +127,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
           <select
             id="interestedCategory"
             name="interestedCategory"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-white"
+            className={inputClass}
             defaultValue="general"
             required
           >
@@ -145,7 +146,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
           <select
             id="audienceType"
             name="audienceType"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-white"
+            className={inputClass}
             defaultValue="self"
             required
           >
@@ -168,7 +169,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
           id="subject"
           name="subject"
           placeholder={t('placeholder.subject')}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all"
+          className={inputClass}
           required
         />
       </div>
@@ -183,7 +184,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
           name="message"
           rows={6}
           placeholder={t('placeholder.message')}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all resize-none"
+          className={`${inputClass} resize-none`}
           required
         />
       </div>
@@ -192,17 +193,17 @@ export default function ContactForm({ locale }: ContactFormProps) {
         <input
           type="checkbox"
           name="consentContact"
-          className="mt-1 h-4 w-4 rounded border-gray-300 text-gray-900 focus:ring-gray-900"
+          className="mt-1 h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
           required
         />
         <span>
           {t('consentPrefix')}{' '}
-          <Link href={`/${locale}/privacy`} className="font-medium text-gray-900 underline underline-offset-4">
+          <Link href={`/${locale}/privacy`} className="font-medium text-primary-700 underline underline-offset-4">
             {t('privacyPolicy')}
           </Link>
           {' '}
           {t('consentConnector')}{' '}
-          <Link href={`/${locale}/terms`} className="font-medium text-gray-900 underline underline-offset-4">
+          <Link href={`/${locale}/terms`} className="font-medium text-primary-700 underline underline-offset-4">
             {t('termsOfService')}
           </Link>
           {t('consentSuffix')}
@@ -213,7 +214,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
       <button
         type="submit"
         disabled={pending}
-        className="w-full px-8 py-4 bg-gray-900 text-white text-base font-medium rounded-lg hover:bg-gray-800 transition-colors shadow-sm disabled:cursor-not-allowed disabled:bg-gray-400"
+        className={`w-full px-8 py-4 text-base ${primaryButtonClass}`}
       >
         {pending ? t('submitting') : t('submit')}
       </button>

@@ -1,5 +1,12 @@
 import Link from 'next/link';
 import {
+  Eyebrow,
+  PageShell,
+  secondaryButtonClass,
+  softCardClass,
+  softPanelClass,
+} from '@/components/PageChrome';
+import {
   filterMvpScalesByCategory,
   getLocalizedScaleText,
   getMvpScales,
@@ -82,11 +89,9 @@ export default async function MvpAssessmentsPage({
   );
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+    <PageShell maxWidth="max-w-6xl">
       <div className="mb-10">
-        <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
-          {copy.eyebrow}
-        </p>
+        <Eyebrow tone="primary">{copy.eyebrow}</Eyebrow>
         <h1 className="text-3xl font-light text-gray-900 sm:text-4xl">{copy.title}</h1>
         <p className="mt-4 max-w-2xl text-sm leading-6 text-gray-600">
           {copy.intro}
@@ -96,10 +101,10 @@ export default async function MvpAssessmentsPage({
       <div className="mb-8 flex flex-wrap gap-2">
         <Link
           href={`/${locale}/assessments`}
-          className={`border px-3 py-2 text-sm font-medium ${
+          className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
             selectedCategory
-              ? 'border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900'
-              : 'border-gray-900 bg-gray-900 text-white'
+              ? 'border-gray-200 bg-white text-gray-600 hover:border-primary-200 hover:text-primary-700'
+              : 'border-primary-600 bg-primary-600 text-white shadow-md shadow-primary-100'
           }`}
         >
           {copy.all}
@@ -108,10 +113,10 @@ export default async function MvpAssessmentsPage({
           <Link
             key={category}
             href={`/${locale}/assessments?category=${category}`}
-            className={`border px-3 py-2 text-sm font-medium ${
+            className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
               selectedCategory === category
-                ? 'border-gray-900 bg-gray-900 text-white'
-                : 'border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900'
+                ? 'border-primary-600 bg-primary-600 text-white shadow-md shadow-primary-100'
+                : 'border-gray-200 bg-white text-gray-600 hover:border-primary-200 hover:text-primary-700'
             }`}
           >
             {copy.categories[category]}
@@ -120,7 +125,7 @@ export default async function MvpAssessmentsPage({
       </div>
 
       {selectedCategory && scales.length === 0 && (
-        <div className="mb-8 border border-gray-200 bg-white p-6">
+        <div className={`mb-8 ${softCardClass}`}>
           <h2 className="text-lg font-medium text-gray-900">
             {copy.emptyPrefix} {copy.categories[selectedCategory]} {copy.emptySuffix}
           </h2>
@@ -129,7 +134,7 @@ export default async function MvpAssessmentsPage({
           </p>
           <Link
             href={`/${locale}/assessments`}
-            className="mt-5 inline-block border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-900 hover:text-gray-900"
+            className={`mt-5 ${secondaryButtonClass}`}
           >
             {copy.emptyCta}
           </Link>
@@ -141,7 +146,7 @@ export default async function MvpAssessmentsPage({
           <section key={group.moduleCode}>
             <div className="mb-4 flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                <p className="text-xs font-medium uppercase tracking-wide text-primary-500">
                   {group.moduleCode}
                 </p>
                 <h2 className="mt-1 text-xl font-medium text-gray-900">{group.moduleName}</h2>
@@ -159,7 +164,7 @@ export default async function MvpAssessmentsPage({
                   <Link
                     key={scale.scale_code}
                     href={`/${locale}/assessments/${scale.scale_code}`}
-                    className="border border-gray-200 bg-white p-5 transition-colors hover:border-gray-900"
+                    className={`${softPanelClass} block transition-all hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-100/50`}
                   >
                     <h3 className="text-lg font-medium text-gray-900">
                       {localized.title}
@@ -170,7 +175,7 @@ export default async function MvpAssessmentsPage({
                     <p className="mt-4 text-sm leading-6 text-gray-600">
                       {localized.description}
                     </p>
-                    <p className="mt-5 text-sm font-medium text-gray-900">{copy.viewDetails}</p>
+                    <p className="mt-5 text-sm font-medium text-primary-700">{copy.viewDetails}</p>
                   </Link>
                 );
               })}
@@ -178,7 +183,7 @@ export default async function MvpAssessmentsPage({
           </section>
         ))}
       </div>
-    </div>
+    </PageShell>
   );
 }
 

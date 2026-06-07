@@ -1,5 +1,11 @@
 import Link from 'next/link';
 import { setRequestLocale } from 'next-intl/server';
+import {
+  Eyebrow,
+  primaryButtonClass,
+  secondaryButtonClass,
+  softPanelClass,
+} from '@/components/PageChrome';
 
 type Props = {
   params: { locale: string };
@@ -211,12 +217,10 @@ export default function ReviewPage({ params: { locale } }: Props) {
   const copy = locale === 'zh' ? reviewCopy.zh : reviewCopy.en;
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20">
+    <div className="min-h-screen bg-gradient-to-b from-primary-50 via-white to-gray-50">
+      <div className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
-            {copy.eyebrow}
-          </p>
+          <Eyebrow tone="primary">{copy.eyebrow}</Eyebrow>
           <h1 className="text-4xl font-light text-gray-900 sm:text-5xl">{copy.title}</h1>
           <p className="mt-6 max-w-3xl text-lg font-light leading-relaxed text-gray-600">
             {copy.intro}
@@ -224,13 +228,13 @@ export default function ReviewPage({ params: { locale } }: Props) {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href={`/${locale}/assessments`}
-              className="inline-block bg-gray-900 px-5 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-gray-700"
+              className={primaryButtonClass}
             >
               {copy.primaryCta}
             </Link>
             <Link
               href={`/${locale}/contact`}
-              className="inline-block border border-gray-300 px-5 py-3 text-center text-sm font-medium text-gray-700 transition-colors hover:border-gray-900 hover:text-gray-900"
+              className={secondaryButtonClass}
             >
               {copy.secondaryCta}
             </Link>
@@ -246,10 +250,10 @@ export default function ReviewPage({ params: { locale } }: Props) {
                 <h2 className="text-2xl font-light text-gray-900">{section.heading}</h2>
                 <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
                   {section.items.map((item) => (
-                    <div key={item.label} className="border border-gray-200 bg-white p-5">
+                    <div key={item.label} className={softPanelClass}>
                       <h3 className="text-base font-medium text-gray-900">
                         {'href' in item ? (
-                          <Link href={item.href} className="underline underline-offset-4">
+                          <Link href={item.href} className="text-primary-700 underline underline-offset-4">
                             {item.label}
                           </Link>
                         ) : (

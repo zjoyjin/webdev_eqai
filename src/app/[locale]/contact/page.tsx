@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import ContactForm from '@/components/ContactForm';
+import { Eyebrow, softCardClass } from '@/components/PageChrome';
 
 type Props = {
   params: { locale: string };
@@ -11,10 +12,11 @@ export default function ContactPage({ params: { locale } }: Props) {
   const t = useTranslations('contact');
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-primary-50 via-white to-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20">
+      <div className="py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Eyebrow tone="teal">{t('title')}</Eyebrow>
           <h1 className="text-4xl sm:text-5xl font-light text-gray-900 mb-6">
             {t('title')}
           </h1>
@@ -35,7 +37,7 @@ export default function ContactPage({ params: { locale } }: Props) {
 
             {/* Contact Information */}
             <div className="lg:col-span-1">
-              <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
+              <div className={softCardClass}>
                 <h2 className="text-xl font-medium text-gray-900 mb-6">
                   {t('info.heading')}
                 </h2>

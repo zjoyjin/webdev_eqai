@@ -4,6 +4,7 @@ import { submitScaleAttempt } from '@/app/[locale]/mvpScaleActions';
 import { getCurrentUser, getLocalizedItemText, getLocalizedScaleText, getMvpDemoItems, getMvpScale } from '@/lib/mvpScales';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import ScaleSubmitButton from '@/components/ScaleSubmitButton';
+import { Eyebrow, PageShell, secondaryButtonClass, softCardClass } from '@/components/PageChrome';
 
 type Props = {
   params: { locale: string; scaleCode: string };
@@ -102,20 +103,18 @@ export default async function TakeMvpScalePage({
   const localizedScale = getLocalizedScaleText(scale, locale);
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+    <PageShell maxWidth="max-w-3xl" className="py-10 sm:py-14">
       <div className="mb-8 flex items-center justify-between gap-4">
-        <Link href={`/${locale}/assessments/${scale.scale_code}`} className="text-sm font-medium text-gray-600 hover:text-gray-900">
+        <Link href={`/${locale}/assessments/${scale.scale_code}`} className={secondaryButtonClass}>
           {copy.back}
         </Link>
-        <span className="text-sm text-gray-500">
+        <span className="rounded-full bg-teal-100 px-3 py-1 text-sm font-medium text-teal-700">
           {locale === 'zh' ? `${demoItems.length}${copy.itemCount}` : `${demoItems.length} ${copy.itemCount}`}
         </span>
       </div>
 
-      <div className="mb-8 border border-gray-200 bg-white p-6">
-        <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
-          {copy.eyebrow}
-        </p>
+      <div className={`mb-8 ${softCardClass}`}>
+        <Eyebrow tone="primary">{copy.eyebrow}</Eyebrow>
         <h1 className="text-3xl font-light text-gray-900">{localizedScale.title}</h1>
         {localizedScale.secondaryTitle && (
           <p className="mt-2 text-sm text-gray-500">{localizedScale.secondaryTitle}</p>
@@ -126,13 +125,13 @@ export default async function TakeMvpScalePage({
       </div>
 
       {searchParams.error && (
-        <div className="mb-6 border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+        <div className="mb-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
           {searchParams.error}
         </div>
       )}
 
       {demoItems.length === 0 ? (
-        <div className="border border-gray-200 bg-white p-8 text-center">
+        <div className={softCardClass}>
           <h2 className="text-lg font-medium text-gray-900">{copy.emptyTitle}</h2>
           <p className="mt-3 text-sm text-gray-600">
             {copy.emptyText}
@@ -146,8 +145,8 @@ export default async function TakeMvpScalePage({
           }}
           className="space-y-5"
         >
-          <div className="h-2 bg-gray-100">
-            <div className="h-2 bg-gray-900" style={{ width: '100%' }} />
+          <div className="h-2 overflow-hidden rounded-full bg-primary-100">
+            <div className="h-2 rounded-full bg-gradient-to-r from-primary-500 to-teal-500" style={{ width: '100%' }} />
           </div>
 
           <div className="space-y-4">
@@ -155,8 +154,8 @@ export default async function TakeMvpScalePage({
               const localizedItem = getLocalizedItemText(item, locale);
 
               return (
-                <fieldset key={item.item_code} className="border border-gray-200 bg-white p-5">
-                  <legend className="px-1 text-sm font-medium text-gray-500">
+                <fieldset key={item.item_code} className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm shadow-primary-100/30">
+                  <legend className="rounded-full bg-white px-2 text-sm font-medium text-primary-600">
                     {locale === 'zh'
                       ? `${copy.question}${index + 1}${copy.of}${demoItems.length}${copy.itemCount}`
                       : `${copy.question} ${index + 1} ${copy.of} ${demoItems.length}`}
@@ -172,7 +171,7 @@ export default async function TakeMvpScalePage({
                     {SCORE_OPTIONS.map((score) => (
                       <label
                         key={score}
-                        className="flex cursor-pointer items-center justify-center border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-gray-700 hover:border-gray-900 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-900 has-[:checked]:text-white"
+                        className="flex min-h-11 cursor-pointer items-center justify-center rounded-xl border border-gray-200 bg-white px-3 py-3 text-sm font-medium text-gray-700 transition-colors hover:border-primary-300 hover:text-primary-700 has-[:checked]:border-primary-600 has-[:checked]:bg-primary-600 has-[:checked]:text-white"
                       >
                         <input
                           className="sr-only"
@@ -198,7 +197,7 @@ export default async function TakeMvpScalePage({
           <ScaleSubmitButton idleLabel={copy.submit} pendingLabel={copy.saving} />
         </form>
       )}
-    </div>
+    </PageShell>
   );
 }
 

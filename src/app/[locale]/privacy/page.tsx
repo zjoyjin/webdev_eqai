@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { setRequestLocale } from 'next-intl/server';
+import { Eyebrow, secondaryButtonClass, softPanelClass } from '@/components/PageChrome';
 
 type Props = {
   params: { locale: string };
@@ -83,12 +84,10 @@ export default function PrivacyPage({ params: { locale } }: Props) {
   const copy = locale === 'zh' ? privacyCopy.zh : privacyCopy.en;
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20">
+    <div className="min-h-screen bg-gradient-to-b from-primary-50 via-white to-gray-50">
+      <div className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
-            {copy.eyebrow}
-          </p>
+          <Eyebrow tone="teal">{copy.eyebrow}</Eyebrow>
           <h1 className="text-4xl font-light text-gray-900 sm:text-5xl">{copy.title}</h1>
           <p className="mt-4 text-sm text-gray-500">{copy.updated}</p>
           <p className="mt-6 text-lg font-light leading-relaxed text-gray-600">
@@ -101,7 +100,7 @@ export default function PrivacyPage({ params: { locale } }: Props) {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-10">
             {copy.sections.map((section) => (
-              <section key={section.heading} className="border-t border-gray-200 pt-8">
+              <section key={section.heading} className={softPanelClass}>
                 <h2 className="text-2xl font-light text-gray-900">{section.heading}</h2>
                 <p className="mt-4 text-base font-light leading-7 text-gray-600">
                   {section.body}
@@ -112,7 +111,7 @@ export default function PrivacyPage({ params: { locale } }: Props) {
 
           <Link
             href={`/${locale}/contact`}
-            className="mt-12 inline-block border border-gray-300 px-5 py-3 text-sm font-medium text-gray-700 transition-colors hover:border-gray-900 hover:text-gray-900"
+            className={`mt-12 ${secondaryButtonClass}`}
           >
             {copy.contactCta}
           </Link>

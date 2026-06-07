@@ -1,6 +1,7 @@
 'use client';
 
 import { useFormStatus } from 'react-dom';
+import { primaryButtonClass } from '@/components/PageChrome';
 
 type ScaleSubmitButtonProps = {
   idleLabel: string;
@@ -14,7 +15,7 @@ export default function ScaleSubmitButton({ idleLabel, pendingLabel }: ScaleSubm
     <button
       type="submit"
       disabled={pending}
-      className="w-full bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700 disabled:cursor-not-allowed disabled:bg-gray-500"
+      className={`w-full ${primaryButtonClass}`}
       aria-disabled={pending}
     >
       {pending ? pendingLabel : idleLabel}

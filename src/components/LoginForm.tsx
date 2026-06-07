@@ -3,6 +3,7 @@
 import { FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { createSupabaseBrowserClient } from '@/lib/supabase/browser';
+import { inputClass, primaryButtonClass, softCardClass } from '@/components/PageChrome';
 
 type LoginFormProps = {
   locale: string;
@@ -70,13 +71,13 @@ export default function LoginForm({
   }
 
   return (
-    <div className="border border-gray-200 bg-white p-6 shadow-sm">
-      <div className="mb-6 grid grid-cols-2 border border-gray-200">
+    <div className={softCardClass}>
+      <div className="mb-6 grid grid-cols-2 rounded-full border border-gray-200 bg-gray-50 p-1">
         <button
           type="button"
           onClick={() => setMode('login')}
-          className={`px-4 py-3 text-sm font-medium ${
-            mode === 'login' ? 'bg-gray-900 text-white' : 'text-gray-600 hover:text-gray-900'
+          className={`rounded-full px-4 py-3 text-sm font-medium transition-colors ${
+            mode === 'login' ? 'bg-primary-600 text-white shadow-md shadow-primary-100' : 'text-gray-600 hover:text-primary-700'
           }`}
         >
           {t('loginTab')}
@@ -84,8 +85,8 @@ export default function LoginForm({
         <button
           type="button"
           onClick={() => setMode('register')}
-          className={`px-4 py-3 text-sm font-medium ${
-            mode === 'register' ? 'bg-gray-900 text-white' : 'text-gray-600 hover:text-gray-900'
+          className={`rounded-full px-4 py-3 text-sm font-medium transition-colors ${
+            mode === 'register' ? 'bg-primary-600 text-white shadow-md shadow-primary-100' : 'text-gray-600 hover:text-primary-700'
           }`}
         >
           {t('registerTab')}
@@ -103,7 +104,7 @@ export default function LoginForm({
             required
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className="w-full border border-gray-300 px-3 py-3 text-sm outline-none focus:border-gray-900"
+            className={inputClass}
             placeholder={t('emailPlaceholder')}
           />
         </div>
@@ -119,7 +120,7 @@ export default function LoginForm({
             minLength={6}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            className="w-full border border-gray-300 px-3 py-3 text-sm outline-none focus:border-gray-900"
+            className={inputClass}
             placeholder={t('passwordPlaceholder')}
           />
         </div>
@@ -127,14 +128,14 @@ export default function LoginForm({
         <button
           type="submit"
           disabled={pending}
-          className="w-full bg-gray-900 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700 disabled:cursor-not-allowed disabled:bg-gray-400"
+          className={`w-full ${primaryButtonClass}`}
         >
           {pending ? t('working') : mode === 'login' ? t('loginButton') : t('registerButton')}
         </button>
       </form>
 
       {message && (
-        <p role="status" aria-live="polite" className="mt-4 border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+        <p role="status" aria-live="polite" className="mt-4 rounded-2xl border border-primary-100 bg-primary-50 p-3 text-sm text-primary-800">
           {message}
         </p>
       )}
