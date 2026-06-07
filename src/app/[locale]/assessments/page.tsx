@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {
   filterMvpScalesByCategory,
+  getLocalizedScaleText,
   getMvpScales,
   mvpScaleCategories,
   normalizeMvpScaleCategory,
@@ -13,17 +14,16 @@ type Props = {
 
 const catalogCopy = {
   en: {
-    eyebrow: 'Demo catalog',
-    title: 'Assessment MVP',
+    eyebrow: 'Assessment catalog',
+    title: 'Assessments',
     intro:
-      'These demo scales are scaffolding for the MVP flow. They are not formal psychological assessments or diagnostic instruments.',
+      'Browse EQAI assessment pathways and save your own records. Results are for personal reference and are not a clinical diagnosis.',
     all: 'All',
-    emptyPrefix: 'No demo scales are active for',
+    emptyPrefix: 'No assessments are active for',
     emptySuffix: 'yet.',
-    emptyText: 'Browse all demo scales while this category is being prepared.',
-    emptyCta: 'View all demo scales',
-    demoScales: 'demo scales',
-    demo: 'Demo',
+    emptyText: 'Browse all assessments while this category is being prepared.',
+    emptyCta: 'View all assessments',
+    scaleCount: 'assessments',
     viewDetails: 'View details',
     categories: {
       work: 'Work',
@@ -33,16 +33,15 @@ const catalogCopy = {
     },
   },
   zh: {
-    eyebrow: 'Demo 目录',
-    title: '评估 MVP',
-    intro: '这些 demo 量表用于验证 MVP 流程，不属于正式心理测评或诊断工具。',
+    eyebrow: '评估目录',
+    title: '评估',
+    intro: '浏览 EQAI 评估路径并保存自己的作答记录。结果用于个人参考，不作为临床诊断。',
     all: '全部',
     emptyPrefix: '当前还没有启用',
-    emptySuffix: '类 demo 量表。',
-    emptyText: '该分类仍在准备中，可以先浏览全部 demo 量表。',
-    emptyCta: '查看全部 demo 量表',
-    demoScales: '个 demo 量表',
-    demo: 'Demo',
+    emptySuffix: '类评估。',
+    emptyText: '该分类仍在准备中，可以先浏览全部评估。',
+    emptyCta: '查看全部评估',
+    scaleCount: '个评估',
     viewDetails: '查看详情',
     categories: {
       work: '工作',
@@ -64,6 +63,7 @@ export default async function MvpAssessmentsPage({
   const groupedScales = scales.reduce<Array<{ moduleCode: string; moduleName: string; scales: typeof scales }>>(
     (groups, scale) => {
       const moduleName = scale.module_name_en ?? scale.module_name_cn;
+      const localized = getLocalizedScaleText(scale, locale);
       const existing = groups.find((group) => group.moduleCode === scale.module_code);
 
       if (existing) {
@@ -71,7 +71,7 @@ export default async function MvpAssessmentsPage({
       } else {
         groups.push({
           moduleCode: scale.module_code,
-          moduleName,
+          moduleName: localized.moduleName ?? moduleName,
           scales: [scale],
         });
       }
@@ -147,35 +147,38 @@ export default async function MvpAssessmentsPage({
                 <h2 className="mt-1 text-xl font-medium text-gray-900">{group.moduleName}</h2>
               </div>
               <span className="text-sm text-gray-500">
-                {group.scales.length} {copy.demoScales}
+                {group.scales.length} {copy.scaleCount}
               </span>
             </div>
 
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {group.scales.map((scale) => (
-                <Link
-                  key={scale.scale_code}
-                  href={`/${locale}/assessments/${scale.scale_code}`}
-                  className="border border-gray-200 bg-white p-5 transition-colors hover:border-gray-900"
-                >
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <span className="text-xs font-medium uppercase tracking-wide text-gray-500">
-                      {scale.scale_code}
-                    </span>
-                    <span className="border border-gray-300 px-2 py-1 text-xs font-medium text-gray-600">
-                      {copy.demo}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-medium text-gray-900">
-                    {scale.title_en ?? scale.title_cn}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-500">{scale.title_cn}</p>
-                  <p className="mt-4 text-sm leading-6 text-gray-600">
-                    {scale.description_en ?? scale.description_cn}
-                  </p>
-                  <p className="mt-5 text-sm font-medium text-gray-900">{copy.viewDetails}</p>
-                </Link>
-              ))}
+              {group.scales.map((scale) => {
+                const localized = getLocalizedScaleText(scale, locale);
+
+                return (
+                  <Link
+                    key={scale.scale_code}
+                    href={`/${locale}/assessments/${scale.scale_code}`}
+                    className="border border-gray-200 bg-white p-5 transition-colors hover:border-gray-900"
+                  >
+                    <div className="mb-4">
+                      <span className="text-xs font-medium uppercase tracking-wide text-gray-500">
+                        {scale.scale_code}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-medium text-gray-900">
+                      {localized.title}
+                    </h3>
+                    {localized.secondaryTitle && (
+                      <p className="mt-2 text-sm text-gray-500">{localized.secondaryTitle}</p>
+                    )}
+                    <p className="mt-4 text-sm leading-6 text-gray-600">
+                      {localized.description}
+                    </p>
+                    <p className="mt-5 text-sm font-medium text-gray-900">{copy.viewDetails}</p>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         ))}

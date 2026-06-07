@@ -1,13 +1,13 @@
 -- =============================================================================
--- EQAI MVP scale records
--- Small MVP surface: demo scale catalog + user scale attempts.
+-- EQAI assessment scale records
+-- Public assessment catalog + user scale attempts.
 --
 -- Run this in Supabase Dashboard -> SQL Editor.
 -- Do not paste service role keys or database passwords into SQL.
 -- =============================================================================
 
 -- =============================================================================
--- DEMO SCALE CATALOG
+-- ASSESSMENT SCALE CATALOG
 -- =============================================================================
 
 CREATE TABLE IF NOT EXISTS assessment_scales (
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS assessment_scales (
 );
 
 COMMENT ON TABLE assessment_scales IS
-  'MVP demo scale catalog. Demo rows are not validated formal psychological instruments.';
+  'EQAI assessment scale catalog. Rows are not clinical diagnostic instruments.';
 
 CREATE TABLE IF NOT EXISTS assessment_dimensions (
   id                    UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS assessment_dimensions (
 );
 
 COMMENT ON TABLE assessment_dimensions IS
-  'MVP demo scale dimensions and subdimensions based on the local scale structure draft.';
+  'EQAI assessment dimensions and subdimensions based on the local scale structure.';
 
 CREATE TABLE IF NOT EXISTS assessment_demo_items (
   id             UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS assessment_demo_items (
 );
 
 COMMENT ON TABLE assessment_demo_items IS
-  'MVP demo Likert-style items used only to test the assessment flow.';
+  'Likert-style assessment items for the current short-form assessment flow.';
 
 -- =============================================================================
 -- USER SCALE RECORDS
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS user_scale_attempts (
 );
 
 COMMENT ON TABLE user_scale_attempts IS
-  'MVP user-owned record of started or completed demo scales.';
+  'User-owned record of started or completed assessment scales.';
 
 CREATE TABLE IF NOT EXISTS user_scale_responses (
   id         UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS user_scale_responses (
 );
 
 COMMENT ON TABLE user_scale_responses IS
-  'Optional MVP answer detail table. Use only if item-level responses are saved.';
+  'Optional answer detail table. Use only if item-level responses are saved.';
 
 CREATE INDEX IF NOT EXISTS idx_assessment_scales_active_module
   ON assessment_scales (active, module_code, scale_code);
@@ -218,7 +218,7 @@ CREATE POLICY "user_scale_responses_service_role_all" ON user_scale_responses
   FOR ALL TO service_role USING (true) WITH CHECK (true);
 
 -- =============================================================================
--- DEMO SEED DATA
+-- SEED DATA
 -- =============================================================================
 
 INSERT INTO assessment_scales (
@@ -239,11 +239,11 @@ INSERT INTO assessment_scales (
     'ABILITY',
     '能力与发展',
     'Ability and Development',
-    'EQAI 多维智慧与智力问卷',
+    'EQAI多维智慧与智力问卷',
     'EQAI Multiple Wisdom & Intelligence Questionnaire',
     '通用 / 青少年 / 成人',
-    '用于测试 EQAI MVP 流程的多维能力 demo 量表。',
-    'A demo scale for testing the EQAI MVP multi-domain ability flow.',
+    '从情绪理解、自我调节、韧性、表达与审美等维度观察多元智慧与综合能力。',
+    'A multidimensional questionnaire covering emotional understanding, self-regulation, resilience, expression, and aesthetic perception.',
     true,
     true
   ),
@@ -252,11 +252,11 @@ INSERT INTO assessment_scales (
     'ABILITY',
     '能力与发展',
     'Ability and Development',
-    'EQAI 学业能力量表',
+    'EQAI学业能力量表',
     'EQAI Academic Competence Questionnaire',
     '学生',
-    '用于测试学习动机、策略和执行流程的 demo 量表。',
-    'A demo scale for testing learning motivation, strategy, and execution flows.',
+    '关注学习动机、学业自我效能、深度学习策略、元认知监控与资源管理。',
+    'Assesses learning motivation, academic self-efficacy, deep learning strategies, metacognitive monitoring, and resource management.',
     true,
     true
   ),
@@ -265,11 +265,11 @@ INSERT INTO assessment_scales (
     'ABILITY',
     '能力与发展',
     'Ability and Development',
-    'EQAI 人格因素测验',
+    'EQAI人格因素测验',
     'EQAI Personality Characteristics Survey',
     '通用',
-    '用于测试人格因素目录和记录流程的 demo 量表。',
-    'A demo scale for testing personality-catalog and record flows.',
+    '覆盖乐群性、思辨性、情绪起伏、守规性、敏感性、自律性等人格特征。',
+    'Explores personality characteristics such as warmth, reasoning, emotional instability, rule-consciousness, sensitivity, and perfectionism.',
     true,
     true
   ),
@@ -278,11 +278,11 @@ INSERT INTO assessment_scales (
     'WELLBEING',
     '身心健康',
     'Physical and Mental Well-Being',
-    'EQAI 负面情绪管理量表',
+    'EQAI负面情绪管理量表',
     'EQAI Negative Emotion Regulation Survey',
     '青少年 / 成人',
-    '用于测试情绪觉察与调节记录流程的 demo 量表。',
-    'A demo scale for testing emotion awareness and regulation record flows.',
+    '评估情绪觉察、情绪接纳、冲动控制与情绪调节策略的使用情况。',
+    'Assesses emotional awareness, acceptance, impulsivity control, and use of emotion regulation strategies.',
     true,
     true
   ),
@@ -291,11 +291,11 @@ INSERT INTO assessment_scales (
     'WELLBEING',
     '身心健康',
     'Physical and Mental Well-Being',
-    'EQAI 注意力缺陷多动障碍筛查量表',
+    'EQAI注意力缺陷多动障碍筛查量表',
     'EQAI ADHD Screening Questionnaire',
     '儿童 / 青少年',
-    '用于测试注意力与行为筛查流程的 demo 量表。',
-    'A demo scale for testing attention and behavior screening flows.',
+    '围绕注意缺陷、多动、冲动和对立行为进行初步筛查观察。',
+    'A screening questionnaire covering inattention, hyperactivity, impulsivity, and oppositionality.',
     true,
     true
   ),
@@ -304,11 +304,11 @@ INSERT INTO assessment_scales (
     'PARENT',
     '家长参与',
     'Parent Participation',
-    'EQAI 家长养育模式问卷',
+    'EQAI家长养育模式问卷',
     'EQAI Parenting Style Questionnaire',
     '家长',
-    '用于测试家长参与类量表流程的 demo 量表。',
-    'A demo scale for testing parent-participation assessment flows.',
+    '观察权威型、专制型与宽容型养育模式中的支持、引导、结构与边界。',
+    'Explores parenting patterns across support, guidance, structure, authority, and boundaries.',
     true,
     true
   )
@@ -337,16 +337,16 @@ INSERT INTO assessment_dimensions (
 ) VALUES
   ('MWI_DEMO', 'EMO_SOCIAL', NULL, '情绪理解与社交', 'Emotional Understanding and Social Functioning', 'simple_short', 10, true),
   ('MWI_DEMO', 'SELF_SOOTHING', NULL, '自我愉悦与情绪调节', 'Self-Soothing and Emotional Regulation', 'simple_short', 20, true),
-  ('ACAD_DEMO', 'INTRINSIC_MOTIVATION', NULL, '内在动机与任务价值', 'Intrinsic Motivation and Task Value', 'simple_short', 10, true),
+  ('ACAD_DEMO', 'INTRINSIC_MOTIVATION', NULL, '内在动机与任务价值', 'Intrinsic Motivation & Values', 'simple_short', 10, true),
   ('ACAD_DEMO', 'TIME_MANAGEMENT', NULL, '时间管理', 'Time Management', 'simple_short', 20, true),
   ('PERSONALITY_DEMO', 'WARMTH', NULL, '乐群性', 'Warmth', 'simple_short', 10, true),
-  ('PERSONALITY_DEMO', 'SELF_DISCIPLINE', NULL, '自律性', 'Perfectionism and Self-Discipline', 'simple_short', 20, true),
-  ('EMOTION_REG_DEMO', 'EMOTION_AWARENESS', NULL, '情绪觉察与理解', 'Emotional Awareness and Understanding', 'simple_short', 10, true),
+  ('PERSONALITY_DEMO', 'SELF_DISCIPLINE', NULL, '自律性', 'Perfectionism', 'simple_short', 20, true),
+  ('EMOTION_REG_DEMO', 'EMOTION_AWARENESS', NULL, '情绪觉察与理解', 'Emotional Awareness & Understanding', 'simple_short', 10, true),
   ('EMOTION_REG_DEMO', 'STRATEGY_USE', NULL, '策略运用', 'Emotional Regulation Strategies', 'simple_short', 20, true),
   ('ADHD_DEMO', 'INATTENTION', NULL, '注意缺陷', 'Inattention', 'simple_short', 10, true),
   ('ADHD_DEMO', 'IMPULSIVITY', NULL, '冲动', 'Impulsivity', 'simple_short', 20, true),
-  ('PARENTING_STYLE_DEMO', 'WARM_SUPPORT', NULL, '情感支持', 'Warmth and Support', 'simple_short', 10, true),
-  ('PARENTING_STYLE_DEMO', 'GUIDANCE', NULL, '讲道理与引导', 'Reasoning and Guidance', 'simple_short', 20, true)
+  ('PARENTING_STYLE_DEMO', 'WARM_SUPPORT', NULL, '情感支持', 'Warmth & Support', 'simple_short', 10, true),
+  ('PARENTING_STYLE_DEMO', 'GUIDANCE', NULL, '讲道理与引导', 'Reasoning & Guidance', 'simple_short', 20, true)
 ON CONFLICT (scale_code, dimension_code) DO UPDATE SET
   parent_dimension_code = EXCLUDED.parent_dimension_code,
   title_cn = EXCLUDED.title_cn,

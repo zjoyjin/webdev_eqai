@@ -82,14 +82,8 @@ export default async function MyAssessmentRecordsPage({
       ) : (
         <div className="space-y-4">
           {attempts.map((attempt) => {
-            const title =
-              attempt.assessment_scales?.title_en ??
-              attempt.assessment_scales?.title_cn ??
-              attempt.scale_code;
-            const moduleName =
-              attempt.assessment_scales?.module_name_en ??
-              attempt.assessment_scales?.module_name_cn ??
-              t('demoScale');
+            const title = getAttemptTitle(attempt, locale);
+            const moduleName = getAttemptModuleName(attempt, locale, t('demoScale'));
 
             return (
               <div key={attempt.id} className="border border-gray-200 bg-white p-5">
@@ -146,4 +140,24 @@ function formatDate(value: string, locale: string) {
     dateStyle: 'medium',
     timeStyle: 'short',
   }).format(new Date(value));
+}
+
+function getAttemptTitle(attempt: Awaited<ReturnType<typeof getUserAttempts>>['attempts'][number], locale: string) {
+  if (locale === 'zh') {
+    return attempt.assessment_scales?.title_cn ?? attempt.assessment_scales?.title_en ?? attempt.scale_code;
+  }
+
+  return attempt.assessment_scales?.title_en ?? attempt.assessment_scales?.title_cn ?? attempt.scale_code;
+}
+
+function getAttemptModuleName(
+  attempt: Awaited<ReturnType<typeof getUserAttempts>>['attempts'][number],
+  locale: string,
+  fallback: string
+) {
+  if (locale === 'zh') {
+    return attempt.assessment_scales?.module_name_cn ?? attempt.assessment_scales?.module_name_en ?? fallback;
+  }
+
+  return attempt.assessment_scales?.module_name_en ?? attempt.assessment_scales?.module_name_cn ?? fallback;
 }

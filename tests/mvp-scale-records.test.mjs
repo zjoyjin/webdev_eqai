@@ -47,7 +47,7 @@ test('MVP RLS keeps user scale attempts owner-scoped', () => {
   assert.match(sql, /\(select auth\.uid\(\)\) = user_id/);
 });
 
-test('MVP seed includes six demo scales and visible demo wording', () => {
+test('MVP seed includes six assessment scales with product-facing copy', () => {
   const scaleCodes = [...sql.matchAll(/'([A-Z_]+_DEMO)'/g)].map((match) => match[1]);
   assert.deepEqual(
     Array.from(new Set(scaleCodes)).filter((code) =>
@@ -69,7 +69,10 @@ test('MVP seed includes six demo scales and visible demo wording', () => {
       'PERSONALITY_DEMO',
     ]
   );
-  assert.match(sql, /not validated formal psychological instruments/i);
+  assert.match(sql, /Rows are not clinical diagnostic instruments/i);
+  assert.match(sql, /EQAI多维智慧与智力问卷/);
+  assert.match(sql, /Intrinsic Motivation & Values/);
+  assert.doesNotMatch(sql, /用于测试|A demo scale for testing|MVP demo scale catalog/i);
 });
 
 test('MVP assessment flow routes started attempts through the demo take page', () => {
@@ -78,11 +81,12 @@ test('MVP assessment flow routes started attempts through the demo take page', (
   assert.match(recordsPage, /t\('continue'\)/);
 });
 
-test('MVP catalog groups demo scales by module before listing scale cards', () => {
+test('MVP catalog groups assessments by module before listing scale cards', () => {
   assert.match(catalogPage, /groupedScales = scales\.reduce/);
   assert.match(catalogPage, /moduleCode: scale\.module_code/);
   assert.match(catalogPage, /group\.scales\.map/);
-  assert.match(catalogPage, /\{group\.scales\.length\} \{copy\.demoScales\}/);
+  assert.match(catalogPage, /\{group\.scales\.length\} \{copy\.scaleCount\}/);
+  assert.match(catalogPage, /getLocalizedScaleText\(scale, locale\)/);
 });
 
 test('MVP category entry points route into the unified filtered catalog', () => {
@@ -117,9 +121,9 @@ test('MVP demo submission validates 1-5 item scores and saves a total score', ()
 
 test('MVP demo submission lands on a saved result page before history', () => {
   assert.match(actions, /\/assessments\/\$\{scaleCode\}\/result\?attemptId=\$\{attemptId\}/);
-  assert.match(resultPage, /Demo result saved/);
+  assert.match(resultPage, /Result saved/);
   assert.match(resultPage, /Total score/);
-  assert.match(resultPage, /not represent a formal psychological assessment result/);
+  assert.match(resultPage, /does not represent a formal psychological assessment result or diagnosis/);
   assert.match(resultPage, /\/me\/assessments/);
 });
 
@@ -169,6 +173,8 @@ test('MVP auth and records surfaces are localized', () => {
   assert.match(loginForm, /t\('loginTab'\)/);
   assert.match(loginForm, /t\('registerTab'\)/);
   assert.match(loginForm, /t\('registrationSaved'\)/);
+  assert.match(loginForm, /t\('emailNotConfirmed'\)/);
+  assert.match(loginForm, /t\('rateLimited'\)/);
 
   for (const messages of [enMessages, zhMessages]) {
     assert.match(messages, /"auth"/);
@@ -177,6 +183,13 @@ test('MVP auth and records surfaces are localized', () => {
     assert.match(messages, /"registerTab"/);
     assert.match(messages, /"logout"/);
     assert.match(messages, /"browseDemoScales"/);
+  }
+});
+
+test('MVP product surfaces avoid visible demo and test wording', () => {
+  for (const page of [catalogPage, takePage, resultPage, enMessages, zhMessages]) {
+    assert.doesNotMatch(page, /Demo catalog|Assessment MVP|Start demo scale|Submit demo result|demo total score/i);
+    assert.doesNotMatch(page, /浏览、作答并保存 demo 记录|demo 量表|MVP 流程/i);
   }
 });
 

@@ -29,7 +29,7 @@
     "heading": "Our Mission",
     "text": "EQAIGlobal is dedicated to making emotional intelligence accessible to everyone. We believe that understanding and developing emotional intelligence is essential for personal growth, meaningful relationships, and professional success.",
     "cardTitle": "Assessment guidance with a human frame",
-    "cardText": "The MVP connects discovery, short demo scales, and saved records while keeping diagnostic boundaries explicit."
+    "cardText": "EQAI connects assessment discovery, guided answering, and saved records while keeping diagnostic boundaries explicit."
   },
   "features": {
     "heading": "Why Emotional Intelligence Matters",
@@ -55,9 +55,9 @@
     "assessmentsHeading": "Choose Your Assessment Path",
     "assessmentsSubheading": "Select the assessment that best fits your needs",
     "assessmentsEyebrow": "Get Started",
-    "flowEyebrow": "MVP flow",
-    "flowTitle": "Browse, answer, and save a demo record",
-    "flowText": "The current release validates the core path: users can choose a demo scale, answer short 1-5 items, and keep a private record in Supabase.",
+    "flowEyebrow": "Assessment flow",
+    "flowTitle": "Browse, answer, and save your record",
+    "flowText": "Choose an assessment pathway, answer short 1-5 items, and keep a private record tied to your account.",
     "flowSteps": {
       "browse": {
         "title": "Browse",
@@ -65,7 +65,7 @@
       },
       "answer": {
         "title": "Answer",
-        "text": "Complete short demo items with bounded scoring."
+        "text": "Complete short questions with bounded scoring."
       },
       "save": {
         "title": "Save",
@@ -191,9 +191,9 @@
     }
   },
   "auth": {
-    "eyebrow": "EQAI MVP",
+    "eyebrow": "EQAI account",
     "title": "Log in or register",
-    "intro": "Create an account to save the demo scales you start or complete.",
+    "intro": "Create an account to save the assessments you start or complete. Registration uses an email confirmation link, not an in-page verification code.",
     "loginTab": "Log in",
     "registerTab": "Register",
     "email": "Email",
@@ -203,21 +203,23 @@
     "loginButton": "Log in",
     "registerButton": "Register",
     "working": "Working...",
-    "notConfigured": "Supabase is not configured yet. Add env vars before testing auth.",
-    "registrationSaved": "Registration saved. Please check your email if confirmation is enabled."
+    "notConfigured": "Supabase is not configured yet. Add env vars before using auth.",
+    "registrationSaved": "Registration submitted. Check your email for a confirmation link, then log in after confirming. If it is not in your inbox, check spam before requesting another email.",
+    "emailNotConfirmed": "Please confirm your email before logging in. Check your inbox or spam folder for the confirmation link.",
+    "rateLimited": "Please wait before requesting another confirmation email. Repeated registration attempts are rate-limited for account security."
   },
   "records": {
     "eyebrow": "My records",
     "title": "My assessment records",
-    "intro": "This MVP only records whether you started or completed a demo scale.",
+    "intro": "Review assessments you have started or completed.",
     "logout": "Log out",
     "setupTitle": "Setup required",
-    "setupText": "The MVP record tables are not available yet, so records cannot be listed.",
-    "backToCatalog": "Back to demo catalog",
+    "setupText": "The assessment record tables are not available yet, so records cannot be listed.",
+    "backToCatalog": "Back to catalog",
     "emptyTitle": "No records yet",
-    "emptyText": "Start a demo scale to create your first MVP record.",
-    "browseDemoScales": "Browse demo scales",
-    "demoScale": "Demo scale",
+    "emptyText": "Start an assessment to create your first record.",
+    "browseDemoScales": "Browse assessments",
+    "demoScale": "Assessment",
     "started": "Started",
     "completed": "Completed",
     "details": "Details",
@@ -226,27 +228,27 @@
   "assessments": {
     "work": {
       "title": "Work Assessment",
-      "description": "Explore demo scales for workplace emotional intelligence, learning agility, communication, and practical self-management.",
-      "note": "The current MVP uses short demo scales to validate the catalog and record-saving flow. Results are not formal psychological assessments.",
-      "cta": "View work demo scales"
+      "description": "Explore assessments for workplace emotional intelligence, learning agility, communication, and practical self-management.",
+      "note": "Results are for personal reference and are not formal psychological assessments.",
+      "cta": "View work assessments"
     },
     "personal": {
       "title": "Personal Assessment",
-      "description": "Browse demo scales for self-awareness, emotional regulation, personality patterns, and everyday well-being.",
-      "note": "The current MVP saves lightweight demo records only. It is designed for product validation, not diagnosis.",
-      "cta": "View personal demo scales"
+      "description": "Browse assessments for self-awareness, emotional regulation, personality patterns, and everyday well-being.",
+      "note": "Saved records help you review your own responses over time. They are not a diagnosis.",
+      "cta": "View personal assessments"
     },
     "kid": {
       "title": "Kid Assessment",
-      "description": "Find demo scales related to learning habits, attention, emotional development, and parent-supported growth.",
-      "note": "Kid-related demo content is informational and should not be treated as medical, clinical, or diagnostic guidance.",
-      "cta": "View kid demo scales"
+      "description": "Find assessments related to learning habits, attention, emotional development, and parent-supported growth.",
+      "note": "Kid-related content is informational and should not be treated as medical, clinical, or diagnostic guidance.",
+      "cta": "View kid assessments"
     },
     "pet": {
       "title": "Pet Assessment",
-      "description": "Pet assessment ideas are still being shaped. For now, this category links into the unified demo catalog while the product scope is reviewed.",
+      "description": "Pet assessment ideas are still being shaped. For now, this category links into the unified assessment catalog while the product scope is reviewed.",
       "note": "Pet-related experiences should avoid veterinary diagnosis and will need separate review before becoming a real assessment flow.",
-      "cta": "View pet demo scales"
+      "cta": "View pet assessments"
     }
   }
 }

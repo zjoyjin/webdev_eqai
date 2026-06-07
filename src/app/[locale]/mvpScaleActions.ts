@@ -83,7 +83,7 @@ export async function submitScaleAttempt(locale: string, scaleCode: string, atte
     .order('sort_order', { ascending: true });
 
   if (itemsError || !items || items.length === 0) {
-    redirect(`/${locale}/assessments/${scaleCode}/take?attemptId=${attemptId}&error=${encodeURIComponent(formatMvpDatabaseError(itemsError?.message ?? 'No demo items are available for this scale.'))}`);
+    redirect(`/${locale}/assessments/${scaleCode}/take?attemptId=${attemptId}&error=${encodeURIComponent(formatMvpDatabaseError(itemsError?.message ?? 'No active questions are available for this assessment.'))}`);
   }
 
   const scores = items.map((item) => {
@@ -98,7 +98,7 @@ export async function submitScaleAttempt(locale: string, scaleCode: string, atte
   });
 
   if (scores.some((score) => score === null)) {
-    redirect(`/${locale}/assessments/${scaleCode}/take?attemptId=${attemptId}&error=${encodeURIComponent('Please answer every demo item from 1 to 5 before submitting.')}`);
+    redirect(`/${locale}/assessments/${scaleCode}/take?attemptId=${attemptId}&error=${encodeURIComponent('Please answer every question from 1 to 5 before submitting.')}`);
   }
 
   const totalScore = (scores as number[]).reduce((sum, score) => sum + score, 0);
@@ -108,7 +108,7 @@ export async function submitScaleAttempt(locale: string, scaleCode: string, atte
       status: 'completed',
       total_score: totalScore,
       completed_at: new Date().toISOString(),
-      notes: `Demo flow completed with ${items.length} item scores. This is not a formal assessment result.`,
+      notes: `Completed with ${items.length} item scores. This is not a formal assessment result.`,
     })
     .eq('id', attemptId)
     .eq('user_id', user.id)

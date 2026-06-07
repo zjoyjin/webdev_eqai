@@ -54,7 +54,7 @@ export default function LoginForm({
             });
 
       if (result.error) {
-        setMessage(result.error.message);
+        setMessage(formatAuthMessage(result.error.message, t));
         return;
       }
 
@@ -140,4 +140,16 @@ export default function LoginForm({
       )}
     </div>
   );
+}
+
+function formatAuthMessage(message: string, t: ReturnType<typeof useTranslations>) {
+  if (/email_not_confirmed|email not confirmed/i.test(message)) {
+    return t('emailNotConfirmed');
+  }
+
+  if (/429|rate limit|too many|security purposes|after \d+ seconds/i.test(message)) {
+    return t('rateLimited');
+  }
+
+  return message;
 }

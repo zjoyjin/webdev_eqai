@@ -49,6 +49,7 @@ export type MvpAttempt = {
 
 export const mvpScaleCategories = ['work', 'personal', 'kid', 'pet'] as const;
 export type MvpScaleCategory = (typeof mvpScaleCategories)[number];
+export type MvpLocale = 'en' | 'zh' | string;
 
 export const mvpCategoryScaleCodes: Record<MvpScaleCategory, string[]> = {
   work: ['MWI_DEMO', 'ACAD_DEMO', 'PERSONALITY_DEMO'],
@@ -63,11 +64,11 @@ export const demoScales: MvpScale[] = [
     module_code: 'ABILITY',
     module_name_cn: '能力与发展',
     module_name_en: 'Ability and Development',
-    title_cn: 'EQAI 多维智慧与智力问卷',
+    title_cn: 'EQAI多维智慧与智力问卷',
     title_en: 'EQAI Multiple Wisdom & Intelligence Questionnaire',
     audience: '通用 / 青少年 / 成人',
-    description_cn: '用于测试 EQAI MVP 流程的多维能力 demo 量表。',
-    description_en: 'A demo scale for testing the EQAI MVP multi-domain ability flow.',
+    description_cn: '从情绪理解、自我调节、韧性、表达与审美等维度观察多元智慧与综合能力。',
+    description_en: 'A multidimensional questionnaire covering emotional understanding, self-regulation, resilience, expression, and aesthetic perception.',
     demo: true,
     active: true,
   },
@@ -76,11 +77,11 @@ export const demoScales: MvpScale[] = [
     module_code: 'ABILITY',
     module_name_cn: '能力与发展',
     module_name_en: 'Ability and Development',
-    title_cn: 'EQAI 学业能力量表',
+    title_cn: 'EQAI学业能力量表',
     title_en: 'EQAI Academic Competence Questionnaire',
     audience: '学生',
-    description_cn: '用于测试学习动机、策略和执行流程的 demo 量表。',
-    description_en: 'A demo scale for testing learning motivation, strategy, and execution flows.',
+    description_cn: '关注学习动机、学业自我效能、深度学习策略、元认知监控与资源管理。',
+    description_en: 'Assesses learning motivation, academic self-efficacy, deep learning strategies, metacognitive monitoring, and resource management.',
     demo: true,
     active: true,
   },
@@ -89,11 +90,11 @@ export const demoScales: MvpScale[] = [
     module_code: 'ABILITY',
     module_name_cn: '能力与发展',
     module_name_en: 'Ability and Development',
-    title_cn: 'EQAI 人格因素测验',
+    title_cn: 'EQAI人格因素测验',
     title_en: 'EQAI Personality Characteristics Survey',
     audience: '通用',
-    description_cn: '用于测试人格因素目录和记录流程的 demo 量表。',
-    description_en: 'A demo scale for testing personality-catalog and record flows.',
+    description_cn: '覆盖乐群性、思辨性、情绪起伏、守规性、敏感性、自律性等人格特征。',
+    description_en: 'Explores personality characteristics such as warmth, reasoning, emotional instability, rule-consciousness, sensitivity, and perfectionism.',
     demo: true,
     active: true,
   },
@@ -102,11 +103,11 @@ export const demoScales: MvpScale[] = [
     module_code: 'WELLBEING',
     module_name_cn: '身心健康',
     module_name_en: 'Physical and Mental Well-Being',
-    title_cn: 'EQAI 负面情绪管理量表',
+    title_cn: 'EQAI负面情绪管理量表',
     title_en: 'EQAI Negative Emotion Regulation Survey',
     audience: '青少年 / 成人',
-    description_cn: '用于测试情绪觉察与调节记录流程的 demo 量表。',
-    description_en: 'A demo scale for testing emotion awareness and regulation record flows.',
+    description_cn: '评估情绪觉察、情绪接纳、冲动控制与情绪调节策略的使用情况。',
+    description_en: 'Assesses emotional awareness, acceptance, impulsivity control, and use of emotion regulation strategies.',
     demo: true,
     active: true,
   },
@@ -115,11 +116,11 @@ export const demoScales: MvpScale[] = [
     module_code: 'WELLBEING',
     module_name_cn: '身心健康',
     module_name_en: 'Physical and Mental Well-Being',
-    title_cn: 'EQAI 注意力缺陷多动障碍筛查量表',
+    title_cn: 'EQAI注意力缺陷多动障碍筛查量表',
     title_en: 'EQAI ADHD Screening Questionnaire',
     audience: '儿童 / 青少年',
-    description_cn: '用于测试注意力与行为筛查流程的 demo 量表。',
-    description_en: 'A demo scale for testing attention and behavior screening flows.',
+    description_cn: '围绕注意缺陷、多动、冲动和对立行为进行初步筛查观察。',
+    description_en: 'A screening questionnaire covering inattention, hyperactivity, impulsivity, and oppositionality.',
     demo: true,
     active: true,
   },
@@ -128,11 +129,11 @@ export const demoScales: MvpScale[] = [
     module_code: 'PARENT',
     module_name_cn: '家长参与',
     module_name_en: 'Parent Participation',
-    title_cn: 'EQAI 家长养育模式问卷',
+    title_cn: 'EQAI家长养育模式问卷',
     title_en: 'EQAI Parenting Style Questionnaire',
     audience: '家长',
-    description_cn: '用于测试家长参与类量表流程的 demo 量表。',
-    description_en: 'A demo scale for testing parent-participation assessment flows.',
+    description_cn: '观察权威型、专制型与宽容型养育模式中的支持、引导、结构与边界。',
+    description_en: 'Explores parenting patterns across support, guidance, structure, authority, and boundaries.',
     demo: true,
     active: true,
   },
@@ -141,17 +142,56 @@ export const demoScales: MvpScale[] = [
 export const demoDimensions: MvpDimension[] = [
   dimension('MWI_DEMO', 'EMO_SOCIAL', '情绪理解与社交', 'Emotional Understanding and Social Functioning', 10),
   dimension('MWI_DEMO', 'SELF_SOOTHING', '自我愉悦与情绪调节', 'Self-Soothing and Emotional Regulation', 20),
-  dimension('ACAD_DEMO', 'INTRINSIC_MOTIVATION', '内在动机与任务价值', 'Intrinsic Motivation and Task Value', 10),
+  dimension('ACAD_DEMO', 'INTRINSIC_MOTIVATION', '内在动机与任务价值', 'Intrinsic Motivation & Values', 10),
   dimension('ACAD_DEMO', 'TIME_MANAGEMENT', '时间管理', 'Time Management', 20),
   dimension('PERSONALITY_DEMO', 'WARMTH', '乐群性', 'Warmth', 10),
-  dimension('PERSONALITY_DEMO', 'SELF_DISCIPLINE', '自律性', 'Perfectionism and Self-Discipline', 20),
-  dimension('EMOTION_REG_DEMO', 'EMOTION_AWARENESS', '情绪觉察与理解', 'Emotional Awareness and Understanding', 10),
+  dimension('PERSONALITY_DEMO', 'SELF_DISCIPLINE', '自律性', 'Perfectionism', 20),
+  dimension('EMOTION_REG_DEMO', 'EMOTION_AWARENESS', '情绪觉察与理解', 'Emotional Awareness & Understanding', 10),
   dimension('EMOTION_REG_DEMO', 'STRATEGY_USE', '策略运用', 'Emotional Regulation Strategies', 20),
   dimension('ADHD_DEMO', 'INATTENTION', '注意缺陷', 'Inattention', 10),
   dimension('ADHD_DEMO', 'IMPULSIVITY', '冲动', 'Impulsivity', 20),
-  dimension('PARENTING_STYLE_DEMO', 'WARM_SUPPORT', '情感支持', 'Warmth and Support', 10),
-  dimension('PARENTING_STYLE_DEMO', 'GUIDANCE', '讲道理与引导', 'Reasoning and Guidance', 20),
+  dimension('PARENTING_STYLE_DEMO', 'WARM_SUPPORT', '情感支持', 'Warmth & Support', 10),
+  dimension('PARENTING_STYLE_DEMO', 'GUIDANCE', '讲道理与引导', 'Reasoning & Guidance', 20),
 ];
+
+export function getLocalizedScaleText(scale: MvpScale, locale: MvpLocale) {
+  const isZh = locale === 'zh';
+  const title = isZh ? scale.title_cn : scale.title_en ?? scale.title_cn;
+  const secondaryTitle = isZh ? scale.title_en : scale.title_cn;
+  const moduleName = isZh ? scale.module_name_cn : scale.module_name_en ?? scale.module_name_cn;
+  const description = isZh
+    ? scale.description_cn ?? scale.description_en
+    : scale.description_en ?? scale.description_cn;
+
+  return {
+    title,
+    secondaryTitle: secondaryTitle && secondaryTitle !== title ? secondaryTitle : null,
+    moduleName,
+    description,
+  };
+}
+
+export function getLocalizedDimensionText(dimension: MvpDimension, locale: MvpLocale) {
+  const isZh = locale === 'zh';
+  const title = isZh ? dimension.title_cn : dimension.title_en ?? dimension.title_cn;
+  const secondaryTitle = isZh ? dimension.title_en : dimension.title_cn;
+
+  return {
+    title,
+    secondaryTitle: secondaryTitle && secondaryTitle !== title ? secondaryTitle : null,
+  };
+}
+
+export function getLocalizedItemText(item: MvpDemoItem, locale: MvpLocale) {
+  const isZh = locale === 'zh';
+  const prompt = isZh ? item.prompt_cn : item.prompt_en ?? item.prompt_cn;
+  const secondaryPrompt = isZh ? item.prompt_en : item.prompt_cn;
+
+  return {
+    prompt,
+    secondaryPrompt: secondaryPrompt && secondaryPrompt !== prompt ? secondaryPrompt : null,
+  };
+}
 
 export const demoItems: MvpDemoItem[] = [
   item('MWI_DEMO', 'EMO_SOCIAL', 'MWI_01', '我能觉察自己和他人的情绪变化。', 'I can notice emotional changes in myself and others.', 10),

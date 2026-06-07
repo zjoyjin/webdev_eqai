@@ -29,7 +29,7 @@
     "heading": "我们的使命",
     "text": "情智AI全球致力于让每个人都能获得情商评估。我们相信，理解和发展情商对于个人成长、有意义的关系和职业成功至关重要。",
     "cardTitle": "有人文边界的评估引导",
-    "cardText": "MVP 将评估发现、短版 demo 量表和用户记录连接起来，同时明确避免诊断化表达。"
+    "cardText": "EQAI 将评估发现、引导作答和用户记录连接起来，同时明确避免诊断化表达。"
   },
   "features": {
     "heading": "为什么情商很重要",
@@ -55,9 +55,9 @@
     "assessmentsHeading": "选择您的评估路径",
     "assessmentsSubheading": "选择最适合您需求的评估",
     "assessmentsEyebrow": "开始探索",
-    "flowEyebrow": "MVP 流程",
-    "flowTitle": "浏览、作答并保存 demo 记录",
-    "flowText": "当前版本验证核心路径：用户可以选择 demo 量表、完成短版 1-5 分题目，并在 Supabase 中保存私有记录。",
+    "flowEyebrow": "评估流程",
+    "flowTitle": "浏览、作答并保存你的记录",
+    "flowText": "选择合适的评估路径，完成短版 1-5 分题目，并把私有记录保存到账户中。",
     "flowSteps": {
       "browse": {
         "title": "浏览",
@@ -65,7 +65,7 @@
       },
       "answer": {
         "title": "作答",
-        "text": "完成短版 demo 题目，分值范围明确。"
+        "text": "完成短版题目，分值范围明确。"
       },
       "save": {
         "title": "保存",
@@ -191,9 +191,9 @@
     }
   },
   "auth": {
-    "eyebrow": "EQAI MVP",
+    "eyebrow": "EQAI 账户",
     "title": "登录或注册",
-    "intro": "创建账户后，可以保存你开始或完成的 demo 量表记录。",
+    "intro": "创建账户后，可以保存你开始或完成的评估记录。注册使用邮箱确认链接，不是页面验证码。",
     "loginTab": "登录",
     "registerTab": "注册",
     "email": "电子邮件",
@@ -203,21 +203,23 @@
     "loginButton": "登录",
     "registerButton": "注册",
     "working": "处理中...",
-    "notConfigured": "Supabase 尚未配置。请先添加环境变量再测试登录。",
-    "registrationSaved": "注册已提交。如果启用了邮件确认，请检查你的邮箱。"
+    "notConfigured": "Supabase 尚未配置。请先添加环境变量再使用登录。",
+    "registrationSaved": "注册已提交。请到邮箱查收确认链接，点击确认后再登录。如果收件箱没有，请检查垃圾邮件；不要短时间重复提交。",
+    "emailNotConfirmed": "请先确认邮箱后再登录。请检查收件箱或垃圾邮件中的确认链接。",
+    "rateLimited": "请稍后再请求新的确认邮件。为保护账户安全，短时间重复注册会被限流。"
   },
   "records": {
     "eyebrow": "我的记录",
     "title": "我的评估记录",
-    "intro": "当前 MVP 只记录你是否开始或完成了一个 demo 量表。",
+    "intro": "查看你开始或完成过的评估记录。",
     "logout": "退出登录",
     "setupTitle": "需要完成配置",
-    "setupText": "MVP 记录表尚不可用，因此暂时无法列出记录。",
-    "backToCatalog": "返回 demo 目录",
+    "setupText": "评估记录表尚不可用，因此暂时无法列出记录。",
+    "backToCatalog": "返回评估目录",
     "emptyTitle": "还没有记录",
-    "emptyText": "开始一个 demo 量表后，会创建你的第一条 MVP 记录。",
-    "browseDemoScales": "浏览 demo 量表",
-    "demoScale": "Demo 量表",
+    "emptyText": "开始一个评估后，会创建你的第一条记录。",
+    "browseDemoScales": "浏览评估",
+    "demoScale": "评估",
     "started": "开始",
     "completed": "完成",
     "details": "详情",
@@ -226,27 +228,27 @@
   "assessments": {
     "work": {
       "title": "工作评估",
-      "description": "浏览与职场情绪智能、学习敏捷度、沟通协作和自我管理相关的 demo 量表。",
-      "note": "当前 MVP 使用短版 demo 量表验证目录、登录和记录保存流程，结果不代表正式心理测评。",
-      "cta": "查看工作类 demo 量表"
+      "description": "浏览与职场情绪智能、学习敏捷度、沟通协作和自我管理相关的评估。",
+      "note": "结果用于个人参考，不代表正式心理测评。",
+      "cta": "查看工作类评估"
     },
     "personal": {
       "title": "个人评估",
-      "description": "浏览与自我觉察、情绪调节、人格特质和日常身心状态相关的 demo 量表。",
-      "note": "当前 MVP 只保存轻量 demo 记录，用于产品流程验证，不用于诊断。",
-      "cta": "查看个人类 demo 量表"
+      "description": "浏览与自我觉察、情绪调节、人格特质和日常身心状态相关的评估。",
+      "note": "保存记录方便你回看自己的作答，不用于诊断。",
+      "cta": "查看个人类评估"
     },
     "kid": {
       "title": "儿童评估",
-      "description": "查找与学习习惯、注意力、情绪发展和家长支持相关的 demo 量表。",
-      "note": "儿童相关 demo 内容仅用于信息展示和流程验证，不应被视为医学、临床或诊断建议。",
-      "cta": "查看儿童类 demo 量表"
+      "description": "查找与学习习惯、注意力、情绪发展和家长支持相关的评估。",
+      "note": "儿童相关内容仅用于信息展示，不应被视为医学、临床或诊断建议。",
+      "cta": "查看儿童类评估"
     },
     "pet": {
       "title": "宠物评估",
-      "description": "宠物评估方向仍在梳理中。当前先接入统一 demo 目录，等待产品范围进一步确认。",
+      "description": "宠物评估方向仍在梳理中。当前先接入统一评估目录，等待产品范围进一步确认。",
       "note": "宠物相关体验不应暗示兽医诊断，正式上线前需要单独审查。",
-      "cta": "查看宠物类 demo 量表"
+      "cta": "查看宠物类评估"
     }
   }
 }
