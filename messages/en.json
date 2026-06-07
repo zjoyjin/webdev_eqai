@@ -13,7 +13,10 @@
     "login": "Login",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "review": "Review Pack"
+    "review": "Review Pack",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "switchLanguage": "Switch language"
   },
   "hero": {
     "title": "Unlock Your Emotional Intelligence with AI",

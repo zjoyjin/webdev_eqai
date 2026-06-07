@@ -68,7 +68,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" aria-busy={pending}>
       {/* Name Field */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -220,6 +220,8 @@ export default function ContactForm({ locale }: ContactFormProps) {
 
       {message && (
         <p
+          role={status === 'error' ? 'alert' : 'status'}
+          aria-live="polite"
           className={`rounded-lg border p-4 text-sm ${
             status === 'success'
               ? 'border-green-200 bg-green-50 text-green-800'

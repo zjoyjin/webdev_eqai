@@ -13,7 +13,10 @@
     "login": "登录",
     "privacy": "隐私政策",
     "terms": "服务条款",
-    "review": "评审包"
+    "review": "评审包",
+    "openMenu": "打开导航菜单",
+    "closeMenu": "关闭导航菜单",
+    "switchLanguage": "切换语言"
   },
   "hero": {
     "title": "用AI解锁你的情商潜能",
