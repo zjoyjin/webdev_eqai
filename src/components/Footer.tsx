@@ -107,11 +107,11 @@ export default function Footer({ locale }: FooterProps) {
               {new Date().getFullYear()} EQAIGlobal. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link href={`/${locale}/contact`} className="text-gray-400 hover:text-white text-sm font-light transition-colors">
-                Privacy Policy
+              <Link href={`/${locale}/privacy`} className="text-gray-400 hover:text-white text-sm font-light transition-colors">
+                {t('nav.privacy')}
               </Link>
-              <Link href={`/${locale}/contact`} className="text-gray-400 hover:text-white text-sm font-light transition-colors">
-                Terms of Service
+              <Link href={`/${locale}/terms`} className="text-gray-400 hover:text-white text-sm font-light transition-colors">
+                {t('nav.terms')}
               </Link>
             </div>
           </div>

@@ -10,7 +10,9 @@
     "donate": "捐赠",
     "contact": "联系我们",
     "myRecords": "我的记录",
-    "login": "登录"
+    "login": "登录",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
   },
   "hero": {
     "title": "用AI解锁你的情商潜能",
@@ -144,6 +146,11 @@
       "success": "谢谢。你的消息已保存，EQAI 团队可以在 Supabase 中查看。",
       "error": "保存消息时出现问题，请稍后重试。",
       "consent": "我同意 EQAI 保存这条消息，并就本次咨询联系我。此表单不用于紧急、临床、医学或诊断支持。",
+      "consentPrefix": "我同意 EQAI 保存这条消息，并就本次咨询联系我。我接受",
+      "consentConnector": "和",
+      "consentSuffix": "。此表单不用于紧急、临床、医学或诊断支持。",
+      "privacyPolicy": "隐私政策",
+      "termsOfService": "服务条款",
       "inquiryTypes": {
         "assessment_interest": "评估咨询",
         "partnership": "合作",

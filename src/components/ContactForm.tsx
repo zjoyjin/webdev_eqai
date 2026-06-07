@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 type ContactFormProps = {
   locale: string;
@@ -194,7 +195,18 @@ export default function ContactForm({ locale }: ContactFormProps) {
           className="mt-1 h-4 w-4 rounded border-gray-300 text-gray-900 focus:ring-gray-900"
           required
         />
-        <span>{t('consent')}</span>
+        <span>
+          {t('consentPrefix')}{' '}
+          <Link href={`/${locale}/privacy`} className="font-medium text-gray-900 underline underline-offset-4">
+            {t('privacyPolicy')}
+          </Link>
+          {' '}
+          {t('consentConnector')}{' '}
+          <Link href={`/${locale}/terms`} className="font-medium text-gray-900 underline underline-offset-4">
+            {t('termsOfService')}
+          </Link>
+          {t('consentSuffix')}
+        </span>
       </label>
 
       {/* Submit Button */}

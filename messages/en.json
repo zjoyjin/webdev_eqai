@@ -10,7 +10,9 @@
     "donate": "Donate",
     "contact": "Contact",
     "myRecords": "My Records",
-    "login": "Login"
+    "login": "Login",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   },
   "hero": {
     "title": "Unlock Your Emotional Intelligence with AI",
@@ -144,6 +146,11 @@
       "success": "Thanks. Your message has been saved and the EQAI team can review it in Supabase.",
       "error": "Something went wrong while saving your message. Please try again.",
       "consent": "I agree that EQAI may store this message and contact me about this inquiry. This form is not for urgent, clinical, medical, or diagnostic support.",
+      "consentPrefix": "I agree that EQAI may store this message and contact me about this inquiry. I accept the",
+      "consentConnector": "and",
+      "consentSuffix": ". This form is not for urgent, clinical, medical, or diagnostic support.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
       "inquiryTypes": {
         "assessment_interest": "Assessment interest",
         "partnership": "Partnership",
