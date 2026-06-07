@@ -121,7 +121,7 @@ interface ChatBoxProps {
 }
 
 export default function ChatBox({ variant = 'floating' }: ChatBoxProps) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(variant === 'inline');
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,

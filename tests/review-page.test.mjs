@@ -14,7 +14,7 @@ test('review page documents the MVP walkthrough and review scope', () => {
   assert.match(reviewPage, /Verified MVP capabilities/);
   assert.match(reviewPage, /Known limitations/);
   assert.match(reviewPage, /Open product questions/);
-  assert.match(reviewPage, /Review assets pending/);
+  assert.match(reviewPage, /Review assets/);
   assert.match(reviewPage, /MWI_DEMO/);
 });
 

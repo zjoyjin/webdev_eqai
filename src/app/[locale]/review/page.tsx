@@ -81,7 +81,7 @@ const reviewCopy = {
             text: 'Donate remains deferred until payment, compliance, and public-benefit positioning are confirmed.',
           },
           {
-            label: 'Review assets pending',
+            label: 'Review assets',
             text: 'Screenshots and a short recording should be captured from the verified production-like build before external review.',
           },
         ],
@@ -180,7 +180,7 @@ const reviewCopy = {
             text: 'Donate 继续暂缓，直到支付、合规和公益定位确认。',
           },
           {
-            label: '评审素材待捕获',
+            label: '评审素材',
             text: '外部评审前，应从已验证的类生产构建中截取截图并录制短视频。',
           },
         ],
