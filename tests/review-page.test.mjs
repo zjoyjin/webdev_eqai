@@ -15,7 +15,7 @@ test('review page documents the walkthrough and review scope', () => {
   assert.match(reviewPage, /Known limitations/);
   assert.match(reviewPage, /Open product questions/);
   assert.match(reviewPage, /Review assets/);
-  assert.match(reviewPage, /MWI_DEMO/);
+  assert.match(reviewPage, /\/en\/assessments\/MWI/);
   assert.doesNotMatch(reviewPage, /\bMVP\b|\bdemo\b|test account|演示/i);
 });
 
@@ -23,8 +23,8 @@ test('review page links to the core MVP routes', () => {
   assert.match(reviewPage, /\/\$\{locale\}\/assessments/);
   assert.match(reviewPage, /\/\$\{locale\}\/contact/);
   assert.match(reviewPage, /\/en\/assessments/);
-  assert.match(reviewPage, /\/en\/assessments\/MWI_DEMO/);
-  assert.match(reviewPage, /\/zh\/assessments\/MWI_DEMO/);
+  assert.match(reviewPage, /\/en\/assessments\/MWI/);
+  assert.match(reviewPage, /\/zh\/assessments\/MWI/);
   assert.match(reviewPage, /\/zh\/me\/assessments/);
 });
 

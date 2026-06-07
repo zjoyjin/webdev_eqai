@@ -16,7 +16,7 @@ type AttemptRow = {
   completed_at: string | null;
 };
 
-const SCORE_OPTIONS = [1, 2, 3, 4, 5];
+const SCORE_OPTIONS = [1, 2, 3, 4, 5, 6, 7];
 
 const takeCopy = {
   en: {
@@ -24,7 +24,7 @@ const takeCopy = {
     itemCount: 'questions',
     eyebrow: 'Assessment',
     intro:
-      'Answer each item from 1 to 5. Your saved score is for personal reference and is not a formal psychological result.',
+      'Answer each item from 1 to 7. Your saved score is for personal reference and is not a formal psychological result.',
     emptyTitle: 'No questions available',
     emptyText: 'This assessment is available in the catalog, but questions are not active yet.',
     question: 'Question',
@@ -37,7 +37,7 @@ const takeCopy = {
     back: '返回',
     itemCount: '道题',
     eyebrow: '评估作答',
-    intro: '请按 1 到 5 分回答每道题。保存的分数仅供个人参考，不代表正式心理测评结果。',
+    intro: '请按 1 到 7 分回答每道题。保存的分数仅供个人参考，不代表正式心理测评结果。',
     emptyTitle: '暂无可作答题目',
     emptyText: '该评估已在目录中展示，但题目尚未启用。',
     question: '第',
@@ -165,7 +165,7 @@ export default async function TakeMvpScalePage({
                     <p className="mt-2 text-sm leading-6 text-gray-500">{localizedItem.secondaryPrompt}</p>
                   )}
 
-                  <div className="mt-5 grid grid-cols-5 gap-2">
+                  <div className="mt-5 grid grid-cols-7 gap-2">
                     {SCORE_OPTIONS.map((score) => (
                       <label
                         key={score}

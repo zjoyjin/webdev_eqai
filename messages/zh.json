@@ -57,7 +57,7 @@
     "assessmentsEyebrow": "开始探索",
     "flowEyebrow": "评估流程",
     "flowTitle": "浏览、作答并保存你的记录",
-    "flowText": "选择合适的评估路径，完成短版 1-5 分题目，并把私有记录保存到账户中。",
+    "flowText": "选择合适的评估路径，完成 1-7 分题目，并把私有记录保存到账户中。",
     "flowSteps": {
       "browse": {
         "title": "浏览",

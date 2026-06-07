@@ -90,7 +90,7 @@ export async function submitScaleAttempt(locale: string, scaleCode: string, atte
     const value = formData.get(`score_${item.item_code}`);
     const score = typeof value === 'string' ? Number(value) : NaN;
 
-    if (!Number.isInteger(score) || score < 1 || score > 5) {
+    if (!Number.isInteger(score) || score < 1 || score > 7) {
       return null;
     }
 
@@ -98,7 +98,7 @@ export async function submitScaleAttempt(locale: string, scaleCode: string, atte
   });
 
   if (scores.some((score) => score === null)) {
-    redirect(`/${locale}/assessments/${scaleCode}/take?attemptId=${attemptId}&error=${encodeURIComponent('Please answer every question from 1 to 5 before submitting.')}`);
+    redirect(`/${locale}/assessments/${scaleCode}/take?attemptId=${attemptId}&error=${encodeURIComponent('Please answer every question from 1 to 7 before submitting.')}`);
   }
 
   const totalScore = (scores as number[]).reduce((sum, score) => sum + score, 0);

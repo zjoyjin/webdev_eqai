@@ -57,7 +57,7 @@
     "assessmentsEyebrow": "Get Started",
     "flowEyebrow": "Assessment flow",
     "flowTitle": "Browse, answer, and save your record",
-    "flowText": "Choose an assessment pathway, answer short 1-5 items, and keep a private record tied to your account.",
+    "flowText": "Choose an assessment pathway, answer 1-7 scale items, and keep a private record tied to your account.",
     "flowSteps": {
       "browse": {
         "title": "Browse",

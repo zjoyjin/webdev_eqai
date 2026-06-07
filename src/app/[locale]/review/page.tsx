@@ -29,7 +29,7 @@ const reviewCopy = {
           },
           {
             label: 'MWI assessment',
-            href: '/en/assessments/MWI_DEMO',
+            href: '/en/assessments/MWI',
             text: 'Open an assessment detail page and confirm the non-diagnostic boundary.',
           },
           {
@@ -53,7 +53,7 @@ const reviewCopy = {
           },
           {
             label: 'Response flow',
-            text: 'Signed-in users can start an assessment, answer bounded 1-5 items, save a total score, and review the result.',
+            text: 'Signed-in users can start an assessment, answer bounded 1-7 items, save a total score, and review the result.',
           },
           {
             label: 'Contact intake',
@@ -128,7 +128,7 @@ const reviewCopy = {
           },
           {
             label: 'MWI 评估',
-            href: '/zh/assessments/MWI_DEMO',
+            href: '/zh/assessments/MWI',
             text: '打开评估详情页，确认非诊断性的边界说明。',
           },
           {
@@ -152,7 +152,7 @@ const reviewCopy = {
           },
           {
             label: '作答流程',
-            text: '登录用户可以开始评估、完成 1-5 分题目、保存总分并查看结果。',
+            text: '登录用户可以开始评估、完成 1-7 分题目、保存总分并查看结果。',
           },
           {
             label: '联系信息收集',

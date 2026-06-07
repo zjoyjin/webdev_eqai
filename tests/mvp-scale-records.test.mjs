@@ -28,13 +28,22 @@ const enMessages = readFileSync(new URL('../messages/en.json', import.meta.url),
 const zhMessages = readFileSync(new URL('../messages/zh.json', import.meta.url), 'utf8');
 
 const scaleCodes = [
-  'MWI_DEMO',
-  'ACAD_DEMO',
-  'PERSONALITY_DEMO',
-  'EMOTION_REG_DEMO',
-  'ADHD_DEMO',
-  'PARENTING_STYLE_DEMO',
+  'MWI',
+  'ACAD',
+  'EMOTION_REG',
+  'ADHD',
+  'SSD',
+  'DASS_SHORT',
 ];
+
+const itemCounts = {
+  MWI: 95,
+  ACAD: 54,
+  EMOTION_REG: 28,
+  ADHD: 25,
+  SSD: 8,
+  DASS_SHORT: 7,
+};
 
 test('MVP SQL defines the required scale and user attempt tables', () => {
   for (const tableName of [
@@ -60,21 +69,13 @@ test('MVP RLS keeps user scale attempts owner-scoped', () => {
 });
 
 test('MVP seed includes six assessment scales with product-facing copy', () => {
-  const seededScaleCodes = [...sql.matchAll(/'([A-Z_]+_DEMO)'/g)].map((match) => match[1]);
-  assert.deepEqual(
-    Array.from(new Set(seededScaleCodes)).filter((code) => scaleCodes.includes(code)).sort(),
-    [
-      'ACAD_DEMO',
-      'ADHD_DEMO',
-      'EMOTION_REG_DEMO',
-      'MWI_DEMO',
-      'PARENTING_STYLE_DEMO',
-      'PERSONALITY_DEMO',
-    ]
-  );
-  assert.match(sql, /Rows are not clinical diagnostic instruments/i);
+  for (const scaleCode of scaleCodes) {
+    assert.match(sql, new RegExp(`'${scaleCode}'`));
+  }
+
+  assert.match(sql, /Rows are informational tools and not clinical diagnostic instruments/i);
   assert.match(sql, /EQAI多维智慧与智力问卷/);
-  assert.match(sql, /Intrinsic Motivation & Values/);
+  assert.match(sql, /EQAI-躯体症状障碍量表/);
   assert.doesNotMatch(sql, /用于测试|A demo scale for testing|MVP demo scale catalog/i);
 });
 
@@ -86,15 +87,15 @@ test('MVP scale seed and local fallback include enough dimensions and answerable
     const localItems = [...mvpScales.matchAll(new RegExp(`item\\('${scaleCode}'`, 'g'))];
 
     assert.equal(dimensionRows.length, 4, `${scaleCode} SQL dimension count`);
-    assert.equal(itemRows.length, 8, `${scaleCode} SQL item count`);
+    assert.equal(itemRows.length, itemCounts[scaleCode], `${scaleCode} SQL item count`);
     assert.equal(localDimensions.length, 4, `${scaleCode} fallback dimension count`);
-    assert.equal(localItems.length, 8, `${scaleCode} fallback item count`);
+    assert.equal(localItems.length, itemCounts[scaleCode], `${scaleCode} fallback item count`);
   }
 
-  assert.match(sql, /'MWI_DEMO', 'RESILIENCE'/);
-  assert.match(sql, /'PARENTING_STYLE_DEMO', 'STRUCTURED_AUTONOMY'/);
-  assert.match(mvpScales, /item\('MWI_DEMO', 'EXPRESSION', 'MWI_08'/);
-  assert.match(mvpScales, /item\('PARENTING_STYLE_DEMO', 'BOUNDARIES', 'PARENT_08'/);
+  assert.match(sql, /'MWI', 'EXECUTION_RESILIENCE'/);
+  assert.match(sql, /'SSD', 'BODY_WORRY'/);
+  assert.match(mvpScales, /item\('MWI', 'AESTHETIC_EXPRESSION', 'MWI_008'/);
+  assert.match(mvpScales, /item\('DASS_SHORT', 'ANXIETY', 'DASS_007'/);
 });
 
 test('MVP assessment flow routes started attempts through the demo take page', () => {
@@ -166,10 +167,10 @@ test('MVP category entry points route into the unified filtered catalog', () => 
   }
 });
 
-test('MVP demo submission validates 1-5 item scores and saves a total score', () => {
-  assert.match(takePage, /const SCORE_OPTIONS = \[1, 2, 3, 4, 5\]/);
+test('MVP demo submission validates 1-7 item scores and saves a total score', () => {
+  assert.match(takePage, /const SCORE_OPTIONS = \[1, 2, 3, 4, 5, 6, 7\]/);
   assert.match(takePage, /name=\{`score_\$\{item\.item_code\}`\}/);
-  assert.match(actions, /score < 1 \|\| score > 5/);
+  assert.match(actions, /score < 1 \|\| score > 7/);
   assert.match(actions, /totalScore = \(scores as number\[\]\)\.reduce/);
   assert.match(actions, /total_score: totalScore/);
   assert.match(actions, /status: 'completed'/);

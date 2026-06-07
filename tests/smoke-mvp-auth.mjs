@@ -12,7 +12,7 @@ const supabasePublishableKey =
 const email = process.env.MVP_SMOKE_EMAIL;
 const password = process.env.MVP_SMOKE_PASSWORD;
 const shouldCreate = process.env.MVP_SMOKE_CREATE === '1';
-const scaleCode = process.env.MVP_SMOKE_SCALE_CODE ?? 'MWI_DEMO';
+const scaleCode = process.env.MVP_SMOKE_SCALE_CODE ?? 'MWI';
 
 if (!supabaseUrl || !supabasePublishableKey) {
   fail('Supabase env vars are missing. Set SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY.');
@@ -131,7 +131,7 @@ if (!attemptId) {
   attemptId = insertedAttempt.id;
 }
 
-const totalScore = items.reduce((sum, _item, index) => sum + ((index % 5) + 1), 0);
+const totalScore = items.reduce((sum, _item, index) => sum + ((index % 7) + 1), 0);
 const { data: completedAttempt, error: completeAttemptError } = await supabase
   .from('user_scale_attempts')
   .update({
@@ -213,7 +213,7 @@ function formatAuthError(error) {
 
 function formatDatabaseError(message) {
   return /assessment_scales|assessment_demo_items|user_scale_attempts|schema cache|PGRST205/i.test(message)
-    ? 'MVP database tables are not ready. Run backend/ingestion/mvp_scale_records.sql in Supabase SQL Editor first.'
+    ? 'Assessment records are not ready yet. Run backend/ingestion/mvp_scale_records.sql in Supabase SQL Editor first.'
     : `MVP database smoke failed: ${message}`;
 }
 
