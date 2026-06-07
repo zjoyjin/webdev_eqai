@@ -21,6 +21,8 @@ const middleware = readFileSync(new URL('../src/middleware.ts', import.meta.url)
 const packageJson = readFileSync(new URL('../package.json', import.meta.url), 'utf8');
 const readinessScript = readFileSync(new URL('../tests/check-mvp-readiness.mjs', import.meta.url), 'utf8');
 const mvpScales = readFileSync(new URL('../src/lib/mvpScales.ts', import.meta.url), 'utf8');
+const enMessages = readFileSync(new URL('../messages/en.json', import.meta.url), 'utf8');
+const zhMessages = readFileSync(new URL('../messages/zh.json', import.meta.url), 'utf8');
 
 test('MVP SQL defines the required scale and user attempt tables', () => {
   for (const tableName of [
@@ -73,7 +75,7 @@ test('MVP seed includes six demo scales and visible demo wording', () => {
 test('MVP assessment flow routes started attempts through the demo take page', () => {
   assert.match(actions, /redirect\(`\/\$\{locale\}\/assessments\/\$\{scaleCode\}\/take\?attemptId=\$\{attemptId\}`\)/);
   assert.match(recordsPage, /\/assessments\/\$\{attempt\.scale_code\}\/take\?attemptId=\$\{attempt\.id\}/);
-  assert.match(recordsPage, />\s*Continue\s*</);
+  assert.match(recordsPage, /t\('continue'\)/);
 });
 
 test('MVP catalog groups demo scales by module before listing scale cards', () => {
@@ -146,6 +148,8 @@ test('MVP RLS smoke proves two-user isolation and rolls back test data', () => {
 });
 
 test('MVP registration confirmation uses the SSR auth callback safely', () => {
+  assert.match(loginForm, /useTranslations\('auth'\)/);
+  assert.match(readFileSync(new URL('../src/app/[locale]/login/page.tsx', import.meta.url), 'utf8'), /getTranslations\(\{ locale, namespace: 'auth' \}\)/);
   assert.match(loginForm, /emailRedirectTo: `\$\{window\.location\.origin\}\/auth\/callback\?next=/);
   assert.match(loginForm, /encodeURIComponent\(nextPath \|\| `\/\$\{locale\}\/me\/assessments`\)/);
   assert.match(middleware, /\(\?!_next\|_vercel\|api\|auth\|\.\*\\\\\.\.\*\)/);
@@ -155,6 +159,25 @@ test('MVP registration confirmation uses the SSR auth callback safely', () => {
   assert.match(authCallbackRoute, /value\.startsWith\('\/en\/'\)/);
   assert.match(authCallbackRoute, /value\.startsWith\('\/zh\/'\)/);
   assert.match(authCallbackRoute, /Missing authentication code\./);
+});
+
+test('MVP auth and records surfaces are localized', () => {
+  assert.match(recordsPage, /getTranslations\(\{ locale, namespace: 'records' \}\)/);
+  assert.match(recordsPage, /t\('logout'\)/);
+  assert.match(recordsPage, /t\('emptyTitle'\)/);
+  assert.match(recordsPage, /Intl\.DateTimeFormat\(locale === 'zh' \? 'zh-CN' : 'en'/);
+  assert.match(loginForm, /t\('loginTab'\)/);
+  assert.match(loginForm, /t\('registerTab'\)/);
+  assert.match(loginForm, /t\('registrationSaved'\)/);
+
+  for (const messages of [enMessages, zhMessages]) {
+    assert.match(messages, /"auth"/);
+    assert.match(messages, /"records"/);
+    assert.match(messages, /"loginTab"/);
+    assert.match(messages, /"registerTab"/);
+    assert.match(messages, /"logout"/);
+    assert.match(messages, /"browseDemoScales"/);
+  }
 });
 
 test('MVP readiness check reports missing authenticated smoke credentials explicitly', () => {

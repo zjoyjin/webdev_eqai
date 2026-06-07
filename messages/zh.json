@@ -190,6 +190,39 @@
       "note": "消息会保存用于产品评审和评估咨询。请不要通过此表单发送紧急、临床、医学或诊断请求。"
     }
   },
+  "auth": {
+    "eyebrow": "EQAI MVP",
+    "title": "登录或注册",
+    "intro": "创建账户后，可以保存你开始或完成的 demo 量表记录。",
+    "loginTab": "登录",
+    "registerTab": "注册",
+    "email": "电子邮件",
+    "password": "密码",
+    "emailPlaceholder": "you@example.com",
+    "passwordPlaceholder": "至少 6 个字符",
+    "loginButton": "登录",
+    "registerButton": "注册",
+    "working": "处理中...",
+    "notConfigured": "Supabase 尚未配置。请先添加环境变量再测试登录。",
+    "registrationSaved": "注册已提交。如果启用了邮件确认，请检查你的邮箱。"
+  },
+  "records": {
+    "eyebrow": "我的记录",
+    "title": "我的评估记录",
+    "intro": "当前 MVP 只记录你是否开始或完成了一个 demo 量表。",
+    "logout": "退出登录",
+    "setupTitle": "需要完成配置",
+    "setupText": "MVP 记录表尚不可用，因此暂时无法列出记录。",
+    "backToCatalog": "返回 demo 目录",
+    "emptyTitle": "还没有记录",
+    "emptyText": "开始一个 demo 量表后，会创建你的第一条 MVP 记录。",
+    "browseDemoScales": "浏览 demo 量表",
+    "demoScale": "Demo 量表",
+    "started": "开始",
+    "completed": "完成",
+    "details": "详情",
+    "continue": "继续"
+  },
   "assessments": {
     "work": {
       "title": "工作评估",

@@ -190,6 +190,39 @@
       "note": "Messages are saved for product review and assessment inquiries. Do not send urgent clinical, medical, or diagnostic requests through this form."
     }
   },
+  "auth": {
+    "eyebrow": "EQAI MVP",
+    "title": "Log in or register",
+    "intro": "Create an account to save the demo scales you start or complete.",
+    "loginTab": "Log in",
+    "registerTab": "Register",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "you@example.com",
+    "passwordPlaceholder": "At least 6 characters",
+    "loginButton": "Log in",
+    "registerButton": "Register",
+    "working": "Working...",
+    "notConfigured": "Supabase is not configured yet. Add env vars before testing auth.",
+    "registrationSaved": "Registration saved. Please check your email if confirmation is enabled."
+  },
+  "records": {
+    "eyebrow": "My records",
+    "title": "My assessment records",
+    "intro": "This MVP only records whether you started or completed a demo scale.",
+    "logout": "Log out",
+    "setupTitle": "Setup required",
+    "setupText": "The MVP record tables are not available yet, so records cannot be listed.",
+    "backToCatalog": "Back to demo catalog",
+    "emptyTitle": "No records yet",
+    "emptyText": "Start a demo scale to create your first MVP record.",
+    "browseDemoScales": "Browse demo scales",
+    "demoScale": "Demo scale",
+    "started": "Started",
+    "completed": "Completed",
+    "details": "Details",
+    "continue": "Continue"
+  },
   "assessments": {
     "work": {
       "title": "Work Assessment",

@@ -1,12 +1,14 @@
 import LoginForm from '@/components/LoginForm';
 import { getSupabaseBrowserConfig, isSupabaseConfigured } from '@/lib/supabase/server';
+import { getTranslations } from 'next-intl/server';
 
 type Props = {
   params: { locale: string };
   searchParams: { message?: string; next?: string };
 };
 
-export default function LoginPage({ params: { locale }, searchParams }: Props) {
+export default async function LoginPage({ params: { locale }, searchParams }: Props) {
+  const t = await getTranslations({ locale, namespace: 'auth' });
   const nextPath =
     searchParams.next?.startsWith(`/${locale}/`) || searchParams.next === `/${locale}`
       ? searchParams.next
@@ -17,11 +19,11 @@ export default function LoginPage({ params: { locale }, searchParams }: Props) {
     <div className="mx-auto max-w-md px-4 py-12 sm:px-6 sm:py-16">
       <div className="mb-8">
         <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
-          EQAI MVP
+          {t('eyebrow')}
         </p>
-        <h1 className="text-3xl font-light text-gray-900">Log in or register</h1>
+        <h1 className="text-3xl font-light text-gray-900">{t('title')}</h1>
         <p className="mt-4 text-sm leading-6 text-gray-600">
-          Create an account to save the demo scales you start or complete.
+          {t('intro')}
         </p>
       </div>
 

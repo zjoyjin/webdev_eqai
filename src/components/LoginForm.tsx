@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { createSupabaseBrowserClient } from '@/lib/supabase/browser';
 
 type LoginFormProps = {
@@ -18,6 +19,7 @@ export default function LoginForm({
   supabasePublishableKey,
   nextPath,
 }: LoginFormProps) {
+  const t = useTranslations('auth');
   const [mode, setMode] = useState<'login' | 'register'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,7 +31,7 @@ export default function LoginForm({
     setMessage('');
 
     if (!configured) {
-      setMessage('Supabase is not configured yet. Add env vars before testing auth.');
+      setMessage(t('notConfigured'));
       return;
     }
 
@@ -57,7 +59,7 @@ export default function LoginForm({
       }
 
       if (mode === 'register' && !result.data.session) {
-        setMessage('Registration saved. Please check your email if confirmation is enabled.');
+        setMessage(t('registrationSaved'));
         return;
       }
 
@@ -77,7 +79,7 @@ export default function LoginForm({
             mode === 'login' ? 'bg-gray-900 text-white' : 'text-gray-600 hover:text-gray-900'
           }`}
         >
-          Log in
+          {t('loginTab')}
         </button>
         <button
           type="button"
@@ -86,14 +88,14 @@ export default function LoginForm({
             mode === 'register' ? 'bg-gray-900 text-white' : 'text-gray-600 hover:text-gray-900'
           }`}
         >
-          Register
+          {t('registerTab')}
         </button>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4" aria-busy={pending}>
         <div>
           <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-700">
-            Email
+            {t('email')}
           </label>
           <input
             id="email"
@@ -102,13 +104,13 @@ export default function LoginForm({
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             className="w-full border border-gray-300 px-3 py-3 text-sm outline-none focus:border-gray-900"
-            placeholder="you@example.com"
+            placeholder={t('emailPlaceholder')}
           />
         </div>
 
         <div>
           <label htmlFor="password" className="mb-2 block text-sm font-medium text-gray-700">
-            Password
+            {t('password')}
           </label>
           <input
             id="password"
@@ -118,7 +120,7 @@ export default function LoginForm({
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             className="w-full border border-gray-300 px-3 py-3 text-sm outline-none focus:border-gray-900"
-            placeholder="At least 6 characters"
+            placeholder={t('passwordPlaceholder')}
           />
         </div>
 
@@ -127,12 +129,12 @@ export default function LoginForm({
           disabled={pending}
           className="w-full bg-gray-900 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700 disabled:cursor-not-allowed disabled:bg-gray-400"
         >
-          {pending ? 'Working...' : mode === 'login' ? 'Log in' : 'Register'}
+          {pending ? t('working') : mode === 'login' ? t('loginButton') : t('registerButton')}
         </button>
       </form>
 
       {message && (
-        <p className="mt-4 border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+        <p role="status" aria-live="polite" className="mt-4 border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
           {message}
         </p>
       )}

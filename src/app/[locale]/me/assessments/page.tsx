@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { signOut } from '@/app/[locale]/mvpScaleActions';
 import { getUserAttempts } from '@/lib/mvpScales';
+import { getTranslations } from 'next-intl/server';
 
 type Props = {
   params: { locale: string };
@@ -12,6 +13,7 @@ export default async function MyAssessmentRecordsPage({
   params: { locale },
   searchParams,
 }: Props) {
+  const t = await getTranslations({ locale, namespace: 'records' });
   const { user, attempts, error } = await getUserAttempts();
 
   if (!user) {
@@ -23,11 +25,11 @@ export default async function MyAssessmentRecordsPage({
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
-            My records
+            {t('eyebrow')}
           </p>
-          <h1 className="text-3xl font-light text-gray-900">My assessment records</h1>
+          <h1 className="text-3xl font-light text-gray-900">{t('title')}</h1>
           <p className="mt-4 text-sm leading-6 text-gray-600">
-            This MVP only records whether you started or completed a demo scale.
+            {t('intro')}
           </p>
         </div>
         <form
@@ -40,7 +42,7 @@ export default async function MyAssessmentRecordsPage({
             type="submit"
             className="border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-900 hover:text-gray-900"
           >
-            Log out
+            {t('logout')}
           </button>
         </form>
       </div>
@@ -53,28 +55,28 @@ export default async function MyAssessmentRecordsPage({
 
       {error ? (
         <div className="border border-gray-200 bg-white p-8 text-center">
-          <h2 className="text-lg font-medium text-gray-900">Setup required</h2>
+          <h2 className="text-lg font-medium text-gray-900">{t('setupTitle')}</h2>
           <p className="mt-3 text-sm text-gray-600">
-            The MVP record tables are not available yet, so records cannot be listed.
+            {t('setupText')}
           </p>
           <Link
             href={`/${locale}/assessments`}
             className="mt-6 inline-block border border-gray-300 px-5 py-3 text-sm font-medium text-gray-700 hover:border-gray-900 hover:text-gray-900"
           >
-            Back to demo catalog
+            {t('backToCatalog')}
           </Link>
         </div>
       ) : attempts.length === 0 ? (
         <div className="border border-gray-200 bg-white p-8 text-center">
-          <h2 className="text-lg font-medium text-gray-900">No records yet</h2>
+          <h2 className="text-lg font-medium text-gray-900">{t('emptyTitle')}</h2>
           <p className="mt-3 text-sm text-gray-600">
-            Start a demo scale to create your first MVP record.
+            {t('emptyText')}
           </p>
           <Link
             href={`/${locale}/assessments`}
             className="mt-6 inline-block bg-gray-900 px-5 py-3 text-sm font-medium text-white hover:bg-gray-700"
           >
-            Browse demo scales
+            {t('browseDemoScales')}
           </Link>
         </div>
       ) : (
@@ -87,7 +89,7 @@ export default async function MyAssessmentRecordsPage({
             const moduleName =
               attempt.assessment_scales?.module_name_en ??
               attempt.assessment_scales?.module_name_cn ??
-              'Demo scale';
+              t('demoScale');
 
             return (
               <div key={attempt.id} className="border border-gray-200 bg-white p-5">
@@ -103,8 +105,8 @@ export default async function MyAssessmentRecordsPage({
                     </div>
                     <h2 className="text-lg font-medium text-gray-900">{title}</h2>
                     <p className="mt-2 text-sm text-gray-500">
-                      Started: {formatDate(attempt.started_at)}
-                      {attempt.completed_at ? ` · Completed: ${formatDate(attempt.completed_at)}` : ''}
+                      {t('started')}: {formatDate(attempt.started_at, locale)}
+                      {attempt.completed_at ? ` · ${t('completed')}: ${formatDate(attempt.completed_at, locale)}` : ''}
                     </p>
                     {attempt.notes && (
                       <p className="mt-3 text-sm leading-6 text-gray-600">{attempt.notes}</p>
@@ -116,14 +118,14 @@ export default async function MyAssessmentRecordsPage({
                       href={`/${locale}/assessments/${attempt.scale_code}`}
                       className="border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-900 hover:text-gray-900"
                     >
-                      Details
+                      {t('details')}
                     </Link>
                     {attempt.status === 'started' && (
                       <Link
                         href={`/${locale}/assessments/${attempt.scale_code}/take?attemptId=${attempt.id}`}
                         className="bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700"
                       >
-                        Continue
+                        {t('continue')}
                       </Link>
                     )}
                   </div>
@@ -139,8 +141,8 @@ export default async function MyAssessmentRecordsPage({
 
 export const dynamic = 'force-dynamic';
 
-function formatDate(value: string) {
-  return new Intl.DateTimeFormat('en', {
+function formatDate(value: string, locale: string) {
+  return new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en', {
     dateStyle: 'medium',
     timeStyle: 'short',
   }).format(new Date(value));
