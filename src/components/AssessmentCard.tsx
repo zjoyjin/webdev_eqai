@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 interface AssessmentCardProps {
   title: string;
@@ -70,6 +70,7 @@ const icons = {
 
 export default function AssessmentCard({ title, description, href, color = 'primary' }: AssessmentCardProps) {
   const locale = useLocale();
+  const t = useTranslations('home');
   const fullHref = `/${locale}${href}`;
   const colors = colorClasses[color];
   const icon = icons[color];
@@ -98,7 +99,7 @@ export default function AssessmentCard({ title, description, href, color = 'prim
 
         {/* Arrow indicator */}
         <div className={`flex items-center ${colors.iconText} text-sm font-medium`}>
-          <span>Start Assessment</span>
+          <span>{t('categoryCta')}</span>
           <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>

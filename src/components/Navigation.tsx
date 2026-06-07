@@ -14,8 +14,11 @@ export default function Navigation() {
 
   const navItems = [
     { key: 'home', href: `/${locale}`, label: t('nav.home') },
+    { key: 'assessments', href: `/${locale}/assessments`, label: t('nav.assessments') },
     { key: 'about', href: `/${locale}/about`, label: t('nav.about') },
-    { key: 'contact', href: `/${locale}/contact`, label: t('nav.contact') }
+    { key: 'contact', href: `/${locale}/contact`, label: t('nav.contact') },
+    { key: 'records', href: `/${locale}/me/assessments`, label: t('nav.myRecords') },
+    { key: 'login', href: `/${locale}/login`, label: t('nav.login') }
   ];
 
   const isActive = (href: string) => {

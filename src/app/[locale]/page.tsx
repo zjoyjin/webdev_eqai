@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import Image from 'next/image';
 import AssessmentCard from '@/components/AssessmentCard';
 import HeroSection from '@/components/HeroSection';
 import FeatureCard from '@/components/FeatureCard';
@@ -15,10 +16,10 @@ export default function HomePage({ params: { locale } }: Props) {
   const t = useTranslations();
 
   const categories = [
-    { key: 'work', href: '/work', color: 'primary' as const },
-    { key: 'personal', href: '/personal', color: 'teal' as const },
-    { key: 'kid', href: '/kid', color: 'lavender' as const },
-    { key: 'pet', href: '/pet', color: 'rose' as const },
+    { key: 'work', href: '/assessments?category=work', color: 'primary' as const },
+    { key: 'personal', href: '/assessments?category=personal', color: 'teal' as const },
+    { key: 'kid', href: '/assessments?category=kid', color: 'lavender' as const },
+    { key: 'pet', href: '/assessments?category=pet', color: 'rose' as const },
   ];
 
   const features = [
@@ -57,20 +58,24 @@ export default function HomePage({ params: { locale } }: Props) {
       {/* Hero Section */}
       <HeroSection locale={locale} />
 
-      {/* Mission Section with image placeholder */}
+      {/* Mission Section */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Image Placeholder */}
             <div className="order-2 lg:order-1">
-              <div className="aspect-square bg-gradient-to-br from-teal-50 to-primary-50 rounded-2xl flex items-center justify-center border border-teal-100">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-teal-100 to-primary-100 rounded-2xl flex items-center justify-center">
-                    <svg className="w-10 h-10 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm text-gray-500">Mission Image Placeholder</p>
+              <div className="relative aspect-square overflow-hidden border border-teal-100 bg-teal-50">
+                <Image
+                  src="/logo.jpeg"
+                  alt={t('common.appName')}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                  priority={false}
+                />
+                <div className="absolute inset-0 bg-white/60" />
+                <div className="absolute inset-x-6 bottom-6 bg-white/90 p-5">
+                  <p className="text-sm font-medium text-gray-900">{t('mission.cardTitle')}</p>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">{t('mission.cardText')}</p>
                 </div>
               </div>
             </div>
@@ -78,7 +83,7 @@ export default function HomePage({ params: { locale } }: Props) {
             {/* Text Content */}
             <div className="order-1 lg:order-2">
               <div className="inline-block px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium mb-4">
-                Our Mission
+                {t('mission.eyebrow')}
               </div>
               <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-6">
                 {t('mission.heading')}
@@ -116,19 +121,36 @@ export default function HomePage({ params: { locale } }: Props) {
         </div>
       </section>
 
-      {/* Image Banner Section */}
+      {/* Assessment Flow Section */}
       <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative aspect-[21/9] bg-gradient-to-r from-primary-100 via-lavender-100 to-teal-100 rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-16 h-16 mx-auto mb-4 bg-white/50 rounded-2xl flex items-center justify-center backdrop-blur">
-                  <svg className="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 font-medium">Wide Banner Image Placeholder</p>
-                <p className="text-sm text-gray-500 mt-1">Upload a promotional banner here (21:9 aspect ratio)</p>
+          <div className="border border-gray-200 bg-white p-6 sm:p-8">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1.4fr] lg:items-center">
+              <div>
+                <p className="text-sm font-medium uppercase tracking-wide text-gray-500">
+                  {t('home.flowEyebrow')}
+                </p>
+                <h2 className="mt-3 text-3xl font-light text-gray-900">
+                  {t('home.flowTitle')}
+                </h2>
+                <p className="mt-4 text-sm leading-6 text-gray-600">
+                  {t('home.flowText')}
+                </p>
+              </div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {['browse', 'answer', 'save'].map((step, index) => (
+                  <div key={step} className="border border-gray-200 p-5">
+                    <p className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                      0{index + 1}
+                    </p>
+                    <h3 className="mt-3 text-base font-medium text-gray-900">
+                      {t(`home.flowSteps.${step}.title`)}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">
+                      {t(`home.flowSteps.${step}.text`)}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -140,7 +162,7 @@ export default function HomePage({ params: { locale } }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-4">
-              Get Started
+              {t('home.assessmentsEyebrow')}
             </div>
             <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
               {t('home.assessmentsHeading')}
@@ -169,13 +191,13 @@ export default function HomePage({ params: { locale } }: Props) {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <div className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-4">
-              Ask Us Anything
+              {t('home.chatEyebrow')}
             </div>
             <h2 className="text-3xl sm:text-4xl font-light text-gray-900">
-              Find Your Assessment
+              {t('home.chatTitle')}
             </h2>
             <p className="mt-4 text-lg text-gray-600 font-light">
-              Not sure where to start? Chat with our guide to discover the right assessment for you.
+              {t('home.chatText')}
             </p>
           </div>
           <ChatBox variant="inline" />

@@ -8,7 +8,9 @@
     "assessments": "评估",
     "about": "关于我们",
     "donate": "捐赠",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "myRecords": "我的记录",
+    "login": "登录"
   },
   "hero": {
     "title": "用AI解锁你的情商潜能",
@@ -17,8 +19,11 @@
     "imageAlt": "情智AI主横幅"
   },
   "mission": {
+    "eyebrow": "我们的使命",
     "heading": "我们的使命",
-    "text": "情智AI全球致力于让每个人都能获得情商评估。我们相信，理解和发展情商对于个人成长、有意义的关系和职业成功至关重要。"
+    "text": "情智AI全球致力于让每个人都能获得情商评估。我们相信，理解和发展情商对于个人成长、有意义的关系和职业成功至关重要。",
+    "cardTitle": "有人文边界的评估引导",
+    "cardText": "MVP 将评估发现、短版 demo 量表和用户记录连接起来，同时明确避免诊断化表达。"
   },
   "features": {
     "heading": "为什么情商很重要",
@@ -40,8 +45,30 @@
     }
   },
   "home": {
+    "categoryCta": "探索分类",
     "assessmentsHeading": "选择您的评估路径",
     "assessmentsSubheading": "选择最适合您需求的评估",
+    "assessmentsEyebrow": "开始探索",
+    "flowEyebrow": "MVP 流程",
+    "flowTitle": "浏览、作答并保存 demo 记录",
+    "flowText": "当前版本验证核心路径：用户可以选择 demo 量表、完成短版 1-5 分题目，并在 Supabase 中保存私有记录。",
+    "flowSteps": {
+      "browse": {
+        "title": "浏览",
+        "text": "通过统一目录和分类过滤查找量表。"
+      },
+      "answer": {
+        "title": "作答",
+        "text": "完成短版 demo 题目，分值范围明确。"
+      },
+      "save": {
+        "title": "保存",
+        "text": "通过 RLS 策略保存用户自己的记录。"
+      }
+    },
+    "chatEyebrow": "随时提问",
+    "chatTitle": "找到合适的评估",
+    "chatText": "不确定从哪里开始？可以和引导助手聊聊，发现更适合你的评估方向。",
     "categories": {
       "work": {
         "title": "工作评估",
@@ -126,19 +153,27 @@
   "assessments": {
     "work": {
       "title": "工作评估",
-      "placeholder": "评估问题将显示在这里"
+      "description": "浏览与职场情绪智能、学习敏捷度、沟通协作和自我管理相关的 demo 量表。",
+      "note": "当前 MVP 使用短版 demo 量表验证目录、登录和记录保存流程，结果不代表正式心理测评。",
+      "cta": "查看工作类 demo 量表"
     },
     "personal": {
       "title": "个人评估",
-      "placeholder": "评估问题将显示在这里"
+      "description": "浏览与自我觉察、情绪调节、人格特质和日常身心状态相关的 demo 量表。",
+      "note": "当前 MVP 只保存轻量 demo 记录，用于产品流程验证，不用于诊断。",
+      "cta": "查看个人类 demo 量表"
     },
     "kid": {
       "title": "儿童评估",
-      "placeholder": "评估问题将显示在这里"
+      "description": "查找与学习习惯、注意力、情绪发展和家长支持相关的 demo 量表。",
+      "note": "儿童相关 demo 内容仅用于信息展示和流程验证，不应被视为医学、临床或诊断建议。",
+      "cta": "查看儿童类 demo 量表"
     },
     "pet": {
       "title": "宠物评估",
-      "placeholder": "评估问题将显示在这里"
+      "description": "宠物评估方向仍在梳理中。当前先接入统一 demo 目录，等待产品范围进一步确认。",
+      "note": "宠物相关体验不应暗示兽医诊断，正式上线前需要单独审查。",
+      "cta": "查看宠物类 demo 量表"
     }
   }
 }

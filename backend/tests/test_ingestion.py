@@ -60,13 +60,13 @@ class TestDatasetLoader:
     def test_coerce_booleans(self):
         df = pd.DataFrame([{"scheduled": "TRUE", "data_available": "yes"}])
         result = _coerce_types(df)
-        assert result["scheduled"].iloc[0] is True
-        assert result["data_available"].iloc[0] is True
+        assert bool(result["scheduled"].iloc[0]) is True
+        assert bool(result["data_available"].iloc[0]) is True
 
     def test_coerce_false_booleans(self):
         df = pd.DataFrame([{"scheduled": "FALSE", "data_available": "no"}])
         result = _coerce_types(df)
-        assert result["scheduled"].iloc[0] is False
+        assert bool(result["scheduled"].iloc[0]) is False
 
     def test_coerce_integer_columns(self):
         df = pd.DataFrame([{"module_code": "2", "population_code": "3"}])

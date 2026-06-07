@@ -8,7 +8,9 @@
     "assessments": "Assessments",
     "about": "About",
     "donate": "Donate",
-    "contact": "Contact"
+    "contact": "Contact",
+    "myRecords": "My Records",
+    "login": "Login"
   },
   "hero": {
     "title": "Unlock Your Emotional Intelligence with AI",
@@ -17,8 +19,11 @@
     "imageAlt": "EQAI Hero Banner"
   },
   "mission": {
+    "eyebrow": "Our Mission",
     "heading": "Our Mission",
-    "text": "EQAIGlobal is dedicated to making emotional intelligence accessible to everyone. We believe that understanding and developing emotional intelligence is essential for personal growth, meaningful relationships, and professional success."
+    "text": "EQAIGlobal is dedicated to making emotional intelligence accessible to everyone. We believe that understanding and developing emotional intelligence is essential for personal growth, meaningful relationships, and professional success.",
+    "cardTitle": "Assessment guidance with a human frame",
+    "cardText": "The MVP connects discovery, short demo scales, and saved records while keeping diagnostic boundaries explicit."
   },
   "features": {
     "heading": "Why Emotional Intelligence Matters",
@@ -40,8 +45,30 @@
     }
   },
   "home": {
+    "categoryCta": "Explore category",
     "assessmentsHeading": "Choose Your Assessment Path",
     "assessmentsSubheading": "Select the assessment that best fits your needs",
+    "assessmentsEyebrow": "Get Started",
+    "flowEyebrow": "MVP flow",
+    "flowTitle": "Browse, answer, and save a demo record",
+    "flowText": "The current release validates the core path: users can choose a demo scale, answer short 1-5 items, and keep a private record in Supabase.",
+    "flowSteps": {
+      "browse": {
+        "title": "Browse",
+        "text": "Use one unified directory with category filters."
+      },
+      "answer": {
+        "title": "Answer",
+        "text": "Complete short demo items with bounded scoring."
+      },
+      "save": {
+        "title": "Save",
+        "text": "Store user-owned records behind RLS policies."
+      }
+    },
+    "chatEyebrow": "Ask Us Anything",
+    "chatTitle": "Find Your Assessment",
+    "chatText": "Not sure where to start? Chat with our guide to discover the right assessment for you.",
     "categories": {
       "work": {
         "title": "Work Assessment",
@@ -126,19 +153,27 @@
   "assessments": {
     "work": {
       "title": "Work Assessment",
-      "placeholder": "Assessment questions will appear here"
+      "description": "Explore demo scales for workplace emotional intelligence, learning agility, communication, and practical self-management.",
+      "note": "The current MVP uses short demo scales to validate the catalog and record-saving flow. Results are not formal psychological assessments.",
+      "cta": "View work demo scales"
     },
     "personal": {
       "title": "Personal Assessment",
-      "placeholder": "Assessment questions will appear here"
+      "description": "Browse demo scales for self-awareness, emotional regulation, personality patterns, and everyday well-being.",
+      "note": "The current MVP saves lightweight demo records only. It is designed for product validation, not diagnosis.",
+      "cta": "View personal demo scales"
     },
     "kid": {
       "title": "Kid Assessment",
-      "placeholder": "Assessment questions will appear here"
+      "description": "Find demo scales related to learning habits, attention, emotional development, and parent-supported growth.",
+      "note": "Kid-related demo content is informational and should not be treated as medical, clinical, or diagnostic guidance.",
+      "cta": "View kid demo scales"
     },
     "pet": {
       "title": "Pet Assessment",
-      "placeholder": "Assessment questions will appear here"
+      "description": "Pet assessment ideas are still being shaped. For now, this category links into the unified demo catalog while the product scope is reviewed.",
+      "note": "Pet-related experiences should avoid veterinary diagnosis and will need separate review before becoming a real assessment flow.",
+      "cta": "View pet demo scales"
     }
   }
 }
