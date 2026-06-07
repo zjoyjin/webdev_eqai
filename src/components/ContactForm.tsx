@@ -1,14 +1,69 @@
 'use client';
 
+import { FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-export default function ContactForm() {
-  const t = useTranslations('contact.form');
+type ContactFormProps = {
+  locale: string;
+};
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Placeholder - form functionality to be implemented
-    alert('Form submission is not yet implemented. This is a placeholder.');
+const inquiryTypes = [
+  'assessment_interest',
+  'partnership',
+  'research',
+  'review_feedback',
+  'other',
+] as const;
+const interestedCategories = ['general', 'work', 'personal', 'kid', 'pet'] as const;
+const audienceTypes = ['self', 'parent', 'educator', 'organization', 'reviewer', 'other'] as const;
+
+export default function ContactForm({ locale }: ContactFormProps) {
+  const t = useTranslations('contact.form');
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+  const [pending, setPending] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus('idle');
+    setMessage('');
+    setPending(true);
+
+    const formData = new FormData(event.currentTarget);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          inquiryType: formData.get('inquiryType'),
+          interestedCategory: formData.get('interestedCategory'),
+          audienceType: formData.get('audienceType'),
+          subject: formData.get('subject'),
+          message: formData.get('message'),
+          consentContact: formData.get('consentContact') === 'on',
+          sourceLocale: locale,
+        }),
+      });
+      const result = (await response.json()) as { ok?: boolean; error?: string };
+
+      if (!response.ok || !result.ok) {
+        setStatus('error');
+        setMessage(result.error || t('error'));
+        return;
+      }
+
+      event.currentTarget.reset();
+      setStatus('success');
+      setMessage(t('success'));
+    } catch {
+      setStatus('error');
+      setMessage(t('error'));
+    } finally {
+      setPending(false);
+    }
   };
 
   return (
@@ -43,6 +98,65 @@ export default function ContactForm() {
         />
       </div>
 
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div>
+          <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">
+            {t('inquiryType')}
+          </label>
+          <select
+            id="inquiryType"
+            name="inquiryType"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-white"
+            defaultValue="assessment_interest"
+            required
+          >
+            {inquiryTypes.map((type) => (
+              <option key={type} value={type}>
+                {t(`inquiryTypes.${type}`)}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="interestedCategory" className="block text-sm font-medium text-gray-700 mb-2">
+            {t('interestedCategory')}
+          </label>
+          <select
+            id="interestedCategory"
+            name="interestedCategory"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-white"
+            defaultValue="general"
+            required
+          >
+            {interestedCategories.map((category) => (
+              <option key={category} value={category}>
+                {t(`interestedCategories.${category}`)}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="audienceType" className="block text-sm font-medium text-gray-700 mb-2">
+            {t('audienceType')}
+          </label>
+          <select
+            id="audienceType"
+            name="audienceType"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-white"
+            defaultValue="self"
+            required
+          >
+            {audienceTypes.map((audienceType) => (
+              <option key={audienceType} value={audienceType}>
+                {t(`audienceTypes.${audienceType}`)}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
       {/* Subject Field */}
       <div>
         <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
@@ -73,13 +187,36 @@ export default function ContactForm() {
         />
       </div>
 
+      <label className="flex items-start gap-3 text-sm leading-6 text-gray-600">
+        <input
+          type="checkbox"
+          name="consentContact"
+          className="mt-1 h-4 w-4 rounded border-gray-300 text-gray-900 focus:ring-gray-900"
+          required
+        />
+        <span>{t('consent')}</span>
+      </label>
+
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full px-8 py-4 bg-gray-900 text-white text-base font-medium rounded-lg hover:bg-gray-800 transition-colors shadow-sm"
+        disabled={pending}
+        className="w-full px-8 py-4 bg-gray-900 text-white text-base font-medium rounded-lg hover:bg-gray-800 transition-colors shadow-sm disabled:cursor-not-allowed disabled:bg-gray-400"
       >
-        {t('submit')}
+        {pending ? t('submitting') : t('submit')}
       </button>
+
+      {message && (
+        <p
+          className={`rounded-lg border p-4 text-sm ${
+            status === 'success'
+              ? 'border-green-200 bg-green-50 text-green-800'
+              : 'border-red-200 bg-red-50 text-red-800'
+          }`}
+        >
+          {message}
+        </p>
+      )}
     </form>
   );
 }

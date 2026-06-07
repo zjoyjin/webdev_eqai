@@ -134,9 +134,38 @@
     "form": {
       "name": "您的姓名",
       "email": "电子邮件地址",
+      "inquiryType": "咨询类型",
+      "interestedCategory": "关注分类",
+      "audienceType": "受众身份",
       "subject": "主题",
       "message": "留言",
       "submit": "发送消息",
+      "submitting": "发送中...",
+      "success": "谢谢。你的消息已保存，EQAI 团队可以在 Supabase 中查看。",
+      "error": "保存消息时出现问题，请稍后重试。",
+      "consent": "我同意 EQAI 保存这条消息，并就本次咨询联系我。此表单不用于紧急、临床、医学或诊断支持。",
+      "inquiryTypes": {
+        "assessment_interest": "评估咨询",
+        "partnership": "合作",
+        "research": "研究",
+        "review_feedback": "评审反馈",
+        "other": "其他"
+      },
+      "interestedCategories": {
+        "general": "通用",
+        "work": "工作",
+        "personal": "个人",
+        "kid": "儿童",
+        "pet": "宠物"
+      },
+      "audienceTypes": {
+        "self": "本人",
+        "parent": "家长",
+        "educator": "教育工作者",
+        "organization": "机构",
+        "reviewer": "评审者",
+        "other": "其他"
+      },
       "placeholder": {
         "name": "输入您的姓名",
         "email": "your@email.com",
@@ -147,7 +176,7 @@
     "info": {
       "heading": "联系信息",
       "email": "电子邮件：info@eqaiglobal.org",
-      "note": "此联系表单目前是占位符。完整功能将很快添加。"
+      "note": "消息会保存用于产品评审和评估咨询。请不要通过此表单发送紧急、临床、医学或诊断请求。"
     }
   },
   "assessments": {

@@ -134,9 +134,38 @@
     "form": {
       "name": "Your Name",
       "email": "Email Address",
+      "inquiryType": "Inquiry Type",
+      "interestedCategory": "Category",
+      "audienceType": "Audience",
       "subject": "Subject",
       "message": "Message",
       "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thanks. Your message has been saved and the EQAI team can review it in Supabase.",
+      "error": "Something went wrong while saving your message. Please try again.",
+      "consent": "I agree that EQAI may store this message and contact me about this inquiry. This form is not for urgent, clinical, medical, or diagnostic support.",
+      "inquiryTypes": {
+        "assessment_interest": "Assessment interest",
+        "partnership": "Partnership",
+        "research": "Research",
+        "review_feedback": "Review feedback",
+        "other": "Other"
+      },
+      "interestedCategories": {
+        "general": "General",
+        "work": "Work",
+        "personal": "Personal",
+        "kid": "Kid",
+        "pet": "Pet"
+      },
+      "audienceTypes": {
+        "self": "Self",
+        "parent": "Parent",
+        "educator": "Educator",
+        "organization": "Organization",
+        "reviewer": "Reviewer",
+        "other": "Other"
+      },
       "placeholder": {
         "name": "Enter your name",
         "email": "your@email.com",
@@ -147,7 +176,7 @@
     "info": {
       "heading": "Contact Information",
       "email": "Email: info@eqaiglobal.org",
-      "note": "This contact form is currently a placeholder. Full functionality will be added soon."
+      "note": "Messages are saved for product review and assessment inquiries. Do not send urgent clinical, medical, or diagnostic requests through this form."
     }
   },
   "assessments": {

@@ -152,36 +152,26 @@ Translations are organized by section:
 }
 ```
 
-## Customizing the Hero Image
+## MVP Content Surfaces
 
-The homepage hero section currently has a placeholder for an image. To add your custom banner:
+The homepage uses the current `public/logo.jpeg` asset and routes visitors into the unified assessment directory. Category pages are explanation pages that link to filtered directory views:
 
-1. Place your image in the `public/` directory (e.g., `public/hero-banner.jpg`)
-2. Open `src/components/HeroSection.tsx`
-3. Uncomment the `<Image>` component at the bottom of the file
-4. Update the `src` prop to match your image filename
+- `/en/assessments?category=work`
+- `/en/assessments?category=personal`
+- `/en/assessments?category=kid`
+- `/en/assessments?category=pet`
 
-Example:
-```tsx
-<Image
-  src="/hero-banner.jpg"
-  alt={t('imageAlt')}
-  fill
-  className="object-cover"
-  priority
-/>
+Demo scale prompts and user-owned records are defined in `backend/ingestion/mvp_scale_records.sql` and surfaced through `/[locale]/assessments`.
+
+## Contact Submissions
+
+The contact form posts to `/api/contact` and stores assessment inquiries in Supabase. Before using it in a Supabase-backed environment, run:
+
+```bash
+backend/ingestion/contact_submissions.sql
 ```
 
-## Adding Assessment Questions
-
-Assessment questions can be added to the placeholder sections in:
-
-- `src/app/[locale]/work/page.tsx`
-- `src/app/[locale]/personal/page.tsx`
-- `src/app/[locale]/kid/page.tsx`
-- `src/app/[locale]/pet/page.tsx`
-
-Replace the placeholder `<div>` with your assessment logic and components.
+The `contact_submissions` table allows public inserts only. Public clients cannot read submitted rows; review messages in the Supabase Dashboard or with a privileged server-side/admin workflow.
 
 ## Building for Production
 

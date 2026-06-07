@@ -9,6 +9,7 @@
     "test": "node --test tests/*.test.mjs",
     "lint": "next lint",
     "smoke:mvp-auth": "node tests/smoke-mvp-auth.mjs",
+    "smoke:contact": "node tests/smoke-contact.mjs",
     "check:mvp": "node tests/check-mvp-readiness.mjs"
   },
   "dependencies": {
