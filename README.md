@@ -51,6 +51,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser. You'll be r
 - `/zh/about` - About Us page (Chinese)
 - `/en/contact` - Contact page (English)
 - `/zh/contact` - Contact page (Chinese)
+- `/en/privacy` / `/zh/privacy` - MVP Privacy Policy
+- `/en/terms` / `/zh/terms` - MVP Terms of Service
+- `/en/review` / `/zh/review` - External MVP review pack with walkthrough path, verified capabilities, limitations, and open questions
 
 ### Assessment Pages
 - `/en/work` - Work assessment (English)
