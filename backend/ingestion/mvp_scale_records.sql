@@ -174,7 +174,7 @@ GRANT SELECT ON assessment_scales TO anon, authenticated;
 GRANT SELECT ON assessment_dimensions TO anon, authenticated;
 GRANT SELECT ON assessment_demo_items TO anon, authenticated;
 GRANT SELECT, INSERT, UPDATE ON user_scale_attempts TO authenticated;
-GRANT SELECT, INSERT ON user_scale_responses TO authenticated;
+GRANT SELECT, INSERT, UPDATE ON user_scale_responses TO authenticated;
 
 DROP POLICY IF EXISTS "assessment_scales_public_read_active" ON assessment_scales;
 DROP POLICY IF EXISTS "assessment_dimensions_public_read_active" ON assessment_dimensions;
@@ -188,6 +188,7 @@ DROP POLICY IF EXISTS "user_scale_attempts_update_own" ON user_scale_attempts;
 DROP POLICY IF EXISTS "user_scale_attempts_service_role_all" ON user_scale_attempts;
 DROP POLICY IF EXISTS "user_scale_responses_select_own" ON user_scale_responses;
 DROP POLICY IF EXISTS "user_scale_responses_insert_own" ON user_scale_responses;
+DROP POLICY IF EXISTS "user_scale_responses_update_own" ON user_scale_responses;
 DROP POLICY IF EXISTS "user_scale_responses_service_role_all" ON user_scale_responses;
 
 CREATE POLICY "assessment_scales_public_read_active" ON assessment_scales
@@ -218,7 +219,28 @@ CREATE POLICY "user_scale_attempts_service_role_all" ON user_scale_attempts
 CREATE POLICY "user_scale_responses_select_own" ON user_scale_responses
   FOR SELECT TO authenticated USING ((select auth.uid()) = user_id);
 CREATE POLICY "user_scale_responses_insert_own" ON user_scale_responses
-  FOR INSERT TO authenticated WITH CHECK ((select auth.uid()) = user_id);
+  FOR INSERT TO authenticated
+  WITH CHECK (
+    (select auth.uid()) = user_id
+    AND EXISTS (
+      SELECT 1
+      FROM user_scale_attempts
+      WHERE user_scale_attempts.id = user_scale_responses.attempt_id
+        AND user_scale_attempts.user_id = (select auth.uid())
+    )
+  );
+CREATE POLICY "user_scale_responses_update_own" ON user_scale_responses
+  FOR UPDATE TO authenticated
+  USING ((select auth.uid()) = user_id)
+  WITH CHECK (
+    (select auth.uid()) = user_id
+    AND EXISTS (
+      SELECT 1
+      FROM user_scale_attempts
+      WHERE user_scale_attempts.id = user_scale_responses.attempt_id
+        AND user_scale_attempts.user_id = (select auth.uid())
+    )
+  );
 CREATE POLICY "user_scale_responses_service_role_all" ON user_scale_responses
   FOR ALL TO service_role USING (true) WITH CHECK (true);
 

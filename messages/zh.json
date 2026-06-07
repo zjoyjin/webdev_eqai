@@ -223,7 +223,8 @@
     "started": "开始",
     "completed": "完成",
     "details": "详情",
-    "continue": "继续"
+    "continue": "继续",
+    "viewResult": "查看结果"
   },
   "assessments": {
     "work": {

@@ -172,16 +172,24 @@ test('MVP demo submission validates 1-7 item scores and saves a total score', ()
   assert.match(takePage, /name=\{`score_\$\{item\.item_code\}`\}/);
   assert.match(actions, /score < 1 \|\| score > 7/);
   assert.match(actions, /totalScore = \(scores as number\[\]\)\.reduce/);
+  assert.match(actions, /\.from\('user_scale_responses'\)/);
+  assert.match(actions, /\.upsert\(responseRows, \{ onConflict: 'attempt_id,item_code' \}\)/);
   assert.match(actions, /total_score: totalScore/);
   assert.match(actions, /status: 'completed'/);
+  assert.match(actions, /notes: null/);
 });
 
 test('MVP demo submission lands on a saved result page before history', () => {
   assert.match(actions, /\/assessments\/\$\{scaleCode\}\/result\?attemptId=\$\{attemptId\}/);
   assert.match(resultPage, /Result saved/);
   assert.match(resultPage, /Total score/);
+  assert.match(resultPage, /Dimension scores/);
+  assert.match(resultPage, /getDimensionLevel/);
   assert.match(resultPage, /does not represent a formal psychological assessment result or diagnosis/);
   assert.match(resultPage, /\/me\/assessments/);
+  assert.match(recordsPage, /t\('viewResult'\)/);
+  assert.doesNotMatch(recordsPage, /attempt\.notes/);
+  assert.doesNotMatch(resultPage, /typedAttempt\.notes/);
 });
 
 test('MVP smoke verifies public catalog and authenticated attempt writes when credentials exist', () => {

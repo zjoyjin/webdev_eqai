@@ -102,9 +102,6 @@ export default async function MyAssessmentRecordsPage({
                       {t('started')}: {formatDate(attempt.started_at, locale)}
                       {attempt.completed_at ? ` · ${t('completed')}: ${formatDate(attempt.completed_at, locale)}` : ''}
                     </p>
-                    {attempt.notes && (
-                      <p className="mt-3 text-sm leading-6 text-gray-600">{attempt.notes}</p>
-                    )}
                   </div>
 
                   <div className="flex gap-3">
@@ -120,6 +117,14 @@ export default async function MyAssessmentRecordsPage({
                         className="bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700"
                       >
                         {t('continue')}
+                      </Link>
+                    )}
+                    {attempt.status === 'completed' && (
+                      <Link
+                        href={`/${locale}/assessments/${attempt.scale_code}/result?attemptId=${attempt.id}`}
+                        className="bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700"
+                      >
+                        {t('viewResult')}
                       </Link>
                     )}
                   </div>

@@ -3,6 +3,7 @@ import { notFound, redirect } from 'next/navigation';
 import { submitScaleAttempt } from '@/app/[locale]/mvpScaleActions';
 import { getCurrentUser, getLocalizedItemText, getLocalizedScaleText, getMvpDemoItems, getMvpScale } from '@/lib/mvpScales';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
+import ScaleSubmitButton from '@/components/ScaleSubmitButton';
 
 type Props = {
   params: { locale: string; scaleCode: string };
@@ -32,6 +33,7 @@ const takeCopy = {
     low: 'Strongly disagree',
     high: 'Strongly agree',
     submit: 'Save result',
+    saving: 'Saving result...',
   },
   zh: {
     back: '返回',
@@ -45,6 +47,7 @@ const takeCopy = {
     low: '非常不同意',
     high: '非常同意',
     submit: '保存结果',
+    saving: '保存中...',
   },
 };
 
@@ -192,12 +195,7 @@ export default async function TakeMvpScalePage({
             })}
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700"
-          >
-            {copy.submit}
-          </button>
+          <ScaleSubmitButton idleLabel={copy.submit} pendingLabel={copy.saving} />
         </form>
       )}
     </div>

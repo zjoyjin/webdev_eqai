@@ -223,7 +223,8 @@
     "started": "Started",
     "completed": "Completed",
     "details": "Details",
-    "continue": "Continue"
+    "continue": "Continue",
+    "viewResult": "View result"
   },
   "assessments": {
     "work": {
