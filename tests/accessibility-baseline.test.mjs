@@ -35,3 +35,12 @@ test('navigation accessibility labels are localized', () => {
     assert.match(messages, /"switchLanguage"/);
   }
 });
+
+test('navigation auth link is session-aware and mutually exclusive', () => {
+  assert.match(navigation, /supabase\.auth\.getSession\(\)/);
+  assert.match(navigation, /supabase\.auth\.onAuthStateChange/);
+  assert.match(navigation, /authState === 'signedIn'/);
+  assert.match(navigation, /key: 'records'/);
+  assert.match(navigation, /authState === 'signedOut'/);
+  assert.match(navigation, /key: 'login'/);
+});

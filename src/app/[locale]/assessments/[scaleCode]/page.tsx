@@ -4,9 +4,7 @@ import { startScaleAttempt } from '@/app/[locale]/mvpScaleActions';
 import {
   getCurrentUser,
   getLocalizedDimensionText,
-  getLocalizedItemText,
   getLocalizedScaleText,
-  getMvpDemoItems,
   getMvpDimensions,
   getMvpScale,
 } from '@/lib/mvpScales';
@@ -24,7 +22,6 @@ const detailCopy = {
     start: 'Start assessment',
     login: 'Log in to start',
     dimensions: 'Dimensions',
-    questions: 'Questions',
   },
   zh: {
     back: '返回目录',
@@ -32,7 +29,6 @@ const detailCopy = {
     start: '开始评估',
     login: '登录后开始',
     dimensions: '维度',
-    questions: '题目',
   },
 };
 
@@ -41,10 +37,9 @@ export default async function MvpScaleDetailPage({
   searchParams,
 }: Props) {
   const copy = locale === 'zh' ? detailCopy.zh : detailCopy.en;
-  const [scale, dimensions, demoItems, user] = await Promise.all([
+  const [scale, dimensions, user] = await Promise.all([
     getMvpScale(scaleCode),
     getMvpDimensions(scaleCode),
-    getMvpDemoItems(scaleCode),
     getCurrentUser(),
   ]);
 
@@ -111,31 +106,12 @@ export default async function MvpScaleDetailPage({
                 {localizedDimension.secondaryTitle && (
                   <p className="mt-1 text-sm text-gray-500">{localizedDimension.secondaryTitle}</p>
                 )}
-                <p className="mt-2 text-xs uppercase tracking-wide text-gray-400">{dimension.variant_type}</p>
               </div>
             );
           })}
         </div>
       </section>
 
-      <section className="mt-8">
-        <h2 className="mb-4 text-xl font-medium text-gray-900">{copy.questions}</h2>
-        <div className="space-y-3">
-          {demoItems.map((item) => {
-            const localizedItem = getLocalizedItemText(item, locale);
-
-            return (
-              <div key={item.item_code} className="border border-gray-200 bg-white p-4">
-                <p className="text-sm text-gray-500">{item.item_code}</p>
-                <p className="mt-2 text-sm font-medium text-gray-900">{localizedItem.prompt}</p>
-                {localizedItem.secondaryPrompt && (
-                  <p className="mt-1 text-sm text-gray-500">{localizedItem.secondaryPrompt}</p>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
     </div>
   );
 }

@@ -25,14 +25,16 @@ test('contact consent links to privacy and terms', () => {
   assert.match(form, /t\('termsOfService'\)/);
 });
 
-test('privacy and terms pages define MVP data boundaries', () => {
+test('privacy and terms pages define service data boundaries', () => {
   assert.match(privacyPage, /contact form/);
   assert.match(privacyPage, /Supabase/);
   assert.match(privacyPage, /row-level security/);
   assert.match(privacyPage, /not medical, clinical, emergency, or diagnostic support/);
   assert.match(termsPage, /No medical or diagnostic service/);
-  assert.match(termsPage, /Demo results are not formal psychological assessments/);
+  assert.match(termsPage, /Results are not formal psychological assessments/);
   assert.match(termsPage, /contact form/);
+  assert.doesNotMatch(privacyPage, /MVP|demo/i);
+  assert.doesNotMatch(termsPage, /MVP|demo/i);
 });
 
 test('privacy and terms labels are localized', () => {

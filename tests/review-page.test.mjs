@@ -8,14 +8,15 @@ const enMessages = readFileSync(new URL('../messages/en.json', import.meta.url),
 const zhMessages = readFileSync(new URL('../messages/zh.json', import.meta.url), 'utf8');
 const readme = readFileSync(new URL('../README.md', import.meta.url), 'utf8');
 
-test('review page documents the MVP walkthrough and review scope', () => {
+test('review page documents the walkthrough and review scope', () => {
   assert.match(reviewPage, /External review pack/);
   assert.match(reviewPage, /Walkthrough path/);
-  assert.match(reviewPage, /Verified MVP capabilities/);
+  assert.match(reviewPage, /Verified capabilities/);
   assert.match(reviewPage, /Known limitations/);
   assert.match(reviewPage, /Open product questions/);
   assert.match(reviewPage, /Review assets/);
   assert.match(reviewPage, /MWI_DEMO/);
+  assert.doesNotMatch(reviewPage, /\bMVP\b|\bdemo\b|test account|演示/i);
 });
 
 test('review page links to the core MVP routes', () => {

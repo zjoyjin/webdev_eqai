@@ -8,10 +8,10 @@ type Props = {
 const reviewCopy = {
   en: {
     eyebrow: 'External review pack',
-    title: 'EQAI MVP Review',
+    title: 'EQAI Review',
     intro:
-      'Use this page as the short walkthrough for the current MVP. It lists the demo path, verified capabilities, known limitations, and open product questions for reviewers.',
-    primaryCta: 'Start with the demo catalog',
+      'Use this page as the short walkthrough for the current EQAI experience. It lists the review path, verified capabilities, known limitations, and open product questions for reviewers.',
+    primaryCta: 'Start with the assessment catalog',
     secondaryCta: 'Send review feedback',
     sections: [
       {
@@ -23,14 +23,14 @@ const reviewCopy = {
             text: 'Confirm the bilingual landing page, core mission, category cards, and embedded assessment guide.',
           },
           {
-            label: 'Demo catalog',
+            label: 'Assessment catalog',
             href: '/en/assessments',
-            text: 'Browse six Supabase-backed demo scales and filter by Work, Personal, Kid, or Pet.',
+            text: 'Browse six Supabase-backed assessments and filter by Work, Personal, Kid, or Pet.',
           },
           {
-            label: 'MWI demo scale',
+            label: 'MWI assessment',
             href: '/en/assessments/MWI_DEMO',
-            text: 'Open a demo scale detail page and confirm the non-diagnostic MVP boundary.',
+            text: 'Open an assessment detail page and confirm the non-diagnostic boundary.',
           },
           {
             label: 'Contact form',
@@ -40,20 +40,20 @@ const reviewCopy = {
           {
             label: 'Records',
             href: '/en/me/assessments',
-            text: 'Sign in with a test account to inspect private started and completed demo records.',
+            text: 'Sign in with a reviewer account to inspect private started and completed records.',
           },
         ],
       },
       {
-        heading: 'Verified MVP capabilities',
+        heading: 'Verified capabilities',
         items: [
           {
             label: 'Assessment discovery',
             text: 'Unified directory, category entry points, structured API routes, and dataset fallback are implemented.',
           },
           {
-            label: 'Demo response flow',
-            text: 'Signed-in users can start a demo scale, answer bounded 1-5 items, save a total score, and review the result.',
+            label: 'Response flow',
+            text: 'Signed-in users can start an assessment, answer bounded 1-5 items, save a total score, and review the result.',
           },
           {
             label: 'Contact intake',
@@ -69,8 +69,8 @@ const reviewCopy = {
         heading: 'Known limitations',
         items: [
           {
-            label: 'Demo content only',
-            text: 'The current scales are product-validation demos, not formal psychological instruments.',
+            label: 'Formal assessment boundary',
+            text: 'The current scales are informational tools for personal reference, not formal psychological instruments.',
           },
           {
             label: 'No admin inbox yet',
@@ -91,7 +91,7 @@ const reviewCopy = {
         items: [
           {
             label: 'Formal assessment roadmap',
-            text: 'Which demo scales should graduate first, and what validation evidence is required before public claims expand?',
+            text: 'Which assessments should be expanded first, and what validation evidence is required before public claims expand?',
           },
           {
             label: 'Child data posture',
@@ -107,14 +107,14 @@ const reviewCopy = {
   },
   zh: {
     eyebrow: '外部评审包',
-    title: 'EQAI MVP 评审',
+    title: 'EQAI 评审',
     intro:
-      '这个页面作为当前 MVP 的短版 walkthrough：集中列出演示路径、已验证能力、已知限制和开放产品问题，方便评审者快速走查。',
-    primaryCta: '从 demo 目录开始',
+      '这个页面作为当前 EQAI 体验的短版走查：集中列出评审路径、已验证能力、已知限制和开放产品问题，方便评审者快速查看。',
+    primaryCta: '从评估目录开始',
     secondaryCta: '提交评审反馈',
     sections: [
       {
-        heading: '演示路径',
+        heading: '评审路径',
         items: [
           {
             label: '首页',
@@ -122,14 +122,14 @@ const reviewCopy = {
             text: '确认双语落地页、核心使命、分类卡片和内嵌评估引导。',
           },
           {
-            label: 'Demo 目录',
+            label: '评估目录',
             href: '/zh/assessments',
-            text: '浏览 6 个 Supabase 支持的 demo 量表，并按工作、个人、儿童或宠物过滤。',
+            text: '浏览 6 个 Supabase 支持的评估，并按工作、个人、儿童或宠物过滤。',
           },
           {
-            label: 'MWI demo 量表',
+            label: 'MWI 评估',
             href: '/zh/assessments/MWI_DEMO',
-            text: '打开 demo 量表详情页，确认非诊断性的 MVP 边界说明。',
+            text: '打开评估详情页，确认非诊断性的边界说明。',
           },
           {
             label: '联系表单',
@@ -139,20 +139,20 @@ const reviewCopy = {
           {
             label: '我的记录',
             href: '/zh/me/assessments',
-            text: '使用测试账号登录后，检查私有的 started/completed demo 记录。',
+            text: '使用评审账号登录后，检查私有的 started/completed 记录。',
           },
         ],
       },
       {
-        heading: '已验证的 MVP 能力',
+        heading: '已验证能力',
         items: [
           {
             label: '评估发现',
             text: '统一目录、分类入口、结构化 API 路由和 dataset fallback 已实现。',
           },
           {
-            label: 'Demo 作答流程',
-            text: '登录用户可以开始 demo 量表、完成 1-5 分题目、保存总分并查看结果。',
+            label: '作答流程',
+            text: '登录用户可以开始评估、完成 1-5 分题目、保存总分并查看结果。',
           },
           {
             label: '联系信息收集',
@@ -168,8 +168,8 @@ const reviewCopy = {
         heading: '已知限制',
         items: [
           {
-            label: '仅为 demo 内容',
-            text: '当前量表用于产品流程验证，不是正式心理测评工具。',
+            label: '正式测评边界',
+            text: '当前量表用于个人参考，不是正式心理测评工具。',
           },
           {
             label: '尚无后台 inbox',
@@ -190,7 +190,7 @@ const reviewCopy = {
         items: [
           {
             label: '正式测评路线图',
-            text: '哪些 demo 量表应最先升级，公开表达扩大前需要哪些验证证据？',
+            text: '哪些评估应最先扩展，公开表达扩大前需要哪些验证证据？',
           },
           {
             label: '儿童数据策略',

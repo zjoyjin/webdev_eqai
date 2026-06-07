@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation';
 import { createSupabaseServerClient, isSupabaseConfigured } from '@/lib/supabase/server';
 
 const MVP_SQL_SETUP_MESSAGE =
-  'MVP database tables are not ready. Run backend/ingestion/mvp_scale_records.sql in Supabase SQL Editor first.';
+  'Assessment records are not ready yet. Run backend/ingestion/mvp_scale_records.sql in Supabase SQL Editor first.';
 
 export async function startScaleAttempt(locale: string, scaleCode: string) {
   if (!isSupabaseConfigured()) {

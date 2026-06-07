@@ -161,11 +161,6 @@ export default async function MvpAssessmentsPage({
                     href={`/${locale}/assessments/${scale.scale_code}`}
                     className="border border-gray-200 bg-white p-5 transition-colors hover:border-gray-900"
                   >
-                    <div className="mb-4">
-                      <span className="text-xs font-medium uppercase tracking-wide text-gray-500">
-                        {scale.scale_code}
-                      </span>
-                    </div>
                     <h3 className="text-lg font-medium text-gray-900">
                       {localized.title}
                     </h3>

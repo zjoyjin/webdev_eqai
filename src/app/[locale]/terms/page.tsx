@@ -7,21 +7,21 @@ type Props = {
 
 const termsCopy = {
   en: {
-    eyebrow: 'MVP terms',
+    eyebrow: 'Terms',
     title: 'Terms of Service',
     updated: 'Last updated: June 7, 2026',
     intro:
-      'These terms cover the current EQAI MVP experience, including demo assessment browsing, short demo scale completion, saved user records, and contact submissions.',
+      'These terms cover the current EQAI experience, including assessment browsing, guided scale completion, saved user records, and contact submissions.',
     sections: [
       {
-        heading: 'MVP scope',
+        heading: 'Service scope',
         body:
-          'The current EQAI product is an MVP. Demo scales, categories, records, and copy may change as the product is reviewed and improved.',
+          'EQAI assessments, categories, records, and copy may change as the product is reviewed and improved.',
       },
       {
         heading: 'No medical or diagnostic service',
         body:
-          'EQAI does not provide medical, clinical, emergency, veterinary, legal, or diagnostic services. Demo results are not formal psychological assessments and should not be used as a diagnosis, treatment plan, or crisis response.',
+          'EQAI does not provide medical, clinical, emergency, veterinary, legal, or diagnostic services. Results are not formal psychological assessments and should not be used as a diagnosis, treatment plan, or crisis response.',
       },
       {
         heading: 'Your use of the service',
@@ -31,7 +31,7 @@ const termsCopy = {
       {
         heading: 'Accounts and records',
         body:
-          'Some MVP flows require sign-in so records can be associated with the correct user. You are responsible for keeping your account access secure. Records may be unavailable during maintenance or while MVP database setup is changing.',
+          'Some flows require sign-in so records can be associated with the correct user. You are responsible for keeping your account access secure. Records may be unavailable during maintenance or while database setup is changing.',
       },
       {
         heading: 'Contact submissions',
@@ -41,27 +41,27 @@ const termsCopy = {
       {
         heading: 'Changes',
         body:
-          'We may update the MVP, these terms, and related policies as the product develops. Continued use after updates means you accept the updated terms.',
+          'We may update the service, these terms, and related policies as the product develops. Continued use after updates means you accept the updated terms.',
       },
     ],
     privacyCta: 'Read the privacy policy',
   },
   zh: {
-    eyebrow: 'MVP 服务条款',
+    eyebrow: '服务条款',
     title: '服务条款',
     updated: '最后更新：2026 年 6 月 7 日',
     intro:
-      '这些条款适用于当前 EQAI MVP 体验，包括 demo 评估浏览、短版 demo 量表作答、用户记录保存和联系表单提交。',
+      '这些条款适用于当前 EQAI 体验，包括评估浏览、引导式量表作答、用户记录保存和联系表单提交。',
     sections: [
       {
-        heading: 'MVP 范围',
+        heading: '服务范围',
         body:
-          '当前 EQAI 产品仍处于 MVP 阶段。Demo 量表、分类、记录和页面文案都可能随着产品评审和迭代而调整。',
+          'EQAI 的评估、分类、记录和页面文案都可能随着产品评审和迭代而调整。',
       },
       {
         heading: '不提供医学或诊断服务',
         body:
-          'EQAI 不提供医学、临床、紧急、兽医、法律或诊断服务。Demo 结果不是正式心理测评，不能作为诊断、治疗方案或危机处理依据。',
+          'EQAI 不提供医学、临床、紧急、兽医、法律或诊断服务。评估结果不是正式心理测评，不能作为诊断、治疗方案或危机处理依据。',
       },
       {
         heading: '服务使用',
@@ -71,7 +71,7 @@ const termsCopy = {
       {
         heading: '账户与记录',
         body:
-          '部分 MVP 流程需要登录，以便把记录关联到正确用户。你需要自行保护账户访问安全。维护期间或 MVP 数据库设置变更时，记录可能暂时不可用。',
+          '部分流程需要登录，以便把记录关联到正确用户。你需要自行保护账户访问安全。维护期间或数据库设置变更时，记录可能暂时不可用。',
       },
       {
         heading: '联系表单提交',
@@ -81,7 +81,7 @@ const termsCopy = {
       {
         heading: '变更',
         body:
-          '随着产品发展，我们可能更新 MVP、这些条款和相关政策。更新后继续使用服务，即表示你接受更新后的条款。',
+          '随着产品发展，我们可能更新服务、这些条款和相关政策。更新后继续使用服务，即表示你接受更新后的条款。',
       },
     ],
     privacyCta: '阅读隐私政策',

@@ -6,6 +6,7 @@ const sql = readFileSync(new URL('../backend/ingestion/mvp_scale_records.sql', i
 const rlsSmokeSql = readFileSync(new URL('../backend/ingestion/mvp_rls_smoke.sql', import.meta.url), 'utf8');
 const actions = readFileSync(new URL('../src/app/[locale]/mvpScaleActions.ts', import.meta.url), 'utf8');
 const catalogPage = readFileSync(new URL('../src/app/[locale]/assessments/page.tsx', import.meta.url), 'utf8');
+const detailPage = readFileSync(new URL('../src/app/[locale]/assessments/[scaleCode]/page.tsx', import.meta.url), 'utf8');
 const homePage = readFileSync(new URL('../src/app/[locale]/page.tsx', import.meta.url), 'utf8');
 const takePage = readFileSync(new URL('../src/app/[locale]/assessments/[scaleCode]/take/page.tsx', import.meta.url), 'utf8');
 const resultPage = readFileSync(new URL('../src/app/[locale]/assessments/[scaleCode]/result/page.tsx', import.meta.url), 'utf8');
@@ -21,8 +22,19 @@ const middleware = readFileSync(new URL('../src/middleware.ts', import.meta.url)
 const packageJson = readFileSync(new URL('../package.json', import.meta.url), 'utf8');
 const readinessScript = readFileSync(new URL('../tests/check-mvp-readiness.mjs', import.meta.url), 'utf8');
 const mvpScales = readFileSync(new URL('../src/lib/mvpScales.ts', import.meta.url), 'utf8');
+const navigation = readFileSync(new URL('../src/components/Navigation.tsx', import.meta.url), 'utf8');
+const localeLayout = readFileSync(new URL('../src/app/[locale]/layout.tsx', import.meta.url), 'utf8');
 const enMessages = readFileSync(new URL('../messages/en.json', import.meta.url), 'utf8');
 const zhMessages = readFileSync(new URL('../messages/zh.json', import.meta.url), 'utf8');
+
+const scaleCodes = [
+  'MWI_DEMO',
+  'ACAD_DEMO',
+  'PERSONALITY_DEMO',
+  'EMOTION_REG_DEMO',
+  'ADHD_DEMO',
+  'PARENTING_STYLE_DEMO',
+];
 
 test('MVP SQL defines the required scale and user attempt tables', () => {
   for (const tableName of [
@@ -48,18 +60,9 @@ test('MVP RLS keeps user scale attempts owner-scoped', () => {
 });
 
 test('MVP seed includes six assessment scales with product-facing copy', () => {
-  const scaleCodes = [...sql.matchAll(/'([A-Z_]+_DEMO)'/g)].map((match) => match[1]);
+  const seededScaleCodes = [...sql.matchAll(/'([A-Z_]+_DEMO)'/g)].map((match) => match[1]);
   assert.deepEqual(
-    Array.from(new Set(scaleCodes)).filter((code) =>
-      [
-        'MWI_DEMO',
-        'ACAD_DEMO',
-        'PERSONALITY_DEMO',
-        'EMOTION_REG_DEMO',
-        'ADHD_DEMO',
-        'PARENTING_STYLE_DEMO',
-      ].includes(code)
-    ).sort(),
+    Array.from(new Set(seededScaleCodes)).filter((code) => scaleCodes.includes(code)).sort(),
     [
       'ACAD_DEMO',
       'ADHD_DEMO',
@@ -75,6 +78,25 @@ test('MVP seed includes six assessment scales with product-facing copy', () => {
   assert.doesNotMatch(sql, /用于测试|A demo scale for testing|MVP demo scale catalog/i);
 });
 
+test('MVP scale seed and local fallback include enough dimensions and answerable items', () => {
+  for (const scaleCode of scaleCodes) {
+    const dimensionRows = [...sql.matchAll(new RegExp(`\\('${scaleCode}',\\s*'[A-Z_]+',\\s*NULL`, 'g'))];
+    const itemRows = [...sql.matchAll(new RegExp(`\\('${scaleCode}',\\s*'[A-Z_]+',\\s*'[A-Z_0-9]+'`, 'g'))];
+    const localDimensions = [...mvpScales.matchAll(new RegExp(`dimension\\('${scaleCode}'`, 'g'))];
+    const localItems = [...mvpScales.matchAll(new RegExp(`item\\('${scaleCode}'`, 'g'))];
+
+    assert.equal(dimensionRows.length, 4, `${scaleCode} SQL dimension count`);
+    assert.equal(itemRows.length, 8, `${scaleCode} SQL item count`);
+    assert.equal(localDimensions.length, 4, `${scaleCode} fallback dimension count`);
+    assert.equal(localItems.length, 8, `${scaleCode} fallback item count`);
+  }
+
+  assert.match(sql, /'MWI_DEMO', 'RESILIENCE'/);
+  assert.match(sql, /'PARENTING_STYLE_DEMO', 'STRUCTURED_AUTONOMY'/);
+  assert.match(mvpScales, /item\('MWI_DEMO', 'EXPRESSION', 'MWI_08'/);
+  assert.match(mvpScales, /item\('PARENTING_STYLE_DEMO', 'BOUNDARIES', 'PARENT_08'/);
+});
+
 test('MVP assessment flow routes started attempts through the demo take page', () => {
   assert.match(actions, /redirect\(`\/\$\{locale\}\/assessments\/\$\{scaleCode\}\/take\?attemptId=\$\{attemptId\}`\)/);
   assert.match(recordsPage, /\/assessments\/\$\{attempt\.scale_code\}\/take\?attemptId=\$\{attempt\.id\}/);
@@ -87,6 +109,40 @@ test('MVP catalog groups assessments by module before listing scale cards', () =
   assert.match(catalogPage, /group\.scales\.map/);
   assert.match(catalogPage, /\{group\.scales\.length\} \{copy\.scaleCount\}/);
   assert.match(catalogPage, /getLocalizedScaleText\(scale, locale\)/);
+});
+
+test('MVP Chinese assessment surfaces do not duplicate English secondary text', () => {
+  assert.match(mvpScales, /const secondaryTitle = isZh \? null : scale\.title_cn/);
+  assert.match(mvpScales, /const secondaryTitle = isZh \? null : dimension\.title_cn/);
+  assert.match(mvpScales, /const secondaryPrompt = isZh \? null : item\.prompt_cn/);
+  assert.match(catalogPage, /localized\.secondaryTitle/);
+  assert.match(detailPage, /localizedScale\.secondaryTitle/);
+  assert.match(detailPage, /localizedDimension\.secondaryTitle/);
+  assert.match(takePage, /localizedItem\.secondaryPrompt/);
+  assert.doesNotMatch(zhMessages, /情智AI/);
+  assert.match(zhMessages, /"appName": "EQAI"/);
+});
+
+test('MVP detail page does not preview non-answerable questions or internal variants', () => {
+  assert.doesNotMatch(detailPage, /getMvpDemoItems/);
+  assert.doesNotMatch(detailPage, /getLocalizedItemText/);
+  assert.doesNotMatch(detailPage, /item\.item_code/);
+  assert.doesNotMatch(detailPage, /localizedItem\.secondaryPrompt/);
+  assert.doesNotMatch(detailPage, /dimension\.variant_type/);
+  assert.match(takePage, /getMvpDemoItems/);
+  assert.match(takePage, /name=\{`score_\$\{item\.item_code\}`\}/);
+});
+
+test('MVP navigation swaps login and records from the browser auth session', () => {
+  assert.match(localeLayout, /getSupabaseBrowserConfig/);
+  assert.match(localeLayout, /authConfigured=\{isSupabaseConfigured\(\)\}/);
+  assert.match(navigation, /authState, setAuthState/);
+  assert.match(navigation, /authConfigured \? 'loading' : 'signedOut'/);
+  assert.match(navigation, /supabase\.auth\.getSession\(\)/);
+  assert.match(navigation, /supabase\.auth\.onAuthStateChange/);
+  assert.match(navigation, /authState === 'signedIn'\s*\?\s*\{ key: 'records'/);
+  assert.match(navigation, /authState === 'signedOut'\s*\?\s*\{ key: 'login'/);
+  assert.match(navigation, /\.filter\(\(item\): item is \{ key: string; href: string; label: string \}/);
 });
 
 test('MVP category entry points route into the unified filtered catalog', () => {
@@ -187,7 +243,7 @@ test('MVP auth and records surfaces are localized', () => {
 });
 
 test('MVP product surfaces avoid visible demo and test wording', () => {
-  for (const page of [catalogPage, takePage, resultPage, enMessages, zhMessages]) {
+  for (const page of [catalogPage, detailPage, takePage, resultPage, actions, enMessages, zhMessages]) {
     assert.doesNotMatch(page, /Demo catalog|Assessment MVP|Start demo scale|Submit demo result|demo total score/i);
     assert.doesNotMatch(page, /浏览、作答并保存 demo 记录|demo 量表|MVP 流程/i);
   }
