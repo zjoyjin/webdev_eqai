@@ -27,7 +27,7 @@ const privacyCopy = {
       {
         heading: 'Storage and access',
         body:
-          'Service data is stored in Supabase. Contact submissions are insert-only for public users and are intended for EQAI team review. Assessment records are protected with row-level security so signed-in users can access their own records.',
+    'In the static version, assessment records and contact drafts are stored in the current browser. They are not synchronized across devices.',
       },
       {
         heading: 'Clinical and diagnostic boundary',
@@ -62,7 +62,7 @@ const privacyCopy = {
       {
         heading: '存储与访问',
         body:
-          '服务数据存储在 Supabase 中。公开用户只能插入联系表单记录，供 EQAI 团队审核；评估记录通过行级安全策略保护，登录用户只能访问自己的记录。',
+    '静态版本会把评估记录和联系草稿保存在当前浏览器中，不会跨设备同步。',
       },
       {
         heading: '临床与诊断边界',

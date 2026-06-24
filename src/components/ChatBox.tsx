@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, KeyboardEvent } from 'react';
+import bundledData from '../../dataset/assessment_data.json';
 
 interface Message {
   id: number;
@@ -146,13 +147,9 @@ export default function ChatBox({ variant = 'floating' }: ChatBoxProps) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const slug = params.get('slug') ?? params.get('assessmentSlug');
-    const url = slug ? `/api/assessments?slug=${encodeURIComponent(slug)}` : '/api/assessments';
 
     setAssessmentSlug(slug);
-    fetch(url)
-      .then((r) => r.json())
-      .then((d) => setAssessmentData(d))
-      .catch(() => {});
+    setAssessmentData(bundledData as AssessmentData);
   }, []);
 
   useEffect(() => {

@@ -37,10 +37,7 @@ test('navigation accessibility labels are localized', () => {
 });
 
 test('navigation auth link is session-aware and mutually exclusive', () => {
-  assert.match(navigation, /supabase\.auth\.getSession\(\)/);
-  assert.match(navigation, /supabase\.auth\.onAuthStateChange/);
-  assert.match(navigation, /authState === 'signedIn'/);
   assert.match(navigation, /key: 'records'/);
-  assert.match(navigation, /authState === 'signedOut'/);
-  assert.match(navigation, /key: 'login'/);
+  assert.doesNotMatch(navigation, /supabase\.auth/);
+  assert.doesNotMatch(navigation, /authState/);
 });

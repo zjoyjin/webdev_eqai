@@ -27,12 +27,13 @@ test('contact consent links to privacy and terms', () => {
 
 test('privacy and terms pages define service data boundaries', () => {
   assert.match(privacyPage, /contact form/);
-  assert.match(privacyPage, /Supabase/);
-  assert.match(privacyPage, /row-level security/);
+  assert.match(privacyPage, /current browser/);
+  assert.match(privacyPage, /not synchronized across devices/);
   assert.match(privacyPage, /not medical, clinical, emergency, or diagnostic support/);
   assert.match(termsPage, /No medical or diagnostic service/);
   assert.match(termsPage, /Results are not formal psychological assessments/);
   assert.match(termsPage, /contact form/);
+  assert.match(termsPage, /Clearing browser data or switching devices/);
   assert.doesNotMatch(privacyPage, /MVP|demo/i);
   assert.doesNotMatch(termsPage, /MVP|demo/i);
 });

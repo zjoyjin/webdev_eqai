@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { startScaleAttempt } from '@/app/[locale]/mvpScaleActions';
 import {
   Eyebrow,
   PageShell,
@@ -10,7 +9,7 @@ import {
   softPanelClass,
 } from '@/components/PageChrome';
 import {
-  getCurrentUser,
+  demoScales,
   getLocalizedDimensionText,
   getLocalizedScaleText,
   getMvpDimensions,
@@ -19,7 +18,6 @@ import {
 
 type Props = {
   params: { locale: string; scaleCode: string };
-  searchParams: { error?: string };
 };
 
 const detailCopy = {
@@ -28,27 +26,27 @@ const detailCopy = {
     boundary:
       'This assessment record is for personal reference only. It does not provide a formal psychological assessment result or diagnosis.',
     start: 'Start assessment',
-    login: 'Log in to start',
     dimensions: 'Dimensions',
   },
   zh: {
     back: '返回目录',
     boundary: '本评估记录仅供个人参考，不提供正式心理测评结果或诊断。',
     start: '开始评估',
-    login: '登录后开始',
     dimensions: '维度',
   },
 };
 
+export function generateStaticParams() {
+  return demoScales.map((scale) => ({ scaleCode: scale.scale_code }));
+}
+
 export default async function MvpScaleDetailPage({
   params: { locale, scaleCode },
-  searchParams,
 }: Props) {
   const copy = locale === 'zh' ? detailCopy.zh : detailCopy.en;
-  const [scale, dimensions, user] = await Promise.all([
+  const [scale, dimensions] = await Promise.all([
     getMvpScale(scaleCode),
     getMvpDimensions(scaleCode),
-    getCurrentUser(),
   ]);
 
   if (!scale) {
@@ -80,26 +78,12 @@ export default async function MvpScaleDetailPage({
           {copy.boundary}
         </div>
 
-        {searchParams.error && (
-          <div className="mt-4 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
-            {searchParams.error}
-          </div>
-        )}
-
-        <form
-          action={async () => {
-            'use server';
-            await startScaleAttempt(locale, scale.scale_code);
-          }}
-          className="mt-8"
+        <Link
+          href={`/${locale}/assessments/${scale.scale_code}/take/`}
+          className={`mt-8 ${primaryButtonClass}`}
         >
-          <button
-            type="submit"
-            className={primaryButtonClass}
-          >
-            {user ? copy.start : copy.login}
-          </button>
-        </form>
+          {copy.start}
+        </Link>
       </div>
 
       <section className="mt-8">
@@ -123,5 +107,3 @@ export default async function MvpScaleDetailPage({
     </PageShell>
   );
 }
-
-export const dynamic = 'force-dynamic';

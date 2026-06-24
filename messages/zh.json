@@ -13,6 +13,7 @@
     "login": "登录",
     "privacy": "隐私政策",
     "terms": "服务条款",
+    "devlog": "开发日志",
     "review": "评审包",
     "openMenu": "打开导航菜单",
     "closeMenu": "关闭导航菜单",
@@ -69,7 +70,7 @@
       },
       "save": {
         "title": "保存",
-        "text": "通过 RLS 策略保存用户自己的记录。"
+        "text": "在当前浏览器中保存用户自己的记录。"
       }
     },
     "chatEyebrow": "随时提问",
@@ -147,7 +148,7 @@
       "message": "留言",
       "submit": "发送消息",
       "submitting": "发送中...",
-      "success": "谢谢。你的消息已保存，EQAI 团队可以在 Supabase 中查看。",
+      "success": "谢谢。你的消息已保存在当前浏览器中，可用于本地查看。",
       "error": "保存消息时出现问题，请稍后重试。",
       "consent": "我同意 EQAI 保存这条消息，并就本次咨询联系我。此表单不用于紧急、临床、医学或诊断支持。",
       "consentPrefix": "我同意 EQAI 保存这条消息，并就本次咨询联系我。我接受",
@@ -193,7 +194,7 @@
   "auth": {
     "eyebrow": "EQAI 账户",
     "title": "登录或注册",
-    "intro": "创建账户后，可以保存你开始或完成的评估记录。注册使用邮箱确认链接，不是页面验证码。",
+    "intro": "静态版本会在当前浏览器中保存你开始或完成的评估记录，不需要邮箱验证码或确认链接。",
     "loginTab": "登录",
     "registerTab": "注册",
     "email": "电子邮件",
@@ -203,10 +204,10 @@
     "loginButton": "登录",
     "registerButton": "注册",
     "working": "处理中...",
-    "notConfigured": "Supabase 尚未配置。请先添加环境变量再使用登录。",
-    "registrationSaved": "注册已提交。请到邮箱查收确认链接，点击确认后再登录。如果收件箱没有，请检查垃圾邮件；不要短时间重复提交。",
-    "emailNotConfirmed": "请先确认邮箱后再登录。请检查收件箱或垃圾邮件中的确认链接。",
-    "rateLimited": "请稍后再请求新的确认邮件。为保护账户安全，短时间重复注册会被限流。"
+    "notConfigured": "静态登录已在当前浏览器可用。",
+    "registrationSaved": "注册信息已保存在当前浏览器。",
+    "emailNotConfirmed": "静态登录不需要邮箱确认。",
+    "rateLimited": "静态登录现在可用。"
   },
   "records": {
     "eyebrow": "我的记录",

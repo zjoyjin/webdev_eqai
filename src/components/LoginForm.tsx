@@ -2,22 +2,15 @@
 
 import { FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { createSupabaseBrowserClient } from '@/lib/supabase/browser';
 import { inputClass, primaryButtonClass, softCardClass } from '@/components/PageChrome';
 
 type LoginFormProps = {
   locale: string;
-  configured: boolean;
-  supabaseUrl?: string;
-  supabasePublishableKey?: string;
   nextPath?: string;
 };
 
 export default function LoginForm({
   locale,
-  configured,
-  supabaseUrl,
-  supabasePublishableKey,
   nextPath,
 }: LoginFormProps) {
   const t = useTranslations('auth');
@@ -31,39 +24,13 @@ export default function LoginForm({
     event.preventDefault();
     setMessage('');
 
-    if (!configured) {
-      setMessage(t('notConfigured'));
-      return;
-    }
-
     setPending(true);
 
     try {
-      const supabase = createSupabaseBrowserClient({
-        url: supabaseUrl,
-        publishableKey: supabasePublishableKey,
-      });
-      const result =
-        mode === 'login'
-          ? await supabase.auth.signInWithPassword({ email, password })
-          : await supabase.auth.signUp({
-              email,
-              password,
-              options: {
-                emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(nextPath || `/${locale}/me/assessments`)}`,
-              },
-            });
-
-      if (result.error) {
-        setMessage(formatAuthMessage(result.error.message, t));
-        return;
-      }
-
-      if (mode === 'register' && !result.data.session) {
-        setMessage(t('registrationSaved'));
-        return;
-      }
-
+      window.localStorage.setItem(
+        'eqai.static.user.v1',
+        JSON.stringify({ email, mode, signedInAt: new Date().toISOString() })
+      );
       window.location.href = nextPath || `/${locale}/me/assessments`;
     } finally {
       setPending(false);
@@ -141,16 +108,4 @@ export default function LoginForm({
       )}
     </div>
   );
-}
-
-function formatAuthMessage(message: string, t: ReturnType<typeof useTranslations>) {
-  if (/email_not_confirmed|email not confirmed/i.test(message)) {
-    return t('emailNotConfirmed');
-  }
-
-  if (/429|rate limit|too many|security purposes|after \d+ seconds/i.test(message)) {
-    return t('rateLimited');
-  }
-
-  return message;
 }

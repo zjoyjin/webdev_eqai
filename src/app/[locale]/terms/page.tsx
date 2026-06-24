@@ -32,7 +32,7 @@ const termsCopy = {
       {
         heading: 'Accounts and records',
         body:
-          'Some flows require sign-in so records can be associated with the correct user. You are responsible for keeping your account access secure. Records may be unavailable during maintenance or while database setup is changing.',
+    'The static version stores records in the current browser. Clearing browser data or switching devices may make local records unavailable.',
       },
       {
         heading: 'Contact submissions',
@@ -72,7 +72,7 @@ const termsCopy = {
       {
         heading: '账户与记录',
         body:
-          '部分流程需要登录，以便把记录关联到正确用户。你需要自行保护账户访问安全。维护期间或数据库设置变更时，记录可能暂时不可用。',
+    '静态版本会把记录保存在当前浏览器中。清理浏览器数据或更换设备后，本地记录可能无法继续查看。',
       },
       {
         heading: '联系表单提交',

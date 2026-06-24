@@ -1,5 +1,3 @@
-import { createSupabaseServerClient, isSupabaseConfigured } from '@/lib/supabase/server';
-
 export type MvpScale = {
   scale_code: string;
   module_code: string;
@@ -45,6 +43,16 @@ export type MvpAttempt = {
   started_at: string;
   completed_at: string | null;
   assessment_scales?: Pick<MvpScale, 'title_cn' | 'title_en' | 'module_name_cn' | 'module_name_en'> | null;
+};
+
+export type MvpUser = {
+  id: string;
+  email: string;
+};
+
+export const mockMvpUser: MvpUser = {
+  id: 'local-static-user',
+  email: 'local@eqai.static',
 };
 
 export const mvpScaleCategories = ['work', 'personal', 'kid', 'pet'] as const;
@@ -426,17 +434,7 @@ export const demoItems: MvpDemoItem[] = [
 ];
 
 export async function getMvpScales() {
-  if (!isSupabaseConfigured()) return demoScales;
-
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from('assessment_scales')
-    .select('*')
-    .eq('active', true)
-    .order('module_code', { ascending: true })
-    .order('scale_code', { ascending: true });
-
-  return error || !data ? demoScales : (data as MvpScale[]);
+  return demoScales.filter((scale) => scale.active);
 }
 
 export function normalizeMvpScaleCategory(value: string | null | undefined) {
@@ -453,84 +451,31 @@ export function filterMvpScalesByCategory(scales: MvpScale[], category: MvpScale
 }
 
 export async function getMvpScale(scaleCode: string) {
-  if (!isSupabaseConfigured()) {
-    return demoScales.find((scale) => scale.scale_code === scaleCode) ?? null;
-  }
-
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from('assessment_scales')
-    .select('*')
-    .eq('active', true)
-    .eq('scale_code', scaleCode)
-    .maybeSingle();
-
-  return error || !data ? demoScales.find((scale) => scale.scale_code === scaleCode) ?? null : (data as MvpScale);
+  return demoScales.find((scale) => scale.active && scale.scale_code === scaleCode) ?? null;
 }
 
 export async function getMvpDimensions(scaleCode: string) {
-  if (!isSupabaseConfigured()) {
-    return demoDimensions.filter((dimension) => dimension.scale_code === scaleCode);
-  }
-
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from('assessment_dimensions')
-    .select('*')
-    .eq('active', true)
-    .eq('scale_code', scaleCode)
-    .order('sort_order', { ascending: true });
-
-  return error || !data ? demoDimensions.filter((dimension) => dimension.scale_code === scaleCode) : (data as MvpDimension[]);
+  return demoDimensions
+    .filter((dimension) => dimension.active && dimension.scale_code === scaleCode)
+    .sort((left, right) => left.sort_order - right.sort_order);
 }
 
 export async function getMvpDemoItems(scaleCode: string) {
-  if (!isSupabaseConfigured()) {
-    return demoItems.filter((demoItem) => demoItem.scale_code === scaleCode);
-  }
-
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from('assessment_demo_items')
-    .select('*')
-    .eq('active', true)
-    .eq('scale_code', scaleCode)
-    .order('sort_order', { ascending: true });
-
-  return error || !data ? demoItems.filter((demoItem) => demoItem.scale_code === scaleCode) : (data as MvpDemoItem[]);
+  return demoItems
+    .filter((demoItem) => demoItem.active && demoItem.scale_code === scaleCode)
+    .sort((left, right) => left.sort_order - right.sort_order);
 }
 
 export async function getCurrentUser() {
-  if (!isSupabaseConfigured()) return null;
-
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase.auth.getUser();
-
-  return error ? null : data.user;
+  return mockMvpUser;
 }
 
 export async function getUserAttempts() {
-  const user = await getCurrentUser();
-  if (!user) return { user: null, attempts: [] as MvpAttempt[], error: null as string | null };
-
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from('user_scale_attempts')
-    .select('*, assessment_scales(title_cn,title_en,module_name_cn,module_name_en)')
-    .eq('user_id', user.id)
-    .order('started_at', { ascending: false });
-
   return {
-    user,
-    attempts: error || !data ? [] : (data as MvpAttempt[]),
-    error: error ? formatMvpReadError(error.message) : null,
+    user: mockMvpUser,
+    attempts: [] as MvpAttempt[],
+    error: null as string | null,
   };
-}
-
-function formatMvpReadError(message: string) {
-  return /assessment_scales|user_scale_attempts|schema cache|PGRST205/i.test(message)
-    ? 'Assessment records are not ready yet. Run backend/ingestion/mvp_scale_records.sql in Supabase SQL Editor first.'
-    : message;
 }
 
 function dimension(

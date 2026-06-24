@@ -31,7 +31,7 @@ const reviewCopy = {
           {
             label: 'Assessment catalog',
             href: '/en/assessments',
-            text: 'Browse six Supabase-backed assessments and filter by Work, Personal, Kid, or Pet.',
+    text: 'Browse six static assessments and filter by Work, Personal, Kid, or Pet.',
           },
           {
             label: 'MWI assessment',
@@ -63,7 +63,7 @@ const reviewCopy = {
           },
           {
             label: 'Contact intake',
-            text: 'The contact API validates deterministic fields and writes submissions to Supabase while blocking public reads.',
+    text: 'The contact form saves submissions in the current browser for static hosting review.',
           },
           {
             label: 'Privacy and terms',
@@ -80,7 +80,7 @@ const reviewCopy = {
           },
           {
             label: 'No admin inbox yet',
-            text: 'Contact submissions are reviewed through Supabase for now; a staff-facing dashboard is intentionally deferred.',
+    text: 'Contact submissions stay local in the browser for this static version; a staff-facing dashboard is intentionally deferred.',
           },
           {
             label: 'No payment or donation flow',
@@ -130,7 +130,7 @@ const reviewCopy = {
           {
             label: '评估目录',
             href: '/zh/assessments',
-            text: '浏览 6 个 Supabase 支持的评估，并按工作、个人、儿童或宠物过滤。',
+    text: '浏览 6 个静态评估，并按工作、个人、儿童或宠物过滤。',
           },
           {
             label: 'MWI 评估',
@@ -162,7 +162,7 @@ const reviewCopy = {
           },
           {
             label: '联系信息收集',
-            text: '联系 API 会校验确定性字段并写入 Supabase，同时阻止公开读取。',
+    text: '联系表单会把提交保存在当前浏览器中，适配静态托管评审。',
           },
           {
             label: '隐私与条款',
@@ -179,7 +179,7 @@ const reviewCopy = {
           },
           {
             label: '尚无后台 inbox',
-            text: '联系表单提交目前通过 Supabase 查看；面向员工的管理后台暂缓。',
+    text: '静态版本的联系表单提交保留在当前浏览器；面向员工的管理后台暂缓。',
           },
           {
             label: '没有支付或捐赠流程',

@@ -34,10 +34,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
     const formData = new FormData(event.currentTarget);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      const payload = {
           name: formData.get('name'),
           email: formData.get('email'),
           inquiryType: formData.get('inquiryType'),
@@ -47,15 +44,12 @@ export default function ContactForm({ locale }: ContactFormProps) {
           message: formData.get('message'),
           consentContact: formData.get('consentContact') === 'on',
           sourceLocale: locale,
-        }),
-      });
-      const result = (await response.json()) as { ok?: boolean; error?: string };
-
-      if (!response.ok || !result.ok) {
-        setStatus('error');
-        setMessage(result.error || t('error'));
-        return;
-      }
+          createdAt: new Date().toISOString(),
+        };
+      const key = 'eqai.static.contactSubmissions.v1';
+      const existing = JSON.parse(window.localStorage.getItem(key) ?? '[]');
+      const submissions = Array.isArray(existing) ? existing : [];
+      window.localStorage.setItem(key, JSON.stringify([payload, ...submissions]));
 
       event.currentTarget.reset();
       setStatus('success');

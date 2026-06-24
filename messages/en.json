@@ -13,6 +13,7 @@
     "login": "Login",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
+    "devlog": "Devlog",
     "review": "Review Pack",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",
@@ -69,7 +70,7 @@
       },
       "save": {
         "title": "Save",
-        "text": "Store user-owned records behind RLS policies."
+        "text": "Keep records in the current browser for static hosting."
       }
     },
     "chatEyebrow": "Ask Us Anything",
@@ -147,7 +148,7 @@
       "message": "Message",
       "submit": "Send Message",
       "submitting": "Sending...",
-      "success": "Thanks. Your message has been saved and the EQAI team can review it in Supabase.",
+      "success": "Thanks. Your message has been saved in this browser for local review.",
       "error": "Something went wrong while saving your message. Please try again.",
       "consent": "I agree that EQAI may store this message and contact me about this inquiry. This form is not for urgent, clinical, medical, or diagnostic support.",
       "consentPrefix": "I agree that EQAI may store this message and contact me about this inquiry. I accept the",
@@ -193,7 +194,7 @@
   "auth": {
     "eyebrow": "EQAI account",
     "title": "Log in or register",
-    "intro": "Create an account to save the assessments you start or complete. Registration uses an email confirmation link, not an in-page verification code.",
+    "intro": "Use the static sign-in screen to save assessments in this browser. No email confirmation code is required for this static version.",
     "loginTab": "Log in",
     "registerTab": "Register",
     "email": "Email",
@@ -203,10 +204,10 @@
     "loginButton": "Log in",
     "registerButton": "Register",
     "working": "Working...",
-    "notConfigured": "Supabase is not configured yet. Add env vars before using auth.",
-    "registrationSaved": "Registration submitted. Check your email for a confirmation link, then log in after confirming. If it is not in your inbox, check spam before requesting another email.",
-    "emailNotConfirmed": "Please confirm your email before logging in. Check your inbox or spam folder for the confirmation link.",
-    "rateLimited": "Please wait before requesting another confirmation email. Repeated registration attempts are rate-limited for account security."
+    "notConfigured": "Static sign-in is available in this browser.",
+    "registrationSaved": "Registration saved in this browser.",
+    "emailNotConfirmed": "Static sign-in does not require email confirmation.",
+    "rateLimited": "Static sign-in is available now."
   },
   "records": {
     "eyebrow": "My records",
