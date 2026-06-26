@@ -1,5 +1,19 @@
 {
   "buildCommand": "next build",
   "outputDirectory": ".next",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "rewrites": [
+    {
+      "source": "/anura",
+      "destination": "http://132.148.78.67/anura/"
+    },
+    {
+      "source": "/anura/:path*",
+      "destination": "http://132.148.78.67/anura/:path*"
+    },
+    {
+      "source": "/anura-api/:path*",
+      "destination": "http://132.148.78.67/anura-api/:path*"
+    }
+  ]
 }
