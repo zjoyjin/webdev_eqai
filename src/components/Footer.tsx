@@ -12,6 +12,7 @@ export default function Footer({ locale }: FooterProps) {
     { href: `/${locale}`, label: t('nav.home') },
     { href: `/${locale}/about`, label: t('nav.about') },
     { href: `/${locale}/contact`, label: t('nav.contact') },
+    { href: `/${locale}/devlog`, label: t('nav.devlog') },
     { href: `/${locale}/review`, label: t('nav.review') },
   ];
 

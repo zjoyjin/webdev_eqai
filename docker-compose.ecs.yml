@@ -1,0 +1,31 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
+        NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY}
+    image: eqai-webdev:latest
+    container_name: eqai-webdev-web
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      PORT: "3000"
+      HOSTNAME: "0.0.0.0"
+    ports:
+      - "18080:3000"
+    networks:
+      - eqai-webdev-net
+
+networks:
+  eqai-webdev-net:
+    name: eqai-webdev-net
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.255.254.0/24
+          gateway: 10.255.254.1

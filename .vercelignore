@@ -1,0 +1,7 @@
+.omx/
+*.log
+*.pid
+tmp-*.png
+Dockerfile
+docker-compose*.yml
+.dockerignore

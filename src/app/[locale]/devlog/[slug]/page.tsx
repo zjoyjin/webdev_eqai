@@ -45,7 +45,7 @@ export default function DevlogEntryPage({ params: { locale, slug } }: Props) {
       <div className="space-y-10">
         <article className={softCardClass}>
           <div
-            className="prose prose-gray max-w-none prose-headings:font-light prose-headings:text-gray-900 prose-p:text-sm prose-p:leading-6 prose-p:text-gray-600 prose-li:text-sm prose-li:leading-6 prose-li:text-gray-600"
+            className="devlog-content max-w-none"
             dangerouslySetInnerHTML={{ __html: entry.contentHtml }}
           />
         </article>

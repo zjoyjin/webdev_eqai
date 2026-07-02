@@ -6,4 +6,67 @@
   body {
     @apply bg-white text-gray-900 antialiased;
   }
+
+  .devlog-content {
+    @apply text-gray-700;
+  }
+
+  .devlog-content > * + * {
+    margin-top: 1rem;
+  }
+
+  .devlog-content h2 {
+    @apply text-2xl font-light text-gray-900;
+  }
+
+  .devlog-content h3 {
+    @apply text-xl font-medium text-gray-900;
+  }
+
+  .devlog-content p,
+  .devlog-content li,
+  .devlog-content blockquote {
+    @apply text-sm leading-7;
+  }
+
+  .devlog-content ul {
+    @apply list-disc pl-6;
+  }
+
+  .devlog-content li + li {
+    margin-top: 0.5rem;
+  }
+
+  .devlog-content blockquote {
+    @apply border-l-4 border-primary-200 pl-4 text-gray-600;
+  }
+
+  .devlog-content pre {
+    @apply overflow-x-auto rounded-md bg-gray-50 p-4 text-sm leading-6 text-gray-800;
+  }
+
+  .devlog-content code {
+    @apply rounded bg-gray-100 px-1 py-0.5 text-[0.9em] text-gray-800;
+  }
+
+  .devlog-content pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .devlog-content table {
+    @apply w-full border-collapse text-left text-sm;
+  }
+
+  .devlog-content th,
+  .devlog-content td {
+    @apply border-b border-gray-200 px-3 py-2 align-top;
+  }
+
+  .devlog-content th {
+    @apply bg-gray-50 font-medium text-gray-900;
+  }
+
+  .devlog-content a {
+    @apply text-primary-700 underline decoration-primary-200 underline-offset-2;
+  }
 }

@@ -76,6 +76,9 @@ function markdownToHtml(markdown: string): string {
   const blocks: string[] = [];
   let paragraph: string[] = [];
   let listItems: string[] = [];
+  let table: string[][] = [];
+  let codeLines: string[] | null = null;
+  let blockquote: string[] = [];
 
   const flushParagraph = () => {
     if (paragraph.length === 0) return;
@@ -89,41 +92,117 @@ function markdownToHtml(markdown: string): string {
     listItems = [];
   };
 
+  const flushTable = () => {
+    if (table.length === 0) return;
+    const [header, ...rows] = table;
+    const headerHtml = header.map((cell) => `<th>${renderInline(cell.trim())}</th>`).join('');
+    const bodyHtml = rows
+      .map((row) => `<tr>${row.map((cell) => `<td>${renderInline(cell.trim())}</td>`).join('')}</tr>`)
+      .join('');
+    blocks.push(`<div class="overflow-x-auto"><table><thead><tr>${headerHtml}</tr></thead><tbody>${bodyHtml}</tbody></table></div>`);
+    table = [];
+  };
+
+  const flushCode = () => {
+    if (codeLines === null) return;
+    blocks.push(`<pre><code>${escapeHtml(codeLines.join('\n'))}</code></pre>`);
+    codeLines = null;
+  };
+
+  const flushBlockquote = () => {
+    if (blockquote.length === 0) return;
+    blocks.push(`<blockquote>${blockquote.map((line) => `<p>${renderInline(line)}</p>`).join('')}</blockquote>`);
+    blockquote = [];
+  };
+
+  const flushAll = () => {
+    flushParagraph();
+    flushList();
+    flushTable();
+    flushCode();
+    flushBlockquote();
+  };
+
   for (const rawLine of lines) {
     const line = rawLine.trim();
 
     if (!line) {
-      flushParagraph();
-      flushList();
+      flushAll();
+      continue;
+    }
+
+    if (line.startsWith('```')) {
+      if (codeLines) {
+        flushCode();
+      } else {
+        flushAll();
+        codeLines = [];
+      }
+      continue;
+    }
+
+    if (codeLines) {
+      codeLines.push(rawLine);
       continue;
     }
 
     const headingMatch = line.match(/^(#{1,6})\s+(.*)$/);
     if (headingMatch) {
-      flushParagraph();
-      flushList();
+      flushAll();
       const level = Math.min(6, headingMatch[1].length + 1);
       blocks.push(`<h${level}>${renderInline(headingMatch[2])}</h${level}>`);
       continue;
     }
 
+    if (line.startsWith('>')) {
+      flushParagraph();
+      flushList();
+      flushTable();
+      blockquote.push(line.replace(/^>\s?/, ''));
+      continue;
+    }
+
+    if (line.startsWith('|') && line.endsWith('|')) {
+      flushParagraph();
+      flushList();
+      flushBlockquote();
+      const cells = line
+        .slice(1, -1)
+        .split('|')
+        .map((cell) => cell.trim());
+      const isDivider = cells.every((cell) => /^:?-{3,}:?$/.test(cell));
+      if (isDivider) {
+        continue;
+      }
+      table.push(cells);
+      continue;
+    }
+
     if (line.startsWith('- ')) {
       flushParagraph();
+      flushBlockquote();
+      flushTable();
       listItems.push(line.slice(2));
       continue;
     }
 
+    flushList();
+    flushTable();
+    flushBlockquote();
     paragraph.push(line);
   }
 
-  flushParagraph();
-  flushList();
+  flushAll();
   return blocks.join('');
 }
 
 function renderInline(text: string): string {
   const escaped = escapeHtml(text);
-  return escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  return escaped
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
 
 function escapeHtml(text: string): string {
